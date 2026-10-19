@@ -1,0 +1,59 @@
+2026-10-18 14:41 聊天反馈落实与验证
+
+依据
+聊天记录_20261018_144126.zip，已展开保留于 Docs/SourceEvidence/Feedback20261018_144126。
+本轮附件包含聊天记录、4张反馈照片和 Untitled (8).pdf；PDF 是单页巨大画布，已渲染分区检查，不能使用乱码的文本抽取结果解释规则。
+用户补充确认：第一关报酬改为100贝币。交付数量未要求修改，仍为2条琉璃鱼。
+
+已修改
+1. 低潮水面提高到一层地块边缘；高潮再提高一层。船、码头连接、动物、水面点击区域、工具预览、故事目标和遮挡参考高度同步。
+   规则中的 waterLevel 仍表示“被淹没的最高地面层”：正常为0，高潮为1；WaterSurfaceY统一返回可见水面高度。显示的一层平水面不等于把高度1地块都判为水域，也不能直接踩水。
+2. ClimbBlock 固定，禁止拾起、推、拉、收网、磁铁、发射器和装船。Shift攀爬至多两层保持；普通表面不提供向上攀爬。上下文改为固定台阶说明。
+3. 新增独立枚举 Raft（追加末尾，不重排旧存档枚举）。正式地图原“漂浮”改为薄竹排；箱子推入水仍是 Float，保留木箱外形及水线上可见箱盖。
+   走上竹排后，沿航道按方向键逐格搭乘，也可空手选相邻航道按E；反方向能返回，靠岸可下船再登船。水纹显示往返轴线；风箱命中竹排后改变轴线，空竹排不会自动漂走。
+   竹排不是箱子，不能推拉、打捞或用箱子工具移动；动物、礁石、虾笼及越界会阻止航行。保留底下的贝壳。乘客和竹排到位后才提交位置/一次撤销，取消恢复原位。
+   默认轴线：第一关东西；第二关南北，可用风箱改东西；第四关上方东西、左下南北；第五关东西。自由探索二下方竹排南北，其余额外岛竹排东西。
+4. 五张主线地图保持现有源布局，换用新竹排规则。新增PDF的自由探索一、二已转录接入索引4、9，替换正常航线中的旧额外地图，仍在五关结束后解锁。
+   自由探索一16×17：8箱、2竹排、1潮汐；自由探索二19×21：7箱、2竹排、1潮汐。入口标记在水边时落脚点设在紧邻白色岸格。旧 HabitatFigJamLevel / HabitatMountainLevel 源布局保留用于追溯。
+   新额外图按当前动物适居规则判定；“小石子”文字保留为地面标签，没有擅自增加一条阻挡机制。
+5. 第一委托报酬200→100，重复交付不给钱，相关老板对白和任务提示同步。风箱仍200；可额外捕获1条繁衍幼鱼，出售100后购买，不赠钱补差额。已通过真实新游戏流程检验这条资金路径。
+
+本轮实测（184项专项；不把重复执行重复计数）
+- 62项：竹排/固定台阶/水面/报酬/两张额外地图数据检查。
+- 14项：原浮箱支撑推箱、数量守恒、船舱、磁铁和发射器规则回归。
+- 38项：Unity实际帧竹排登乘、移动同步、取消、撤销、E操作、存档JSON、七图加载/码头绑定、风箱换向、潮位、船舱脚点检查。已查看地图、水面、竹排与码头截图。
+- 30项：可见收网打捞、后退、取消、切关、读档、后台暂停恢复；固定攀爬块改为拒绝打捞断言。无黑屏，到位只结算一次。
+- 16项：发射器/挖土预览、实际动画、消耗、取消、撤销及潮汐打捞回归。
+- 24项：真实InputSystem尾部缓冲、方向、工具键、暂停、重开保护、诱导与焦点检查。
+
+路线实测
+- 第一关：按新版PDF目标布局，用原图三个箱子和竹排49条操作，取得鱼竿、完成适居目标；不购买额外道具。
+- 连续新游戏到第二关：真实开场、走码头、上船、49步第一关、3次垂钓（正式Advance接口逐帧驱动）、自然繁衍、返店交付100、自然晨光、额外鱼出售100、购买风箱200、出航第二关、存读档。没有注入钱、装备或完成标记。
+- 第二关26条操作：从上述真实存档继续，使用已经购入的风箱，登竹排后放置/旋转风箱、横渡、开背篓宝箱、原路返回并收回风箱。
+- 第四关48条操作：独立原图测试，固定台阶攀爬、原图箱子触发涨潮、上方竹排东岸往返、移开箱子退潮、下方竹排抵达南岸。未注入工具或箱子。
+- 第二、四关这两条是运输/机关分支，不是完整动物适居通关。第三、第五关及两张新额外图的完整解法尚未在新规则下复验；不能引用此前旧规则的五关报告作为本轮全通证据。
+
+验证文件
+Verification/feedback-20261018-144126/
+  rules.txt / runtime.txt / utility/utility-runtime.txt / input/input-runtime.txt / recovery/runtime.txt
+  first-route.json / full-campaign-runtime.txt / full-campaign-first.json
+  second-transport-route.json / fourth-transport-route.json / transport-runtime.txt
+  second-transport-result.json / fourth-transport-result.json
+  map-5.png 至 map-10.png（实际文件按索引命名）、map-4.png、map-9.png
+  fourth-transport-high.png / fourth-transport-ebb.png / recovery/frames/
+主要脚本：RunRaftFeedbackRules.ps1、RaftFirstPlanRoute.cs、RaftFeedbackRuntimeChecks.cs、RaftFirstCampaign.cs、RaftTransportRuntime.cs、RaftFeedbackRecoveryChecks.cs、RaftFeedbackUtilityChecks.cs、RaftFeedbackInputChecks.cs。
+Unity帧测试须串行运行，确认已经进入Play且HabitatGame.Instance就绪；不得运行期间改Assets触发重编译。
+
+测试存档事故与恢复（必须保留，不得称所有存档从头到尾均未写入）
+旧 FeedbackUtilityChecks 脚本漏设 SaveSlotDirectoryForTests，第一次工具回归时自动存档写入7×7测试场景；手动存档没有改变。
+已将误写的 autosave.json 与 .bak 完整复制至本轮 save-repair 目录，停止Play后恢复：
+  autosave.json：Verification/release-playtest-20261018/original-session.json，12:16保存的原会话快照。
+  autosave.json.bak：Verification/release-playtest-20261018/native-original-saves/autosave.json，11:37原自动存档备份。
+恢复前通过生产 ReadValidatedSnapshot 校验；恢复后的自动存档与12:16源快照SHA256一致，手动存档逐文件哈希未变。无法宣称恢复到了14:41前的逐字节自动存档；恢复点明确为12:16。
+本轮 RaftFeedbackUtilityChecks 及旧 FeedbackUtilityChecks 均已补测试存档目录隔离；修正后16项复跑通过。恢复文件及修复后回归前后哈希见 save-repair。
+
+兼容、范围与交付
+- 旧存档保留缓存中的岛屿布局、浮箱与已有报酬，不强行转换来源不明的箱子，也不追扣过去已领的钱。完整体验新版地图/竹排请从新游戏开始；未访问的新岛也会使用新版工厂。
+- UI布局与美术没有重排，只改本次规则对应的名称、上下文、报酬和必要高度定位。未应用 UI_final_polish.patch。
+- 原脚本备份 ChangeBackups/20261018_Feedback144126；新额外地图只改工厂数据，不写场景/预制体YAML，不替换原素材GUID。
+- 本轮未构建EXE/ZIP；旧试玩包不包含本轮改动。

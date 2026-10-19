@@ -1,0 +1,40 @@
+2026-10-18 宝箱模型、开盖与到位结算
+
+范围
+本次只补玩法及宝箱表现，不修改 UI、场景 YAML、关卡地形、奖励内容、原模型或原材质。
+正式关与旧图共用 HabitatView.BuildProp 的 Chest 分支，均使用新宝箱。
+
+模型
+HabitatChestVisual 生成可复用的倒角木板网格，制作独立箱底、三层箱壁、边框、金属包边/铆钉、锁扣及弧形分片箱盖。
+箱盖通过后侧铰链根节点转动 105 度；打开时出现箱内暖光、光束及小光点。
+复用已交付的 Resources/Models/BackBasket/Basket_Backboard_Wood、Basket_Backboard_Edges、Basket_Attachments_Gold 材质。
+源背篓 GLB、源材质和 GUID 均未修改。新生成网格及光效材质随宝箱对象销毁，外部共享材质不销毁。
+
+事务
+HabitatGame.Chest.cs 通过同一 HabitatRules.Interact 在 Clone 中预演奖励，原权威 State 在 1.35 秒开盖过程中不变。
+Busy 期间阻止继续移动、交互、交易、撤销和手动模拟；普通自动模拟也暂停。
+箱盖动画结束且画面中的居民已到位后，仅调用一次 CommitPending：记录一步撤销、增加一次 ActionCount、提交原奖励，再播放一次开箱音效。
+CancelPendingAction 先闭合箱盖、清理开箱状态，再丢弃候选状态，不发奖励。
+切图/读档沿既有取消入口处理。撤销恢复原宝箱与奖励库存，重新开箱只取得被撤销的奖励一次。
+四种奖励沿原规则：特制鱼竿、背篓、旧金币箱 20 贝币、Unspecified 不自行增加奖励。
+
+接线
+Assets/HabitatIsland/Scripts/HabitatGame.Chest.cs：新增开箱事务。
+Assets/HabitatIsland/Scripts/HabitatChestVisual.cs：新增模型/铰链/光效。
+HabitatGame.cs：Update 驱动、普通提交/预览排除开箱、取消清理、ApplyTool 宝箱分派。
+HabitatView.cs：新 Chest 分支，ChestVisualAt 定位当前箱体。
+原文件备份：ChangeBackups/20261018_Chest_005828。
+准备脚本和精确差异：AgentScripts/StagedChest/PrepareChestWiring.py、ChestWiring.diff。
+
+验证
+全 Scripts 与新增测试脚本通过离线 C# 编译，无新增错误；只有既有未赋值字段警告。
+AgentScripts/ChestRuntimeChecks20261018.cs 的 Run() 使用真实 Unity 帧，Unity 实测 27 条宝箱事务检查通过。
+另玩家存档 SHA256、原 Snapshot、Undo 队列、Session/控制参数和镜头恢复检查通过。
+覆盖：按下不发奖励、箱盖可见动作、Busy 拦截重复操作、取消及无延迟回调、四奖励各一次结算/防重复/撤销/再开、切图取消。
+证据：Verification/latest-plan-20261018/chest-runtime.txt、chest-opening.png、chest-runtime-save-hashes.txt。
+开盖截图已目视检查：箱体/木条/包边/铰链盖和内容光正常可见。截图是受控平地用例，不是正式关卡的通关证明。
+本次新增开箱机制后，主执行线程已重新通过正式第一关65步与第二关103步真实控制器路线；第二关保留默认动物移动及风箱分段模拟。
+
+运行入口
+不要作为运行时组件放入 Assets。由 Unity C# 工具加载 AgentScripts/ChestRuntimeChecks20261018.cs，await ChestRuntimeChecks20261018.Run()，超时 120 秒。
+只在 Play 模式、游戏空闲且没有进行垂钓时运行。脚本不写玩家存档，finally 恢复原现场。

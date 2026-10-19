@@ -1,0 +1,73 @@
+栖屿：音效扩展包接入记录
+日期：2026-10-16（Asia/Shanghai）
+
+一、本次输入与实测边界
+用户要求将“栖屿_音效资源与说明_20261016.zip”接入当前工程。
+ZIP SHA-256：668d1db2aced65c87e1db4ca0156707eb47bf41c0b6047c793531454c1fb2fdb
+包内说明、清单、Python、HTML及.meta只作为来源材料读取、留档。没有运行包内Python或HTML。
+包内“已经接入”“已经运行验证”等表述属于素材包的历史声明，不是本工程本轮实测结果；本节只记录文件导入及数值检查，运行接线与Unity验证另记。
+
+二、源音频导入
+共25个独立源音频，另有2个离线试听混音；混音不进入游戏Resources，不作为新音源。
+新增24个源文件，全部保持ZIP内的原始音频字节，没有再次增益、裁剪、归一化或重编码：
+  Assets/HabitatIsland/Resources/Audio/Coast：18个动作音。
+  Assets/HabitatIsland/Resources/Audio/Interface：6个界面音。
+包内Ambience/sea_waves_birds.wav与原工程Resources/Audio/Ambience/SeaWavesBirds.wav的SHA完全相同，复用现有文件及GUID，不复制第二份海浪。
+复用海浪SHA-256：1be7aa7dcd7d8dd8fec5a30dc27c5acd9d6279a89fd98a31123d90db4035b900
+旧Resources/Audio/UI五个声音保留。旧环境音、UI和已有.meta共14个保护文件在导入前后SHA完全一致。
+
+包内.meta只留在Docs/SourceEvidence/AudioPack20261016/package，未覆盖任何Assets内.meta；新增音频及目录的.meta由本工程Unity生成。
+完整源路径→当前工程路径→Resources路径映射见Docs/SourceEvidence/AudioPack20261016/import-manifest.json。
+
+三、来源与许可保留
+Assets/HabitatIsland/AudioSources/AudioPack20261016保留以下四份原始文本：
+  Kenney_Impact_CC0.txt：8个Kenney脚步/碰撞音的CC0许可。
+  Kenney_Interface_CC0.txt：6个Kenney界面音的CC0许可。
+  Survival_Island_来源说明.txt：10个用户已有模板短音的来源声明，包内未给出独立音频许可，不标为CC0。
+  Mixkit_来源说明.txt：1个用户提供海浪鸟鸣文件的来源和对应许可入口，不标为CC0。
+这里保留包内来源说明，未将第三方素材宣称为原创，也未将整包统一标为CC0。
+step_sand_1/2在素材包交付前已有增益处理，清单记录原SHA与交付SHA；本次导入保留交付版本原字节。其原始类型为普通step，sand仅表示游戏用途。
+
+四、本次素材校验（实际执行）
+使用本机python-soundfile 0.14.0 / libsndfile 1.2.2解码，未调用或执行包内verify_files.py。
+  ZIP全部72个文件CRC通过。
+  包内文件校验表71项的大小及SHA-256全部通过；表外仅清单自身。
+  音效清单25/25个独立音频的交付SHA、大小、完整解码、采样率、通道数和时长匹配。
+  新增Coast 18、Interface 6，复用环境1。
+  25个解码结果都为有限数，均未发现绝对值大于或等于1的采样点。
+  所有音频峰值范围约-8.76至-0.09 dBFS。原海浪38.041451秒、44.1 kHz立体声；两条step为48 kHz，其余44.1 kHz。
+  原工程受保护的14个音频/元数据文件保持不变。
+这属于数据与文件检查，不等同主观试听，也不代替运行中的事件、混音和循环检查。
+
+机器可读报告：Logs/audio-pack-20261016/asset-validation.json
+可随工程交接的报告：Docs/SourceEvidence/AudioPack20261016/import-manifest.json
+包内说明/清单/来源/元数据原字节证据：Docs/SourceEvidence/AudioPack20261016/package
+本轮独立检查脚本：AgentScripts/ImportAudioPack20261016.py（使用外部numpy及soundfile，不调用素材包脚本；相同文件可复核，遇不同既有文件拒绝覆盖）。
+
+五、运行接线与Unity验证
+接线实现：
+1. HabitatAudio沿用原持久单例和用户PlayerPrefs，界面切换为本包Interface六音（Select沿用代码枚举Click，Back追加，不改原五项数值）。动作层新增HabitatAudio.Actions.cs，17种动作映射18个Coast音频，草/木/低岸脚步及推箱/软碰撞使用交替变体。
+2. 音源固定为环境2、界面1、动作6，共9个；动作声部上限6，优先保留收获/开箱/交易，限制短时重复。同一帧有动作时抑制通用Click/Confirm，购买不会同时叠加通用成功音；错误/面板提示仍独立。
+3. 格子移动在CommitPending真正到位后播放脚步/推拉；候选预演与取消无成功声，撞墙只有轻Error。推箱触发涨潮但人物没动时只播放推箱和潮汐。码头连续行走按实际水平移动路程每0.65米触发木板脚步，原地/被挡不响。
+4. ApplyTool与Mutate成功后接搬起、放下、铺土、虾笼、开箱、引导、旋转与收获。开箱发reward；免费领库存土块发pick；付费购买/出售/委托交付发coin_pickup。失败不发成功音。
+5. Fishing真实Begin发splash抛竿；主动收竿发water；脱钩发低音高splash；成功仍由既有Fish真实结算后发harvest。加载/重开等程序取消用Cancel(false)，静默关闭。
+6. 生态Tick声音由Game层真实提交前后水位与虾库存比较，只有实际潮变或虾笼收获才发一次相应声音；HabitatRules、Evaluate、预演、Render均无音频副作用。未改关卡/动物/经济规则及存档结构。
+7. 撤销、取消动作、重开、读档、切图清理待发和在播短音，保留环境排程；读档失败也清旧短音。存/读档真实成功发Confirm、失败发Error。程序ClosePanels不播放菜单关闭音，用户关闭/返回分为Close/Back，重复选同工具/地图静默。
+8. 设置→声音设置继续分别调整环境与动作/界面音量，支持静音/试听。面板或垂钓打开时环境声平滑降至45%，关闭恢复；生态暂停不暂停海浪。
+
+与包内参考混音的适配：
+保留原环境25%、音效50%默认与已经保存的偏好，不强制覆盖用户配置；不新增主音量滑杆。动作默认实际增益采用包内相对音量×0.55，界面Select/Back/Error默认0.231、其余0.1617。海浪保留此前已验证的1秒淡入/1.2秒等功率交叠，而非改成包内0.35秒；避免重复接入同一海浪。
+环境保持立体声Streaming/Vorbis质量0.7；短音单声道PCM/DecompressOnLoad即时播放，保持源采样率（两条step为48k）。导入器版本提升为2，新增24音频均由Unity按该设置导入。
+Unity项目本轮重新编译通过，compilationFailed=false、errors为空。
+
+六、本轮Unity实测
+两组Play检查串行执行，均从实际运行状态备份，结束后恢复原State/撤销/各岛记录/暂停/镜头及音量偏好值与键存在性，不写玩家游戏存档。
+- AudioPackRuntimeChecks.Begin：93项PASS，restored=true。25源Resources加载、24短音映射、17动作/18文件实际播放与交替、6个界面音、最多6动作声部、静音/音效归零、ClearTransient、真实UI回调及Back/Close/重复选择、duck恢复、disable-enable重载、LoadLevel/Restart不增音源均通过。检测到界面与动作实际GetOutputData信号。
+- 海浪未缩短/未跳播，完整约38秒自然循环：2196帧观察、72帧交叠，增益平方和最大误差7.451E-09，初次淡入后无双音源归零，实际环境信号peak=0.177；DSP推进同时暂停生态JSON不变。
+- AudioGameplayChecks.Begin：34项PASS，restored=true。真实Move预演静默、到位草/低岸/浮箱木步、取消/Undo、撞墙Error、推拉成功、潮淹前格不伪造脚步；搬放/铺土/虾笼/重复失败/开箱/引导/旋转/收获/付费交易/免费领土；真实Fishing.Advance成败、主动/程序收竿、拒绝重复收获；真实Step虾笼自动收获/潮变及随后不重复，全部通过。钓鱼测试临时加快参数以抵达真实结算分支，最后恢复参数。
+- 人工查看声音设置截图，中文及按钮无遮挡，文案已更新“动作与界面”。
+
+报告：Logs/audio-pack-20261016/runtime.txt、gameplay.txt；截图：Logs/audio-pack-20261016/audio-settings.png。
+可重复脚本：AgentScripts/AudioPackRuntimeChecks.cs、AudioGameplayChecks.cs。旧AudioRuntimeChecks.cs作为前一版3音源的历史验证保留，不代表新版结构。
+首次循环检查曾记录功率异常，随后观察到编辑器已退出Play，未取得可确定原因；保留runtime-first-cycle-diagnostic.txt。加入DSP/两源位置/duck等异常采样诊断并重新进入Play后，全部93项通过，无异常样本。不将该次异常武断归因于游戏循环或外部操作。
+本轮验证不等同主观听感评价、物理扬声器检查、硬件热插拔/系统休眠或全部正式关通关。独立HarborPrototype按相同接口接线并编译通过，本轮未切到该开发场景重新跑完整流程。

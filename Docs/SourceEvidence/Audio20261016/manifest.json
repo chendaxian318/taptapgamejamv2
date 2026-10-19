@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-16",
+  "source_zip": {
+    "original_path": "C:\\Users\\admin\\Downloads\\kenney_interface-sounds.zip",
+    "bytes": 834536,
+    "sha256": "f2193d072726d6758a5f7871b2dcc54dcce0d5c35c6f0a62f92549b327c81232"
+  },
+  "source_wav": {
+    "original_path": "C:\\Users\\admin\\Downloads\\mixkit-sea-waves-with-birds-loop-1185.wav",
+    "asset_path": "Assets/HabitatIsland/Resources/Audio/Ambience/SeaWavesBirds.wav",
+    "resource_path": "Audio/Ambience/SeaWavesBirds",
+    "bytes": 6710558,
+    "sha256": "1be7aa7dcd7d8dd8fec5a30dc27c5acd9d6279a89fd98a31123d90db4035b900"
+  },
+  "ui": [
+    {
+      "source_entry": "Audio/click_003.ogg",
+      "resource_path": "Audio/UI/Click",
+      "asset_path": "Assets/HabitatIsland/Resources/Audio/UI/Click.ogg",
+      "bytes": 4371,
+      "sha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292"
+    },
+    {
+      "source_entry": "Audio/maximize_008.ogg",
+      "resource_path": "Audio/UI/Open",
+      "asset_path": "Assets/HabitatIsland/Resources/Audio/UI/Open.ogg",
+      "bytes": 9085,
+      "sha256": "57c074e600e193a303ce781c04c0ccc191c6030f9f106594fd94a65e55435c17"
+    },
+    {
+      "source_entry": "Audio/minimize_008.ogg",
+      "resource_path": "Audio/UI/Close",
+      "asset_path": "Assets/HabitatIsland/Resources/Audio/UI/Close.ogg",
+      "bytes": 9298,
+      "sha256": "bc14c17875436dcaaf809c25db5e61454dbc35612880f329ff37a95ef9b6a865"
+    },
+    {
+      "source_entry": "Audio/confirmation_004.ogg",
+      "resource_path": "Audio/UI/Confirm",
+      "asset_path": "Assets/HabitatIsland/Resources/Audio/UI/Confirm.ogg",
+      "bytes": 12391,
+      "sha256": "568967a3d9f8a8f6af54ea01729c4882284308f2a27d78c07ffd7ee0d6951661"
+    },
+    {
+      "source_entry": "Audio/error_005.ogg",
+      "resource_path": "Audio/UI/Error",
+      "asset_path": "Assets/HabitatIsland/Resources/Audio/UI/Error.ogg",
+      "bytes": 7266,
+      "sha256": "3f75b11df5b06d68d2c25fbf0e9c9d9e7dd9250562a4007ee34856b8a309a2ae"
+    }
+  ],
+  "audio_bytes_modified": false
+}

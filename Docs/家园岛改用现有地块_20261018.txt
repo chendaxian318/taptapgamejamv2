@@ -1,0 +1,16 @@
+家园岛改用现有地块（2026-10-18）
+
+用户否定独立手绘岛方案，明确要求使用现在游戏里的地块搭小岛。本记录覆盖此前家园岛美术方案。
+现仅复用Models/KayKit/sand_with_grass与sand_A，以及已有blockAtlasMaterial。
+地块世界尺寸沿现有关卡：宽深.985米，格距1米，每层高.7米；港口父级缩放.7已换算。
+中部草地、边缘沙地，两层地块组成小岛。保留店侧木栈道、家/商店/船的位置。
+不再生成自制棕榈、岩石、灌木、长椅、草坡和小径；不再使用新贴图或HomePaint shader。
+手绘方案代码和素材备份于../ChangeBackups/home-island-art-discarded-20261018；项目中的Generated atlas与shader通过AssetDatabase删除，未影响现有素材。
+
+通行仍沿港口连续行走，地面采样改为实际地块占用及角色半径边界；住宅/家具排除保持，沿用原harborX/Z存档。
+正式关未修改。未增加资源奖励/经济/任务。
+
+验证AgentScripts/HomeIslandBlockChecks.cs，38项通过，真实玩家存档SHA256不变。
+包含起始港口、四向海面覆盖、上岛往返、商店/家门、岛上存读档、海岸阻挡、切关清理/返回重建。
+截图Verification/home-island-blocks-20261018/home-island-walking.png。
+未构建EXE。旧HomeIslandArtChecks/旧带Palms引用的HomeIslandChecks仅为历史方案记录，当前请运行HomeIslandBlockChecks。

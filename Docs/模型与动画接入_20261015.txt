@@ -1,0 +1,77 @@
+栖屿 · 模型与动画接入（2026-10-15）
+
+后续修正（原图摆放与可行走码头）：
+用户指出需要模型在原地图中，并要求人物能直接走上码头。现已在 HabitatIsland 原出生点西侧接入完整 WoodenDock，主角、342格原地形及四个原动物都保留；(4,9)预置可用动画虾笼。
+主地图码头已由首次摆放的 .4 倍扩大到 .7 倍，宽16.8格；按模型水线升高，连接木板延伸到空甲板。支持同场景、同一主角直接走过去：岛屿用格子移动，木桥和码头用连续行走，镜头、人物动画、携带物随原主角移动，回岸自动恢复格子操作。屋内、家具和水域不开放行走。码头商店旁 E/B 打开现有补给；独立 HarborPrototype 的家/小船/Timeline流程仍保留在设置入口。
+新增 HabitatMapHarbor 测量轮廓并射线采样脚底，阻挡边缘/建筑；码头局部位置和朝向纳入 HabitatState/Clone/JSON。潮汐重建保持位置，岸边淹没时禁止退出到水格；岸格高度改变会重建连接坡道。编辑器停在 HabitatIsland 主场景，Play 使用当前打开场景。
+本轮新增验证：1815项原图布局/路线断言（39次合法动作）、主图动画笼入/出/撤销/潮汐23项检查，以及可行走码头35项检查（168个有脚底支撑的移动采样，含携带龙虾往返与转镜头）。实际键盘A进入、E商店/Esc返回、沿桥与甲板来回行走均已实测。相关日志在 Logs/map-models-20261015 和 Logs/walkable-harbor-20261015；下文为首次模型导入记录，主地图状态以上述修正为准。
+
+工程：HabitatIsland3D，Unity 6000.6.5f1。
+本记录补充并更新同日策划修改记录中“龙虾仍为静态、码头为几何原型”的状态。
+
+一、已应用的资源
+
+龙虾：桌面 part3/vinda/龙虾/3d/03_动画模型_大幅版/creature_animated.glb。
+工程源文件：Assets/HabitatIsland/Art/AnimatedShrimp/creature_animated.glb。
+运行 prefab：Assets/HabitatIsland/Resources/Models/AnimatedShrimp/Shrimp.prefab。
+45 根骨骼，Idle 3 秒、Move 1.2 秒、Carried 2 秒，循环端点保留。
+地面仍为原来 1.4 倍显示，携带恢复 1 倍；进笼后仅视觉收小至地面尺寸的 0.48 倍以适配笼体，取出恢复。位置、朝向和规则仍由游戏负责，Animator 不启用 root motion。
+移动时播放 Move，抱起时播放 Carried，静止播放 Idle。规则暂停期间美术待机继续播放。
+保留原 PBR 贴图和此前降金属度处理。已有动画没有独立步足骨骼，Move 仍是原资源的身体/触须卡通摆动。
+
+笼子：桌面 part3/hona/笼子/3d/lobster_trap_rigged_v2.glb。
+工程源文件：Assets/HabitatIsland/Art/AnimatedTrap/lobster_trap_rigged_v2.glb。
+运行 prefab：Assets/HabitatIsland/Resources/Models/AnimatedTrap/Trap.prefab。
+4 根骨骼，Door_Open_Close、Float_Sway、Demo_Door_And_Floats 三段原动画均导入。
+空笼开门待捕；虾进入时播放关门段；有虾时闭门并循环浮漂摆动；用 E 搬走虾时重新开门。
+Demo 动作保存在 prefab 供预览。初载、撤销、地形重建直接对齐当前状态，不虚构一次捕获。
+仍使用原有“工具 4 放笼、工具 1 搬走虾”规则，本轮未新增携带或回收笼子的玩法。
+
+码头：桌面 part2/hona/3d/Meshy_AI_Wooden_Dock_Scene_Uni_1014170130_texture (1).glb。
+工程源文件：Assets/HabitatIsland/Art/WoodenDock/WoodenDock.glb。
+运行 prefab：Assets/HabitatIsland/Resources/Models/WoodenDock/Harbor.prefab。
+原文件是完整港口：两间房、小船、木平台、桌椅、浮桶、绿植等，共一个合并网格，无骨架、无自带动画。
+已整体替换 HarborPrototype 的原型建筑和平台；小屋为商店、大屋为家。另加一段登船板跨过原小船到平台的水隙。后续同一完整模型也已接入主岛海岸，见文首修正。
+按实际甲板轮廓与家具/建筑障碍重新限制步行范围，脚底高度从原模型甲板采样。
+首日 Timeline 路线已改为沿登船板上岸、收网、走到新商店；晨光镜头照向大屋实际可见的小窗。原首日/次日流程及场景往返状态保留，没有新增 NPC。
+
+二、体验入口
+
+打开 Assets/HabitatIsland/Scenes/HabitatIsland.unity 后 Play。
+正式岛的龙虾已使用动画模型；可用虾笼工具放置新模型。
+Tab → 前往码头，进入使用完整港口模型的 HarborPrototype。
+码头 WASD 走动、Q/C 转镜头、靠近家/商店/小船按 E。
+也可直接打开 Assets/HabitatIsland/Scenes/HarborPrototype.unity 体验码头首日开场。
+码头会话仍仅在同次 Play 内保留，停止 Play 后重置；本轮没有新增磁盘存档。
+
+三、后续维护
+
+HabitatShrimpVisual：根据实际位移和携带状态切换三动作。
+HabitatTrapVisual：通过手动 PlayableGraph 采样笼门与浮漂原动画。
+HabitatView：实例化模型、设置显示比例，处理撤销/重建时的视觉复位。
+HabitatImportedDockLayout：与当前码头源文件哈希绑定的比例、偏移、交互点、甲板轮廓、障碍、路径及窗户镜头。
+HabitatDockBeatClip.pathPoints：可编辑的多点路线；为空时兼容原单个 waypoint。
+HabitatAnimatedShrimpSetup.Prepare() / HabitatTrapSetup.Prepare() / HabitatWoodenDockSetup.Prepare()：通过 Unity API 生成可复用资源。需在 Edit 模式执行。
+HabitatWoodenDockSetup.ApplyToHarborScene()：明确重新布置港口模型和默认行走路线；保留 Timeline 时长，执行前先保存自己的场景/路径修改。
+GLB 和必要贴图已完整进入工程，不依赖桌面或 D:/tools。可编辑 .blend 仍保留在用户桌面原 3d 包中，未让 Unity 自动导入它们。
+
+四、本轮验证
+
+40 项真实帧动画检查通过：骨骼变化、真实动画权重、笼门角度、浮漂摆动、E 搬运、入笼/离笼缩放、撤销、地形重建及状态恢复。
+33 项视觉集成检查通过：动画模型、真实蒙皮范围、徽标、材质、显示比例、攀爬块保持不透明及直接点选。
+79 项新码头流程检查通过：自然 Timeline 播放、暂停、真实 E/Esc、交付防重复、实际沿甲板步行、次日、岛屿往返与跳过边界。
+186 个路线采样点有真实甲板支撑，全部在可走轮廓中；采样甲板高度约 -0.045～0.040 米。
+最后调整屋顶标签和晨光镜头后单独实测自然播放、次日与返回自由行动，并检查截图。
+三个工程 GLB 与桌面源逐一 SHA256 一致；正式 HabitatIsland.unity 与修改前备份哈希一致。
+本轮报告与截图：Logs/models-20261015。测试夹具结束后恢复正式关与撤销栈；夹具截图不是新增正式关卡。
+完整源模型保存不变，原静态虾资源也保留。未构建新的 EXE，未更新之前的交接 ZIP。
+修改前备份：工程父目录 ChangeBackups/before-models-20261015。
+
+行走修正补充：40项规则断言通过（新增风机不能移动码头人物的岛内锚点），缺少码头资源时旧存档位置可安全恢复到岸边；最终编译0错误。
+
+地形透明度修正：已取消正式图对所有空地/未选中道具和动物的自动透视，仅为主角或当前选中格淡化遮挡物；最低不透明度40%提升为78%，点穿阈值同步提高。中央高台恢复实心，ClimbBlock保持不透明。61项现有遮挡检查通过（四向检测、前后格点选、材料还原、撤销、潮汐）。截图与当前会话恢复记录：Logs/terrain-opacity-20261015。原89步撤销记录和角色位置已恢复，生态按用户原先的运行状态继续。
+
+2026-10-15 码头颜色贴图超分：
+已用用户指定的 D:\tools\Real-ESRGAN 本地工具完成 4096²→8192²，并将独立增强PNG接入Harbor0.mat。
+主地图与独立码头共用同一材质。原GLB、UV、粗糙度、碰撞和玩法不变；145步操作/撤销历史已恢复。
+细节、验证和回退方法见 Docs/码头贴图超分_20261015.txt。

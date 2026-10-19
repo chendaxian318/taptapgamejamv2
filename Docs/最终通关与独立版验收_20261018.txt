@@ -1,0 +1,60 @@
+﻿最终通关与独立运行版验收｜2026-10-18
+交付目录：Windows_Playtest_20261018_180208；Unity 6000.6.5f1；Windows 64 位。
+验证对象就是本次打包的 EXE，检查完成后没有再修改游戏代码或重新构建。
+
+一、最新规则通关复验
+从 NewSession 开始，连续完成五个主线岛和两个自由探索岛；不是旧规则报告，也不是注入完成标记。
+开场→第一关特制竿/围鱼→真实捕鱼与繁衍→交付两鱼100贝币→次日→出售额外鱼、买风箱→第二关背篓与携虾→第三关两把铲子及蟹出壳→售壳解锁→第四关涨潮、竹排、退潮及金鱼/水母同时适居→第五关发射器/磁铁→返航结局→两张自由探索地图→存读档。
+七图路线分别为49/157/178/102/130/29/329条编码动作；此外还执行实际岸边/码头行走、商店、捕鱼、返航、存读档。
+全程通过正式控制器驱动、Unity真实帧和到位结算。捕鱼按真实进度逐帧按住/松开；没有发放测试金币、装备或通关标记。
+为缩短重复赚钱等待，繁衍段使用内部4倍生态速度；风箱验证也调用正式模拟入口推进。并非当前UI提供4倍按钮。另有独立1倍速度自然繁衍检查，证明正常时间下也可完成。
+这些是找到的合法可行路线，不等于策划所有标准解或所有可能分支；部分路线需等额外幼体后出售，未据此宣称经济节奏最优。
+
+二、本次发现并修复
+1. 新自由探索地图寄居蟹/水母误沿用旧环境判定：统一执行当前确认规则，旧来源存档保留兼容。
+2. 竹排上按E优先划船，导致前方风箱和龙虾无法交互：改为道具/动物交互优先，空水面仍正常划船。补验箱子推动、风箱拿取、抱虾和到位结算。
+3. 当前规则下金鱼仍提示“鱼竿引导”：改为围水适居、通关后捕捞说明；旧规则提示保留。
+没有更改UI美术或页面布局。
+
+三、交付EXE专项检查
+- campaign: PASS latest continuous campaign and both optional maps; real money, natural breeding, tool consumption, sailing, ending and save/load
+- interaction-text: PASS 2 current/legacy fish-interaction text checks; no movement, carrying or rule change
+- normal-speed-breeding: PASS 1 normal 1x breeding check: two natural offspring in 35.95 wall seconds, original earned island snapshot, no time/inventory injection
+- input: PASS 24 input/focus/lure checks
+- mouse: PASS 26 mouse-facing checks
+- recovery: PASS 35 visible recovery checks
+- utility: PASS 16 utility/cancel/undo/tide checks
+所有运行检查使用隔离存档；真实玩家存档前后SHA256核对不变。
+验收入口仅在显式 --habitat-acceptance 参数下启用，平常双击游戏不会运行测试或生成测试档。
+
+四、性能实测
+AMD Ryzen 9 9950X 16-Core Processor / NVIDIA GeForce RTX 5070 Ti / 48312 MB RAM；1920×1080；锁60帧。
+以下为11个真实渲染场景，每个预热后采300帧。不能据此推算低配电脑帧率或声称无锁帧性能提升。
+地图11 overview: 平均59.99fps，P95 16.67ms，P99 16.77ms，最大17.02ms；>33.34ms 0/300；Unity已分配内存530.3MiB。
+地图11 player: 平均59.99fps，P95 16.67ms，P99 16.72ms，最大16.91ms；>33.34ms 0/300；Unity已分配内存530.1MiB。
+地图5 overview: 平均60.00fps，P95 16.67ms，P99 16.69ms，最大16.72ms；>33.34ms 0/300；Unity已分配内存530.3MiB。
+地图5 player: 平均59.98fps，P95 16.67ms，P99 16.73ms，最大17.46ms；>33.34ms 0/300；Unity已分配内存530.3MiB。
+地图6 overview: 平均59.99fps，P95 16.67ms，P99 16.77ms，最大17.01ms；>33.34ms 0/300；Unity已分配内存531.4MiB。
+地图7 overview: 平均59.97fps，P95 16.68ms，P99 16.88ms，最大17.02ms；>33.34ms 0/300；Unity已分配内存531.7MiB。
+地图8 overview: 平均59.99fps，P95 16.67ms，P99 16.72ms，最大16.96ms；>33.34ms 0/300；Unity已分配内存532.2MiB。
+地图8 player: 平均60.00fps，P95 16.67ms，P99 16.67ms，最大16.82ms；>33.34ms 0/300；Unity已分配内存532.1MiB。
+地图10 overview: 平均59.97fps，P95 16.68ms，P99 16.78ms，最大17.62ms；>33.34ms 0/300；Unity已分配内存533.1MiB。
+地图4 overview: 平均59.98fps，P95 16.69ms，P99 16.80ms，最大17.18ms；>33.34ms 0/300；Unity已分配内存533.1MiB。
+地图9 overview: 平均59.98fps，P95 16.69ms，P99 16.91ms，最大16.94ms；>33.34ms 0/300；Unity已分配内存534.1MiB。
+
+实际整线动态帧记录（包含首次加载/切场景及自动化路径计算、截图、快照写盘开销，不能与预热后的静态场景混为一谈，也未用逐帧Profiler归因长帧）：
+story-and-travel: 4256帧，平均59.71fps，P95 16.67ms，P99 16.81ms，最大143.14ms；>33.34ms 5帧。
+idle-and-ecology: 20301帧，平均59.92fps，P95 16.67ms，P99 16.80ms，最大218.53ms；>33.34ms 6帧。
+movement-and-actions: 25324帧，平均59.93fps，P95 16.67ms，P99 16.78ms，最大159.42ms；>33.34ms 5帧。
+fishing: 3892帧，平均59.91fps，P95 16.67ms，P99 16.75ms，最大107.08ms；>33.34ms 1帧。
+
+五、画面与交付边界
+本机1920×1080检查地图、主角、木船/码头、动物和道具材质，以及打捞收网/箱子出水/人物后退截图；未发现缺失模型或粉色错误材质。
+UI按用户要求冻结；主封面/开场插画及高清透明切件仍待美术交付，当前主菜单白底不能算正式封面验收完成。
+验证是自动化控制器与输入专项，加截图人工审阅，不冒称人工逐步游玩或覆盖所有操作组合。
+构建0错误、2条提示：开发用Pipeline运行连接未启用；已有automaticGuide字段未使用。游戏运行Error/Exception/Assert记录为0。
+性能计数器不可用项为null，不能解释为零分配；本轮没有低配机器或其他分辨率的验收结论。
+整线偶发长帧已如实列出；不能以接近60帧的平均值宣称完全没有卡顿。若继续做性能优化，应先用Profiler区分游戏加载与验收脚本的开销。
+
+证据：Verification/final-acceptance-20261018/player-complete/ 下的 result.json、checks.json、performance.json、journey-performance.json、campaign/full-campaign-runtime.txt、通关快照和截图。
+历史失败尝试保留用于定位原因，不作为最终通过证据。

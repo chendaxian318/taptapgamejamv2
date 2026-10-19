@@ -1,0 +1,9 @@
+2026-10-19 双封面接入
+
+用户选择：两张都用，每次启动随机选择。
+HabitatMenuEntrance 在每次运行初始化时清空选择，首次主菜单配置时以等概率选取 Daylight/Warm，同次运行返回菜单不重新抽取。不依赖玩法随机序列，不新增存档字段。
+资源：Assets/HabitatIsland/Resources/UI/Covers20261019，保持原1920×1080源文件，Windows BC7、关闭mipmap、Clamp。两张原件保留Docs/SourceEvidence/Covers20261019，源/导入文件SHA256一致。
+沿用现有模糊→清晰入场、logo移动及按钮渐入；改密集高斯采样，修正宽模糊出现重复轮廓，渲染纹理Clamp防止跨边缘取样。未改菜单布局及玩法。
+已在Editor实际预览：两次启动分别选到Warm与Daylight，返回菜单不换图，过渡结束正常，两张均可加载。没有启动新游戏、没有重建EXE/ZIP；旧232811试玩包仍不含封面。
+实拍与检查：Verification/covers-20261019/main-menu.png（暖色菜单）、main-menu-final.png（明亮菜单）、smooth-blur.png（最终平滑模糊）、preview.txt、assets.json。entrance-blur.png是改良前模糊效果，不作最终预览。
+修改前代码/Shader备份：ChangeBackups/covers-20261019。

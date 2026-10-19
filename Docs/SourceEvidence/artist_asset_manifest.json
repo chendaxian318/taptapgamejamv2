@@ -1,0 +1,151 @@
+{
+  "review_date": "2026-10-12",
+  "source": "User-supplied artist files",
+  "raster_edits": "None; source and copied file SHA-256 compared",
+  "assets": [
+    {
+      "source": "C:\\Users\\陈大仙\\Desktop\\Asset\\聚光灯草案\\part1\\hona\\正视图.png",
+      "resource": "Assets/HabitatIsland/Resources/Art/Artist/HeroFront.png",
+      "size": [
+        347,
+        382
+      ],
+      "mode": "RGB",
+      "alpha_range": null,
+      "sha256": "6e5b4654148363c4b868f556924fe4a45a91f3c5f2937fdc18eb040d9116f44d",
+      "project_sha256": "6e5b4654148363c4b868f556924fe4a45a91f3c5f2937fdc18eb040d9116f44d",
+      "identical_bytes": true,
+      "active_in_runtime": true,
+      "selection_note": "Reusable subject selected for the current habitat prototype."
+    },
+    {
+      "source": "C:\\Users\\陈大仙\\Desktop\\Asset\\聚光灯草案\\part1\\hona\\背视图.png",
+      "resource": "Assets/HabitatIsland/Resources/Art/Artist/HeroBack.png",
+      "size": [
+        204,
+        259
+      ],
+      "mode": "RGB",
+      "alpha_range": null,
+      "sha256": "43f43b74535f8fc789e8c68fe4a56ed077e3f9628b3860e750b4a13f8892a629",
+      "project_sha256": "43f43b74535f8fc789e8c68fe4a56ed077e3f9628b3860e750b4a13f8892a629",
+      "identical_bytes": true,
+      "active_in_runtime": true,
+      "selection_note": "Reusable subject selected for the current habitat prototype."
+    },
+    {
+      "source": "C:\\Users\\陈大仙\\Desktop\\Asset\\聚光灯草案\\part2\\hona\\地块素材.png",
+      "resource": "Assets/HabitatIsland/Resources/Art/Artist/Water.png",
+      "size": [
+        3023,
+        1659
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "066c38f55d8967ba1d3e24562cbcd7b2ca0485568fc3e1451d880565de04d9b1",
+      "project_sha256": "066c38f55d8967ba1d3e24562cbcd7b2ca0485568fc3e1451d880565de04d9b1",
+      "identical_bytes": true,
+      "active_in_runtime": true,
+      "selection_note": "Reusable subject selected for the current habitat prototype."
+    },
+    {
+      "source": "C:\\Users\\陈大仙\\Desktop\\Asset\\聚光灯草案\\part2\\hona\\房子场景拆件2.png",
+      "resource": "Assets/HabitatIsland/Resources/Art/Artist/HarborParts.png",
+      "size": [
+        3909,
+        2480
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "1cd35a5826bec57da3652f8b2ad008f3c93a02837090991e726b2dbda05e0fe0",
+      "project_sha256": "1cd35a5826bec57da3652f8b2ad008f3c93a02837090991e726b2dbda05e0fe0",
+      "identical_bytes": true,
+      "active_in_runtime": true,
+      "selection_note": "Reusable subject selected for the current habitat prototype."
+    },
+    {
+      "source": "C:\\Users\\陈大仙\\Desktop\\Asset\\聚光灯草案\\part2\\hona\\房子场景.png",
+      "resource": "Docs/SourceEvidence/UnusedLegacy/Harbor.png",
+      "size": [
+        3909,
+        2480
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "9fe7c0ed987479c42e2274e504cdb14031b912a4b5850498b3d827a8fee62200",
+      "project_sha256": "9fe7c0ed987479c42e2274e504cdb14031b912a4b5850498b3d827a8fee62200",
+      "identical_bytes": true,
+      "former_resource": "Assets/HabitatIsland/Resources/Art/Artist/Harbor.png",
+      "active_in_runtime": false,
+      "selection_note": "Whole harbor illustration belongs to previous plan; archived outside Assets and excluded from build."
+    },
+    {
+      "source": "C:\\Users\\陈大仙\\Desktop\\Asset\\聚光灯草案\\part1\\vinda\\怪物草案.jpg",
+      "resource": "Assets/HabitatIsland/Resources/Art/Artist/Creatures.jpg",
+      "size": [
+        3058,
+        1280
+      ],
+      "mode": "RGB",
+      "alpha_range": null,
+      "sha256": "890d0cd3403d6f5329c46bca90b72483a206a9f0b1cacc7b607d35a3e32135cd",
+      "project_sha256": "890d0cd3403d6f5329c46bca90b72483a206a9f0b1cacc7b607d35a3e32135cd",
+      "identical_bytes": true,
+      "active_in_runtime": true,
+      "selection_note": "Reusable subject selected for the current habitat prototype."
+    }
+  ],
+  "active_art_count": 5,
+  "archived_art_count": 1,
+  "excluded_archives": [
+    {
+      "path": "Docs/SourceEvidence/RetiredAI",
+      "reason": "Previous AI HeroIdle PNG and meta files moved outside Assets; not loaded or packaged.",
+      "files": [
+        "HeroIdle_00.png",
+        "HeroIdle_00.png.meta",
+        "HeroIdle_01.png",
+        "HeroIdle_01.png.meta",
+        "HeroIdle_02.png",
+        "HeroIdle_02.png.meta",
+        "HeroIdle_03.png",
+        "HeroIdle_03.png.meta"
+      ]
+    },
+    {
+      "path": "Docs/SourceEvidence/UnusedLegacy",
+      "reason": "Unused whole-harbor illustration and meta moved outside Assets; not loaded or packaged."
+    }
+  ],
+  "last_verified_date": "2026-10-13",
+  "runtime_display_settings": {
+    "raster_files_modified": false,
+    "texture_import": {
+      "npot_scale": "None",
+      "maximum_size": 4096,
+      "compression": "Uncompressed",
+      "mip_maps": false,
+      "filter": "Bilinear"
+    },
+    "white_background_art": "Shader alpha coverage with partial edge white-matte suppression; front-only annotation UV mask.",
+    "boat": "Original alpha retained; no white key.",
+    "water": {
+      "original_texture_weight": 0.1,
+      "base_tint_weight": 0.9,
+      "wrap": "Mirror",
+      "world_repeat_size": [
+        30,
+        16.46
+      ]
+    }
+  }
+}

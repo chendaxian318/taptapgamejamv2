@@ -1,0 +1,79 @@
+音效素材接入记录 — 2026-10-16
+
+一、范围与来源
+用户要求判断两份音效是否适合，适合则接入。接入海浪鸟鸣环境音和五个 UI 音效；没有导入整包 100 个音效。
+所有路径除明确写出的原始下载来源外，均相对本 Unity 工程根目录。运行时不依赖 Downloads 或本机绝对路径。
+资源文件均保持原始字节，未裁剪、重采样、增益归一或离线制作循环。
+.meta 由 Unity 导入器生成，本次资源复制不手写音频 .meta。
+
+原始来源（仅溯源记录，不是运行依赖）：
+C:\Users\admin\Downloads\kenney_interface-sounds.zip
+C:\Users\admin\Downloads\mixkit-sea-waves-with-birds-loop-1185.wav
+
+Kenney ZIP SHA-256: f2193d072726d6758a5f7871b2dcc54dcce0d5c35c6f0a62f92549b327c81232
+Mixkit WAV SHA-256: 1be7aa7dcd7d8dd8fec5a30dc27c5acd9d6279a89fd98a31123d90db4035b900
+
+二、资源映射及逐文件 SHA-256
+Audio/click_003.ogg → Assets/HabitatIsland/Resources/Audio/UI/Click.ogg
+  Resources.Load 路径：Audio/UI/Click
+  SHA-256: 2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292
+  44100Hz，1声道，0.01秒，峰值-1.36dBFS，RMS-16.02dBFS
+Audio/maximize_008.ogg → Assets/HabitatIsland/Resources/Audio/UI/Open.ogg
+  Resources.Load 路径：Audio/UI/Open
+  SHA-256: 57c074e600e193a303ce781c04c0ccc191c6030f9f106594fd94a65e55435c17
+  44100Hz，1声道，0.2254秒，峰值-0.91dBFS，RMS-12.71dBFS
+Audio/minimize_008.ogg → Assets/HabitatIsland/Resources/Audio/UI/Close.ogg
+  Resources.Load 路径：Audio/UI/Close
+  SHA-256: bc14c17875436dcaaf809c25db5e61454dbc35612880f329ff37a95ef9b6a865
+  44100Hz，1声道，0.2254秒，峰值-0.94dBFS，RMS-12.73dBFS
+Audio/confirmation_004.ogg → Assets/HabitatIsland/Resources/Audio/UI/Confirm.ogg
+  Resources.Load 路径：Audio/UI/Confirm
+  SHA-256: 568967a3d9f8a8f6af54ea01729c4882284308f2a27d78c07ffd7ee0d6951661
+  44100Hz，1声道，0.4904秒，峰值-0.91dBFS，RMS-11.78dBFS
+Audio/error_005.ogg → Assets/HabitatIsland/Resources/Audio/UI/Error.ogg
+  Resources.Load 路径：Audio/UI/Error
+  SHA-256: 3f75b11df5b06d68d2c25fbf0e9c9d9e7dd9250562a4007ee34856b8a309a2ae
+  44100Hz，1声道，0.5秒，峰值-0.96dBFS，RMS-18.74dBFS
+mixkit-sea-waves-with-birds-loop-1185.wav → Assets/HabitatIsland/Resources/Audio/Ambience/SeaWavesBirds.wav
+  Resources.Load 路径：Audio/Ambience/SeaWavesBirds
+  SHA-256: 1be7aa7dcd7d8dd8fec5a30dc27c5acd9d6279a89fd98a31123d90db4035b900
+  44100Hz，16bit PCM，双声道，38.0415秒；峰值 -0.09dBFS，RMS -21.50dBFS。
+
+三、适配判断及技术检查
+本次筛选基于文件可解码性、时长、音量、频谱和起止包络，没有把这些检查表述为主观试听。
+Kenney 全包 100 个 OGG 均成功解码。选中的五个文件没有接近或超过满幅的样本。
+点击选短促 click_003；面板使用 maximize_008/minimize_008，约225毫秒、频谱重心约377Hz，选用低音量以保持轻柔反馈。
+确认 confirmation_004 和无效操作 error_005 的起止包络较平滑，用于离散结果提示；不用于持续循环。
+不优先采用 open/close_00x：其频谱重心约10–12kHz；error_002/pluck_001 存在 OGG 解码瞬时峰值超过0dBFS，未采用。
+海浪鸟鸣的题材适合海岛背景；其原文件未出现满幅样本，首尾非静音，拼接最大样本跳变约0.02109。
+环境音由中央音频服务在运行时进行等功率交叉淡化循环；首次播放淡入1秒，循环重叠1.2秒，避免直接硬拼接。默认环境音量25%、操作提示50%，各提示音另有较低增益。
+所有 UI 音源应为2D；环境音保留立体声，不随主角与场景位置变化衰减。
+
+四、许可
+Kenney ZIP 内 License.txt 明确为 Creative Commons Zero (CC0)，允许个人、教育和商业项目，署名非必需。原文保存于 Assets/HabitatIsland/AudioSources/Kenney-LICENSE.txt。
+海浪鸟鸣由用户提供，来源名为 Mixkit；不将 Kenney 的 CC0 声明套用到该 WAV。原始 WAV 本身未附许可文本。
+
+五、运行时接入
+Assets/HabitatIsland/Scripts/HabitatAudio.cs：独立持久化单例，两条2D环境音源、一条2D提示音源，不新增AudioListener。主地图与HarborPrototype均Ensure，切关/重开不会重建音源。环境声跟随DSP时间，生态暂停时保持播放。
+启动、禁用再启用与音频配置变动都重新淡入；Streaming音频被Stop释放为Unloaded时，StartAmbience再次LoadAudioData并等待Loaded，避免恢复后无声。
+同一帧只播放最高优先级提示：错误 > 确认 > 打开/关闭 > 点击；同级使用最后请求，同一提示60毫秒内不重复。
+HUD/独立船只选关/码头按钮接点击；主HUD面板接打开与关闭；真实Mutate结算成功后按结果发确认/点击，失败发错误；钓鱼开始/取消/脱钩也有提示。规则层、候选预演与生态Tick不发音效。
+设置 → 声音设置：分别±5%调整环境/操作音量，全部静音，试听提示音。配置存PlayerPrefs的HabitatIsland.Audio.Ambience、Effects、Muted，独立于游戏存档；禁用、应用暂停、退出时Save。
+Assets/HabitatIsland/Editor/HabitatAudioImporter.cs只处理Resources/Audio子树。环境声保留双声道、采样率，Vorbis质量0.7、Streaming、后台加载；UI单声道、PCM、DecompressOnLoad。原始文件保持不变，移动工程后重导入可复现配置。
+
+六、复核与限制
+完整技术分析：Logs/audio-20261016/inspection/analysis.json。
+来源和哈希清单：Docs/SourceEvidence/Audio20261016/manifest.json。
+原包保留在用户 Downloads；工程仅带运行所需六个音频及 Kenney 许可。
+素材检查与Unity运行验证分开记录；不将信号检测称为主观试听或完整游戏通关。
+
+2026-10-16 本轮Unity 6000.6.5f1实测：
+- 项目重新编译完成，compilationFailed=false，errors为空；最终控制台cursor160→185新增error为空，实时consoleErrors=0、consoleWarnings=0。历史聚合中的一条error为早先工具截图路径错误，不属于本次音频运行错误。
+- AgentScripts/AudioRuntimeChecks.cs 在实际Play中通过33项，状态PASS、restored=true。测试开始前跳过开场、暂停生态；测试结束恢复原始状态/撤销/各岛记录/镜头/暂停及音量偏好，不写玩家游戏存档。
+- 六个clip加载有效；界面实际PointerClick回调覆盖进入/返回、两路加减、静音/取消静音、试听。GetOutputData检测到提示音输出peak=0.112。
+- 禁用后再启用成功，反复Ensure保持一个服务、三条音源、一个AudioListener。首次测试定位到Streaming数据停止后卸载，修复StartAmbience重新加载后重跑全部通过；旧失败记录仅保留为诊断历史。
+- 未拖动播放位置、未缩短素材，观察到完整约38秒自然循环。采样2203帧，72帧交叉重叠，两源增益平方和误差最大7.451E-09；初次淡入之后没有两条环境音源同时为零的帧。实际环境输出peak=0.177，DSP及样本位置持续推进，而暂停生态JSON保持一致。
+- LoadLevel及RestartCurrentLevel保留同一音频对象和音源，环境声继续；测试后偏好值及键是否存在均恢复。
+- 人工查看Logs/audio-20261016/audio-settings.png，中文文字、两组控制、底部三个按钮清晰，无遮挡。
+最终运行记录：Logs/audio-20261016/runtime.txt；修复前诊断：Logs/audio-20261016/runtime-before-streaming-reload-fix.txt。
+未做主观听感试听、物理扬声器检查、硬件设备热插拔/系统休眠及完整关卡通关。本次音频改动不改生态规则。

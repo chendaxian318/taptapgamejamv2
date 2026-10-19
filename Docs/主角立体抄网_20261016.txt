@@ -1,0 +1,21 @@
+主角立体抄网修复（2026-10-16）
+
+用户反馈：主角的网是平的，应像商店老板一样有立体网兜。
+原因：主剧情和独立码头旧后备模型用同一平面内的方条构造网格。
+
+资源：Assets/HabitatIsland/Art/LandingNet/LandingNet.glb
+运行预制体：Assets/HabitatIsland/Resources/Models/Story/LandingNet.prefab
+从用户提供的店员原始 GLB 分离木框和编绳网兜，保留原 UV/PBR 贴图；修整被手套遮盖的柄端、封口并延长为主角握柄。店员原模型不变。
+预制体宽约0.689、高1.353、深0.559单位；剧情按角色既有比例缩放。握柄局部原点，网口沿+Y。静态刚性道具，无需独立蒙皮骨架。
+
+主剧情使用既有 Resources 加载入口。HabitatLandingNetGrip 在角色动画后跟随右手，适配镜像手侧；网兜朝前并向外倾斜，收网旋转/显隐仍由原 Timeline 控制。
+独立 HarborPrototype 仅替换旧 netRoot 子物体，不重建码头或 Timeline；重复绑定不叠加模型。
+编辑器重建入口：Tools/Habitat Island/Art/Prepare Landing Net。通过 AssetDatabase/PrefabUtility 生成预制体，不手写 YAML。
+
+验证：Verification/landing-net-20261016/checks.txt、import.txt 和 player-net-front/side.png。
+运行检查覆盖真实主场景资源加载、网兜深度、材质、无新增碰撞体、手部挂点误差小于2mm、收网中段旋转、93%后隐藏、去商店隐藏、重复采样恢复，以及旧独立码头网的定点迁移/幂等性。
+AgentScripts/LandingNetChecks.cs 是本机验证工具；需要主场景 Play 和 AssetWork 内的本轮临时进度快照。不是生产运行依赖。
+验证过程中不调用 Skip/Complete 发奖励，不构建 EXE。不是全关卡通关验证。
+回退：ChangeBackups/20261016_LandingNet 保留本轮修改前的主剧情/独立码头脚本。原始模型、其他模型及其 GUID 均保留。
+
+补充动态实测：自然播放归航→收网→去商店，115次可见手部采样，最大握柄偏差0.000003357m；取消后鱼/虾/天数/关卡不变。Unity最终编译成功、当前Console错误0/警告0。证据：Verification/landing-net-20261016/moving-grip.txt。

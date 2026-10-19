@@ -1,0 +1,31 @@
+寄居蟹与 UI 接入记录 — 2026-10-16
+
+一、本轮交付
+1. 地图寄居蟹改为美术交付的 HermitCrab_GameReady.glb；保留 PBR 材质、4K 色图、27 骨骼和原比例。实际资源为 36,645 三角面。
+2. Idle 待机 / Walk 行走 / Startle 受惊由真实视觉移动及邻虾惊退触发。RootMotion 关闭，不由动画移动逻辑格子。取消、撤销、换图恢复待机。第三关胜利还须等受惊动作结束及居民到位。
+3. 本模型仅有上述三段动画；Startle 不是“完整出壳/产壳”动画，本轮没有将它冒充出壳。
+4. UI 新包草稿1016.rar 内是五张 8000×4500 RGBA 界面图和一张 1067×1067 特殊指针。原件完整保存 Docs/SourceEvidence/UIExport20261016。游戏用原图 UV 区域绘制 Logo、菜单字样、彩色箭头、六目的地标签、关内菜单及提示装饰；不是整张截图覆盖游戏。
+5. 正式菜单有新游戏、读取现存档、声音设置、特别收录（禁用并标待开放）、退出确认。界面 1→2 接 2.8 秒 Logo 缩放位移、装饰消隐、菜单错峰渐显；鼠标点击/空格/回车/Esc 可跳过；跳过当帧不能误触新游戏；返回设置不重播。
+6. 用户确认美术封面仍在制作，当前菜单保留白底。已准备可选 Resources/UI/Delivered/MainCover 纹理入口与双向高斯模糊，正式封面到货后接入。未用沙滩照片代替主菜单封面。模糊 shader 已用一次性测试纹理验证，不存在已交付封面效果的实测结论。
+7. 用户指定的沙滩网图已作为选关界面背景（MapBeach.jpg），保留比例铺满并居中裁切；关卡卡片、描述和反馈有清晰底板。六正式岛及可选教学保持原入口，点击卡片仅选择，点击出海才走原旅行流程；CLEAR 仅按真实 won 显示。
+8. 特殊指针采用独立透明 PNG，主三角尖端为热点，最上层 Canvas 不接收射线。游戏窗口失焦/停用/退出播放恢复原系统指针；不会隐藏编辑器或桌面指针。
+
+二、资源与入口
+- 原蟹：聚光灯草案/part3/vinda/寄居蟹/3d/02_游戏用成品/HermitCrab_GameReady.glb。
+- 游戏蟹：Assets/HabitatIsland/Art/HermitCrab；Resources/Models/HermitCrab/HermitCrab.prefab。
+- 编辑器重建：Tools/Habitat Island/Art/Prepare Delivered Hermit Crab。
+- UI 原件：Docs/SourceEvidence/UIExport20261016/草稿1016（保留8K原图）；旧1–5截图仍保留 Art/UIReferences/20261016。
+- 运行时 UI：Assets/HabitatIsland/Resources/UI/Delivered。8K导出图导入上限4096、无压缩、保留alpha、Trilinear+MipMaps防缩小锯齿；特殊指针上限1024，沙滩原图1280×2276。原 PNG 字节不变。
+- 新 UI 控制：HabitatHud.DeliveredUI / HabitatMenuEntrance / HabitatDeliveredArt / HabitatUiBackdrop / HabitatSpecialPointer。地图组件沿用 HabitatMapSelectionPanel。
+- 正式封面之后放在 Resources/UI/Delivered/MainCover.png（或同名其他支持格式，只保留一个同名资源），设置Clamp、合适最大尺寸；重新进入Play会自动载入，需要再对实际构图和模糊强度检查。
+- 不改动场景布局/地形/宝箱/出生点，不重建主场景，无本轮EXE构建。
+
+三、本轮验证
+- AgentScripts/CrabUiChecks.cs：54条通过（返回值53，最后一条持久存档检查写在finally中）。包括真实骨骼采样、三动画/循环标志、取消/重做/撤销、菜单设置往返、选关只选择、CLEAR真实性及布局。
+- AgentScripts/DeliveredUiChecks.cs：最终25条通过（返回值24，同上）；此前窗口聚焦分支26条通过，验证实际自定义指针显示、热点和系统指针恢复。最终窗口失焦分支验证保留系统指针。覆盖自然过渡、跳过、按钮射线、图像比例、shader采样及存档不变。
+- AgentScripts/FormalCompletionRuntime.cs Third：35步真实控制器可行路线通过，待动画与位置到位后通关，撤销撤回通关；沿用原前置鱼竿/背篓和暂停生态测试，不是策划尚未提供的标准解法，也不是四关完整主线验收。
+- 截图与日志：Verification/crab-ui-20261016；第三关路线记录：Verification/formal-completion-20261016/runtime-7.txt。
+- 测试不写用户最新存档；工程开始时处于编辑模式，结束时恢复编辑模式。
+
+四、仍需素材
+正式封面尚未交付；寄居蟹完整出壳动画仍不在本次交付模型内。海鸟、其他未在本轮范围的素材/功能保持原状态，不计为本轮完成。

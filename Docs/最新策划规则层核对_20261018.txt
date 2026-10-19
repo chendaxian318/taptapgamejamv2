@@ -1,0 +1,58 @@
+最新策划规则层核对与实现（2026-10-18）
+
+来源：C:\Users\admin\Downloads\Untitled.pdf。
+阅读证据：Docs/SourceEvidence/Plan20261018/rules-detail.png；其余流程与解法由主任务及剧情子任务核对。
+仅修改规则和纯规则测试；未启动 Unity、未修改场景、未构建 EXE。
+
+确认版规则范围
+- HabitatRules.UsesConfirmedPlan 以 HabitatMechanicLevels.Contains 为入口；旧练习图不套新动物条件。
+- 背篓取得后可抱虾；抱虾不能推箱。按最新解法，正式关虾在合法两栖落点或背篓携带时满足自身条件，不再使用旧练习图的“3格活动区域、独处”要求。虾对其他物种的驱赶仍存在。
+- 金鱼被主动靠近的虾驱赶最多两格，逐格检查水域与障碍，不穿过阻挡。其他动物保留一格驱赶。
+- 水母由鱼竿在三格以内牵引一格；正式关不再用鱼竿牵引金鱼。
+- 正式关鱼/水母捕捞必须已通关且当前环境仍适宜。首只立即可捕，保留亲本，以 Animal.catchClaimed 标记防止重复领取；随后必须有实际繁衍产生的 offspring 才能再次捕。首次捕捞不会吞掉既有 offspring。
+- 第一关特制竿/2鱼200的门禁与交付由 HabitatChapterRules 统一负责；已完成岛重访刷新由旅程层负责。
+- 寄居蟹适居后生成一次可拾取蟹壳，Animal.shellShed 保持于岛屿/存档，拾壳优先于“不能抱蟹”的交互。壳与道路/潮汐等底层机关共存，不覆盖掉机关；如脚下是不可容纳的新物体，待可容纳位置再生成。
+- TryShedCrabShell 为公共事件入口，Tick 可调用；主控制器也可在视觉全部到位后的完成检查调用。视觉根据 shellShed 响应。
+- 已通关岛屿携带的虾可 StoreCarriedShrimp，一次转为可售渔获，从地图移除该本体防止重复出售；通关前拒绝，正常抱虾移动不受影响。
+
+经济与共享 API
+- HabitatRules.ShopPrice(state,item)：正式商店木箱150、风箱200、铲子300、磁铁300、发射器400。商店门禁由 ChapterRules.CanBuyItem 处理。
+- 铲子/磁铁/发射器真实购入各自库存，失败不扣币；木箱依然进船舱，上限3。
+- CatchSellPrice：金鱼100、虾150、蟹壳200、水母300。
+- CatchSaleValue 统一计算界面/出售总价，含可出售携虾；Shop sell 清空实际出售库存，增加实际收入，记录 deliveredShells；不能重复结算。
+- 新 HabitatState 字段：jellyfish、deliveredShells、campaignUnlockedStage、campaignBriefedMask、seenGuideKeys。规则Clone深拷贝全部；旅程共享/归一化由剧情任务接入。
+- Animal 新字段 shellShed / catchClaimed 由Clone深拷贝，Unity JSON 自动保存在岛屿状态。
+
+本次验证
+- AgentScripts/RunLatestPlanRuleChecks.ps1：66项（背篓、携虾、两格惊退边界、牵引范围、一次出壳、重复拾取、共享价格、真实收费、库存失败保护、捕捞首次/后代、不可重复出售与Clone）。
+- HabitatModelChecks：51项；HabitatAuthoredRuleChecks：41项。旧练习规则、攀爬、推拉、经济和生态相关回归通过。
+- 报告：Verification/latest-plan-20261018/rules.txt、legacy-rule-regression.txt。
+- 这是受控纯规则验证，不等于运行时动画、正常五关标准解或最终交付全部通过。
+
+新增地图核验：
+- 第1至第5关策划图示最终态全部通过同时适居检查；第5关发射器及磁铁+加购箱两版分别检查。使用图示终态赋值，仅验证规则与终态不矛盾，不作为路线证明。
+- 第一关从原出生点65次合法操作：原3箱+1浮箱、真实取得竿、封闭鱼池；首次鱼1+真实18.1秒生态再生鱼1。
+- 第二关97次合法操作：前关200币实际购风箱，原箱/浮箱，真实开背篓、携虾两格驱鱼、实际Fans载人渡水、下岛封池，所有3只居民同时适居。
+- 第一二关为程序找到的替代合法路线，生态移动暂停，非PDF箭头标准解逐步演出。没有给地图注入地形、箱子或动物。
+- RunLatestPlanMapChecks.ps1与Verification/latest-plan-20261018/map-routes.txt包含完整证据，route-source-hashes.json固定本次源版本。
+- 二次看图发现第5关源第8行x6应为蓝水，主任务已按原图纠正。
+
+
+
+真实游戏时长（新增 2026-10-18）
+- HabitatState.playSeconds 是旅程共享的真实活跃游玩秒数，独立于 elapsed、生态暂停和速度倍率。
+- SessionStarted + 前台活跃游戏时累加 unscaledDeltaTime；启动/暂停/设置/存档/退出菜单及后台不计；背包、图鉴、商店、钓鱼与实际解谜仍计。
+- 新游戏与读档显式 Reset；旧存档无字段为0，不用生态时间估算。游戏中Undo、Cancel和候选动作提交不能倒退已花的真实时间。
+- 新纯类 HabitatPlayClock 以双精度累加、float字段保存，避免每帧输出float再读回导致累积误差。
+- GetSaveSlotInfo仅取当前共享playSeconds，不再把已访岛屿elapsed相加。
+- AgentScripts/RunPlayTimeChecks.ps1 17项通过，覆盖新/旧档、失活、不合法时间、候选提交、撤销、旅程、不双计、新游与读档重置、长时间精度。前台/菜单实时接线需根任务在Unity验证。
+
+第二关默认动物移动补测（2026-10-18，覆盖上面的97步局限）
+- 原97步路线只在 animalMovement=false 下成立；默认移动打开时，风箱航行中的下方金鱼会游到原定最后封口格，原路线在该格放箱失败。因此原路线不能再当作默认玩法通过证据。
+- 新103步路线保持默认 animalMovement=true。渡水后先用下岛箱封左侧缺口，再取回已获得的大虾，从金鱼下方靠近，合法驱赶金鱼回上方水格，放下虾，再完成封口。
+- 全程从原出生点操作；只有前一委托的200币与钓竿作为前置，真实购买风箱、真实打开背篓宝箱，未改地图、未新增箱子或动物、未赠消耗品。
+- 单次 Tick(10.1) 与生产控制器 AdvanceSimulation 的精确分段算法均生成同一103步路线；从导出JSON独立重放两次也通过，并对比玩家、随机种子、移动周期、所有道具与动物位置/繁衍进度一致。
+- 生态在手动操作间暂停、只有风箱渡水显式推进10.1秒；这属于玩家可用的暂停玩法，并未关闭动物移动。不是默认持续运行且任意操作速度都成功的证明，也不冒充PDF标准箭头路线。
+- 可复跑：AgentScripts/RunSecondDefaultMovementChecks.ps1。
+- 路线：Verification/latest-plan-20261018/second-default-route.json。
+- 报告/源码哈希：second-default-movement.txt、second-default-source-hashes.json（同目录）。生产Unity控制器的真实动画与到位检查由主任务另行执行。

@@ -1,0 +1,63 @@
+--- Assets/HabitatIsland/Scripts/HabitatGame.cs
++++ Assets/HabitatIsland/Scripts/HabitatGame.cs
+@@ -83,10 +83,11 @@
+             UpdatePlayTime();
+             HandleInput();
+             TickUtilityPresentation();
++            TickChestPresentation();
+             if (recovering) AdvanceRecovery(Mathf.Min(Time.unscaledDeltaTime,.08f));
+             if (!Busy && !paused && !Hud.ModalOpen && !Fishing.IsOpen) AdvanceSimulation(Mathf.Min(Time.unscaledDeltaTime, .1f) * speed);
+-            View.Render(pendingState != null && !recovering && !utilityDigPending ? pendingState : State, tuning, overlays);
+-            if (pendingState != null && !recovering && View.GridStepComplete && utilitySeconds<=0)
++            View.Render(pendingState != null && !recovering && !utilityDigPending && !ChestOpening ? pendingState : State, tuning, overlays);
++            if (pendingState != null && !recovering && !ChestOpening && View.GridStepComplete && utilitySeconds<=0)
+             {
+                 bool resumeSimulation=pendingSimulation;
+                 CommitPending(); pendingState = pendingBefore = null; pendingSimulation=false;
+@@ -385,6 +386,7 @@
+ 
+         public void CancelPendingAction()
+         {
++            FinishChestPresentation();
+             FinishUtilityPresentation();
+             HabitatAudio.ClearTransient(); harborStepDistance=0f;
+             ResetChapterPresentation();
+@@ -471,6 +473,10 @@
+                 return;
+             }
+             GetTarget(out int x, out int z);
++            if (tool==0 && State.carryingProp==PropKind.None && State.carryingAnimal<0
++                && HabitatRules.TileAt(State,x,z)?.prop==PropKind.Chest
++                && !State.animals.Exists(a=>!a.carried&&a.x==x&&a.z==z))
++            { BeginChestAction(x,z); return; }
+             if (tool==0 && State.carryingProp==PropKind.None && State.carryingAnimal<0 && HabitatRules.IsRecoveryTarget(State,x,z))
+             { BeginRecovery(x,z); return; }
+             switch (tool)
+--- Assets/HabitatIsland/Scripts/HabitatView.cs
++++ Assets/HabitatIsland/Scripts/HabitatView.cs
+@@ -542,6 +542,13 @@
+             Box("South", p, new Vector3(0, .005f, -half), new Vector3(width, .017f, stroke), m);
+             Box("East", p, new Vector3(half, .005f, 0), new Vector3(stroke, .017f, width), m);
+             Box("West", p, new Vector3(-half, .005f, 0), new Vector3(stroke, .017f, width), m);
++        }
++
++        public HabitatChestVisual ChestVisualAt(int x,int z)
++        {
++            if(state==null||tiles==null||!HabitatRules.Inside(state,x,z))return null;
++            Transform prop=tiles[x+z*state.width].prop;
++            return prop?prop.GetComponent<HabitatChestVisual>():null;
+         }
+ 
+         Transform BuildProp(Transform parent, PropKind kind, float y, int rotation)
+@@ -629,10 +636,7 @@
+                         Sphere("Shell ridge", p, new Vector3(rib * .085f, .23f, .02f), new Vector3(.035f, .035f, .34f - Mathf.Abs(rib) * .05f), materials["yellow"]);
+                     break;
+                 case PropKind.Chest:
+-                    Box("Treasure box", p, new Vector3(0, .2f, 0), new Vector3(.64f, .38f, .48f), materials["wood"]);
+-                    Sphere("Rounded lid", p, new Vector3(0, .4f, 0), new Vector3(.65f, .30f, .48f), materials["woodLight"]);
+-                    for (int i = -1; i <= 1; i += 2) Box("Gold brace", p, new Vector3(i * .23f, .25f, -.25f), new Vector3(.065f, .46f, .03f), materials["yellow"]);
+-                    Box("Lock", p, new Vector3(0, .30f, -.27f), new Vector3(.12f, .14f, .05f), materials["yellow"]);
++                    p.gameObject.AddComponent<HabitatChestVisual>().Build(materials["wood"],materials["woodLight"],materials["yellow"],materials["dark"]);
+                     break;
+             }
+             return p;

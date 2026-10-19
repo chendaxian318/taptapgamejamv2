@@ -1,0 +1,30 @@
+码头房屋前楼梯移除（2026-10-15）
+
+用户截图指定的是大屋前、花盆右侧的小楼梯。现已删除台阶和两侧斜撑，补齐平整木甲板。
+
+资源：
+- 原始 Assets/HabitatIsland/Art/WoodenDock/WoodenDock.glb 原样保留。
+- 游戏使用同目录 WoodenDock_NoStairs.glb，39,025 三角形。
+- 修改版移除原网格 288 个三角形，补入 24 个三角形（含边界裁切保留面和木板）。
+- 原顶点/法线/UV 数组和两张嵌入图片保留；周边跨界大面只裁切楼梯范围。
+- 修补范围为原 glTF X=[.234,.378]，Z=[-.338,-.201]，木板顶 Y=-.0748。
+- 新木板 UV 重新映射到原图集中干净的木板区域，不沿用楼梯纹理和阴影；底层补面封闭板缝。
+- Unity 继续使用独立 Real-ESRGAN 8K 颜色图，粗糙度图保留。未重新生成或重排整个图集。
+
+Unity 接入：
+- HabitatWoodenDockSetup.Source 改为修改版，OriginalSource 保留原资源路径。
+- Resources/Models/WoodenDock/Harbor.prefab 已通过 Unity API 更新，保留原 prefab GUID。
+- HarborPrototype 场景中的序列化模型及 MeshCollider 已换成修改版，不重建 Timeline、玩家或场景。
+- 主地图运行时读取同一 Harbor.prefab。
+- HabitatImportedDockLayout 仅移除楼梯对应的局部绕行边界，房屋/花盆/水域限制保留。
+
+本次验证：
+- Blender 正面和俯视渲染检查，台阶删除，补面无原先的裂口。
+- Unity 编译及资源引用检查。
+- 255 个贴近地面的射线点检查补面连续性；采样高度约 -0.0748。
+- 33 个路径点检查角色净空，另 33 个点通过 HabitatMapHarbor 实际地面采样逻辑，使用游戏 .7 倍缩放。
+- 房屋内部及平台外水域仍被阻挡。没有把完整关卡或 Timeline 重测列为本次通过项。
+- 检查脚本 AgentScripts/DockStairsChecks.cs；报告 Logs/dock-stairs-20261015/。
+
+此前生成的 Windows EXE/ZIP 未重新构建，不含这次模型变更。
+若需回退，将 Source 切回 OriginalSource、恢复局部旧行走轮廓，并通过 Unity API 重新绑定 prefab/场景网格。

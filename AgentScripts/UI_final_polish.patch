@@ -1,0 +1,101 @@
+--- D:\chatgptproject\taptapgamejam\HabitatIsland3D\Assets\HabitatIsland\Scripts\HabitatHud.Batch2.cs
++++ D:\chatgptproject\taptapgamejam\HabitatIsland3D\Assets\HabitatIsland\Scripts\HabitatHud.Batch2.cs
+@@ -18,7 +18,8 @@
+   readonly List<RawImage> shopImages=new List<RawImage>();readonly List<GameObject> shopFallbacks=new List<GameObject>();
+   readonly Species[] saleSpecies={Species.Goldfish,Species.Shrimp,Species.Crab,Species.Jellyfish};
+   readonly string[] saleNames={"普通鱼","龙虾","蟹壳","水母"},saleIcons={"Goldfish","Shrimp","Shell","Jellyfish"};
+-  bool shopSelling,purchaseSelling;Species purchaseSpecies;TMP_Text purchaseHeading;
++  bool shopSelling,purchaseSelling;Species purchaseSpecies;TMP_Text purchaseHeading,shopModeLabel,shopSwitchLabel;
++  RectTransform bookPageProgress;readonly Graphic[] bookPageDots=new Graphic[6];
+   readonly string[] shopNames={"风箱","木箱","铲子","磁铁","发射器","出售渔获","土块","漂浮板","潮汐机关","钓竿","虾笼"};
+   readonly string[] shopIcons={"Bellows",null,"Shovel","Magnet","Cannon","Goldfish",null,null,null,"Rod","Trap"};
+   readonly Color ocean=new Color32(41,157,180,255),foam=new Color32(111,215,187,255),deepSea=new Color32(14,76,98,255);
+@@ -111,9 +112,9 @@
+    var p=Skin(shopPanel,new Vector2(1440,810),"");
+    Shape(p,"Shop backdrop",0,0,1440,810,new Color32(153,165,160,245),0);
+    HabitatUiAssets.Icon(p,"Shopkeeper",new Vector2(-100,-24),new Vector2(850,850));
+-   Ribbon(p,"ShopBuy","BUY",88,-58,258,aqua);Text(p,"[买入]",17,deepSea,new Vector2(91,-30),new Vector2(120,30));
++   Ribbon(p,"ShopBuy","BUY",88,-58,258,aqua);shopModeLabel=Text(p,"[买入]",17,deepSea,new Vector2(91,-30),new Vector2(120,30));
+    Ribbon(p,"ShopSold","SOLD",215,-330,245,blue);
+-   TextButton(p,"切换为出售",215,-380,240,()=>SetShopSelling(true),19).name="Sell delivered catch";
++   var tradeToggle=TextButton(p,"切换为出售",215,-380,240,()=>SetShopSelling(!shopSelling),19);tradeToggle.name="Sell delivered catch";shopSwitchLabel=tradeToggle.GetComponentInChildren<TMP_Text>();
+    var buyTab=TextButton(p,"",88,-58,258,()=>SetShopSelling(false));buyTab.name="Shop buy tab";
+    var sellTab=TextButton(p,"",215,-330,245,()=>SetShopSelling(true));sellTab.name="Shop sell tab";
+    Text(p,"今日\n特供",62,Color.white,new Vector2(497,-84),new Vector2(130,410),TextAlignmentOptions.Center);
+@@ -182,7 +183,7 @@
+    var track=Box(title+" slider",p,new Vector2(0,1),new Vector2(0,1),new Vector2(175,y),new Vector2(262,28),Color.clear,true);
+    Shape(track,"White scale",0,-12,262,6,Color.white,3);
+    var handle=Box("Handle",track,new Vector2(0,.5f),new Vector2(.5f,.5f),Vector2.zero,new Vector2(30,40),Color.clear);
+-   HabitatUiMotif.Add(handle,new Vector2(6,-7),new Vector2(22,23),red);
++   var marker=HabitatUiMotif.Add(handle,Vector2.zero,new Vector2(22,23),red);marker.anchorMin=marker.anchorMax=marker.pivot=new Vector2(.5f,.5f);marker.anchoredPosition=new Vector2(0,-1);
+    var slider=track.gameObject.AddComponent<Slider>();slider.handleRect=handle;slider.targetGraphic=handle.GetComponent<Image>();slider.minValue=0;slider.maxValue=1;slider.onValueChanged.AddListener(v=>change(v));return slider;
+   }
+   void BuildCreatureBook()
+@@ -206,12 +207,20 @@
+    bookName=Text(p,"",26,deepSea,new Vector2(1050,-180),new Vector2(340,85),emphasis:true);
+    bookDetails=Text(p,"",22,deepSea,new Vector2(1050,-286),new Vector2(340,335));bookDetails.enableAutoSizing=true;bookDetails.fontSizeMin=19;bookDetails.fontSizeMax=22;
+    bookCounts=Text(p,"",18,deepSea,new Vector2(1045,-645),new Vector2(350,100));
+-   for(int i=0;i<6;i++){int id=i;var b=TextButton(p,new[]{"水母","龙虾","金鱼","寄居蟹","陆龟","海星"}[i],145+i*139,-735,130,()=>{bookIndex=id;RefreshBook();},18);b.GetComponentInChildren<TMP_Text>().color=deepSea;}
++   Shape(p,"Book paging rail",280,-730,480,22,new Color32(220,238,208,255),11);
++   bookPageProgress=Shape(p,"Book paging progress",280,-730,80,22,aqua,11);
++   Shape(p,"Book pager left cap",267,-724,32,34,new Color32(239,227,192,255),9);Shape(p,"Book pager right cap",741,-724,32,34,new Color32(239,227,192,255),9);
++   var prevBook=TextButton(p,"‹",310,-707,60,()=>{bookIndex=(bookIndex+5)%6;RefreshBook();},40);prevBook.name="Previous creature page";prevBook.GetComponentInChildren<TMP_Text>().color=blue;
++   var nextBook=TextButton(p,"›",678,-707,60,()=>{bookIndex=(bookIndex+1)%6;RefreshBook();},40);nextBook.name="Next creature page";nextBook.GetComponentInChildren<TMP_Text>().color=blue;
++   for(int i=0;i<6;i++){int id=i;var dot=TextButton(p,"",396+i*44,-720,32,()=>{bookIndex=id;RefreshBook();},1);dot.name="Creature page "+i;bookPageDots[i]=HabitatUiMotif.Add(dot.transform,new Vector2(10,-16),new Vector2(10,10),blue,true).GetComponent<HabitatUiMotif>();}
++   Shape(p,"Book bottom hint",170,-776,900,24,new Color32(80,122,140,245),12);Text(p,"点击生物查看资料，或用左右箭头翻页",14,Color.white,new Vector2(190,-774),new Vector2(860,27),TextAlignmentOptions.Center);
+    bookPanel.SetActive(false);
+   }
+   void OpenBook(GameObject origin=null){batchReturnPanel=origin;Open(bookPanel);RefreshBook();}
+   void RefreshBook()
+   {
++   bookIndex=Mathf.Clamp(bookIndex,0,5);bookPageProgress.sizeDelta=new Vector2(480*(bookIndex+1)/6f,22);
++   for(int i=0;i<bookPageDots.Length;i++)bookPageDots[i].color=i==bookIndex?deepSea:turquoise;
+    Species species=(Species)bookIndex;bookName.text="我叫什么 · "+new[]{"水母","龙虾","金鱼","寄居蟹","陆龟","海星"}[bookIndex];
+    string[] icons={"Jellyfish","Shrimp","Goldfish","Crab",null,null};bookImage.texture=icons[bookIndex]!=null?HabitatUiAssets.IconTexture(icons[bookIndex]):null;bookImage.material=null;bookImage.uvRect=new Rect(0,0,1,1);bookImage.enabled=bookImage.texture;
+    if(bookIndex==0&&!bookImage.texture){bookImage.texture=Resources.Load<Texture2D>("Art/CreatureSheet");bookImage.uvRect=new Rect(.012f,.66f,.14f,.34f);bookImage.material=BookWhiteMaterial;bookImage.enabled=true;}
+--- D:\chatgptproject\taptapgamejam\HabitatIsland3D\Assets\HabitatIsland\Scripts\HabitatHud.Harbor.cs
++++ D:\chatgptproject\taptapgamejam\HabitatIsland3D\Assets\HabitatIsland\Scripts\HabitatHud.Harbor.cs
+@@ -98,6 +98,8 @@
+         {
+             var s=game.State;
+             int price=HabitatRules.CatchSaleValue(s);
++            if(shopModeLabel)shopModeLabel.text=shopSelling?"[出售]":"[买入]";
++            if(shopSwitchLabel)shopSwitchLabel.text=shopSelling?"切换为买入":"切换为出售";
+             bool nearShop=s.onHarbor?game.View!=null&&game.View.Harbor.NearShop(s):HabitatRules.AtDock(s);
+             bool formal=HabitatChapterRules.IsCampaignShop(s);
+             for(int i=0;i<shopEntries.Count;i++)
+--- D:\chatgptproject\taptapgamejam\HabitatIsland3D\Assets\HabitatIsland\Scripts\HabitatMapSelectionPanel.cs
++++ D:\chatgptproject\taptapgamejam\HabitatIsland3D\Assets\HabitatIsland\Scripts\HabitatMapSelectionPanel.cs
+@@ -98,9 +98,11 @@
+                 var arrow2=HabitatUiMotif.Add(transform,new Vector2(200+col*480,-536),new Vector2(28,25),mint);arrow2.localRotation=Quaternion.Euler(0,0,-90);
+             }
+             confirmButton=Button(transform,"出海  »",new Vector2(570,-190),new Vector2(300,76),ConfirmSelection,true);confirmButton.name="Confirm destination";
+-            confirmButton.GetComponent<Image>().color=new Color32(237,93,103,255);var goLabel=confirmButton.GetComponentInChildren<TMP_Text>();goLabel.fontSize=38;
++            confirmButton.GetComponent<Image>().color=Color.clear;
++            var goRibbon=NewRect("Departure capsule",confirmButton.transform,new Vector2(0,1),new Vector2(0,1),Vector2.zero,new Vector2(300,76));goRibbon.SetAsFirstSibling();var goSurface=goRibbon.gameObject.AddComponent<HabitatUiSurface>();goSurface.color=new Color32(237,93,103,255);goSurface.Radius=38;goSurface.raycastTarget=false;confirmButton.targetGraphic=goSurface;
++            var goLabel=confirmButton.GetComponentInChildren<TMP_Text>();goLabel.fontSize=38;
+             HabitatUiMotif.Add(confirmButton.transform,new Vector2(-14,12),new Vector2(59,64),mint);HabitatUiMotif.Add(confirmButton.transform,new Vector2(-5,3),new Vector2(41,46),new Color32(65,218,58,255));
+-            Label(confirmButton.transform,"Go",19,Color.white,new Vector2(48,10),new Vector2(50,25),true);
++            HabitatUiMotif.Add(confirmButton.transform,new Vector2(43,11),new Vector2(38,38),new Color32(172,74,53,255),true);Label(confirmButton.transform,"Go",19,Color.white,new Vector2(49,8),new Vector2(31,32),true);
+             var previous=Button(header,"‹",new Vector2(1148,-187),new Vector2(46,40),()=>ChangePage(-1),false);previous.GetComponent<Image>().color=Color.clear;
+             pageLabel=Label(header,"",17,ink,new Vector2(1197,-192),new Vector2(100,40),true);pageLabel.alignment=TextAlignmentOptions.Center;
+             var next=Button(header,"›",new Vector2(1300,-187),new Vector2(46,40),()=>ChangePage(1),false);next.GetComponent<Image>().color=Color.clear;
+--- D:\chatgptproject\taptapgamejam\HabitatIsland3D\AgentScripts\PlanUiChecks.cs
++++ D:\chatgptproject\taptapgamejam\HabitatIsland3D\AgentScripts\PlanUiChecks.cs
+@@ -60,14 +60,14 @@
+    Check(Field<System.Collections.Generic.List<Button>>("shopEntries").Count(x=>x.gameObject.activeInHierarchy)==5,"formal shop shows five real goods within twelve-frame design");
+    Check((string)Call("ShopPriceText","crate")=="150 贝币 · 船舱限三箱"&&(string)Call("ShopPriceText","launcher")=="400 贝币","shop uses unified confirmed prices");
+    Check((string)Call("ShopPriceText","sell")=="合计 850 贝币","selling preview includes fish shrimp shell and jellyfish");
+-   B("Shop sell tab").onClick.Invoke();Check(Field<System.Collections.Generic.List<Button>>("shopEntries").Count(x=>x.gameObject.activeInHierarchy)==4,"SOLD switches shelf to four actual catch types");await Capture("shop-selling");
++   B("Shop sell tab").onClick.Invoke();Check(B("Sell delivered catch").GetComponentInChildren<TMP_Text>().text=="切换为买入","sale mode offers the opposite buy action");Check(Field<System.Collections.Generic.List<Button>>("shopEntries").Count(x=>x.gameObject.activeInHierarchy)==4,"SOLD switches shelf to four actual catch types");await Capture("shop-selling");
+    Call("OpenSale",Species.Goldfish);int beforeSale=g.State.coins;B("Confirm purchase quantity").onClick.Invoke();Check(g.State.fish==1&&g.State.coins==beforeSale+100,"selected one-fish sale leaves other catches unchanged");g.Undo();Check(g.State.fish==2&&g.State.coins==beforeSale,"individual sale undo restores catches and money");B("Shop buy tab").onClick.Invoke();
+    Call("OpenPurchase","shovel");Set("purchaseQuantity",2);Call("RefreshPurchase");await Capture("purchase-current");
+    int shovels=g.State.shovels,action=g.ActionCount;B("Confirm purchase quantity").onClick.Invoke();Check(g.State.coins==coins-600&&g.State.shovels==shovels+2&&g.ActionCount==action+1,"bulk purchase commits once using confirmed per-item price");
+    g.Undo();Check(g.State.coins==coins&&g.State.shovels==shovels,"bulk purchase undo restores price and item count");
+    g.Hud.ClosePanels();Call("OpenGuide",Field<GameObject>("pausePanel"));Set("guideIndex",7);Call("RefreshGuide");await Capture("guide-jellyfish");Check(Field<TMP_Text>("guideText").text.Contains("3 格"),"guide reflects confirmed three-cell jellyfish reach");Check(Field<HabitatGuideDemo>("guideDemo").gameObject.activeInHierarchy,"model guide retains original dark demonstration stage");g.Hud.ClosePanels();
+    g.State.seenGuideKeys.Clear();Set("nextGuideAt",0f);Call("RefreshAutomaticGuide");Check(Field<GameObject>("guidePanel").activeInHierarchy&&g.State.seenGuideKeys.SequenceEqual(new[]{"move"}),"first encounter guide opens once and records saveable key");g.Hud.ClosePanels();Call("RefreshAutomaticGuide");Check(!Field<GameObject>("guidePanel").activeInHierarchy,"guide cooldown does not reopen immediately");MarkGuides();
+-   Open("bookPanel");Set("bookIndex",0);Call("RefreshBook");await Capture("book-updated");Check(Field<TMP_Text>("bookDetails").text.Contains("3 格"),"creature book uses latest interaction rule");
++   Open("bookPanel");Set("bookIndex",0);Call("RefreshBook");B("Previous creature page").onClick.Invoke();Check(Field<int>("bookIndex")==5,"creature pager wraps backward to sixth species");B("Next creature page").onClick.Invoke();Check(Field<int>("bookIndex")==0,"creature pager wraps forward to first species");B("Creature page 3").onClick.Invoke();Check(Field<int>("bookIndex")==3,"creature page dots retain direct six-species access");Set("bookIndex",0);Call("RefreshBook");await Capture("book-updated");Check(Field<TMP_Text>("bookDetails").text.Contains("3 格"),"creature book uses latest interaction rule");
+    Open("summaryPanel");g.State.won=true;Call("RefreshSummary");Call("ConfirmSummary");Check(Field<GameObject>("completionChoicesPanel").activeInHierarchy,"summary confirmation offers planner follow-up routes");await Capture("completion-routes");g.State.won=false;g.Hud.ClosePanels();
+    g.Hud.OpenMapSelection(10);await Capture("map-fifth");Check(Field<HabitatMapSelectionPanel>("mapSelection").SelectedLevel==10,"fifth authored level is selectable without changing previous indices");
+    Check(B("Select destination 5").GetComponent<Image>().color.a==0&&B("Confirm destination").GetComponent<RectTransform>().anchoredPosition.y>-260,"map retains floating art labels and top-centered departure ribbon");

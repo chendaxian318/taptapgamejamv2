@@ -1,0 +1,121 @@
+Unity 工具连接与验证（迁移版，2026-10-13）
+
+所有命令在解压后的 HabitatIsland3D 工程根目录执行。下面以 Windows PowerShell 为例。
+这是恢复工程的工具说明，不需要重新生成场景或构建 EXE。
+
+一、先让工程独立运行
+Unity Hub 添加现有工程，用 6000.6.0f1 打开并等待 UPM 和脚本编译。
+入口是 Assets/HabitatIsland/Scenes/HabitatIsland.unity，默认 index=4，18×19，开局暂停。
+缺少 Python/MCP 客户端不应阻止游戏 Play；UPM 缺包和编译错误则必须先解决。
+不要执行 Tools > Habitat Island > 1. Create Playtest Scene 作为启动步骤。
+
+二、Unity CLI + Pipeline（有本机终端工具时可用）
+工程已声明 com.unity.pipeline 0.8.0-exp.1。CLI 程序是机器上的工具，需要新机单独安装。
+本次归档时使用 Unity CLI 1.0.0-beta.13，已检查为当时最新版本；新机先检查自己的版本。
+安装渠道：https://unity.com/install.ps1 （Windows 官方安装入口，查看并按官方流程执行）。
+
+进入工程根目录，逐条执行：
+  unity --version
+  unity self-update --check --format json
+  unity status --format json
+
+如尚未打开，可执行 unity open .，也可使用 Hub。
+本项目已带 Pipeline 依赖，无需重复添加。导入完成后 status 应出现本工程且 state=ready。
+同时开多个 Unity 时，每次操作都带 --project-path 后接新电脑实际工程绝对路径。
+
+先发现实际命令：
+  unity command --query eval --caller plugin --skill unity-cli --format json
+  unity command --query console --caller plugin --skill unity-cli --format json
+
+示例：
+  unity command eval --caller plugin --skill unity-cli --format json 'return UnityEngine.Application.unityVersion;'
+  unity command console --caller plugin --skill unity-cli --format json -- --level error --tail 30
+
+进入 Play 的正确验证顺序（本项目已包含这些命令）：
+  unity command set_autotick --caller plugin --skill unity-cli --format json
+  unity command editor_play --caller plugin --skill unity-cli --format json
+  unity status --until-ready --format json
+  unity command wait_for --caller plugin --skill unity-cli --format json -- --condition '{"member":"UnityEngine.Time.frameCount","op":"changed"}' --timeout_s 10
+
+wait_for 返回 met=true 才证明帧在推进。进入 Play 会触发重载，不要紧接着盲发很多请求。
+游戏自身设置了 Application.runInBackground=true；仍冻结时检查 Editor 暂停按钮和焦点。
+取图前发现 capture_game_view 参数；指定 source=screen 才包含 Overlay HUD。
+注意本项目 Pipeline 0.8.0-exp.1 实测相对 save_path 可能写到 Assets/Verification，按返回 savedPath 找文件。
+检查完可调用 editor_stop。不要用一次旧日志或单张截图宣称完整关卡通过。
+
+三、MCP for Unity（在新电脑重新配置本机连接）
+UPM 中是 com.coplaydev.unity-mcp v10.0.0，Git 提交锁定在 packages-lock.json。
+工程包不包括本机 Python 虚拟环境、uv、Codex 配置和登录凭据。
+当前项目已取消旧电脑专用的自动启动和自动安装逻辑，不再指向 E:/projectstudy/.tools。
+
+1. Unity 打开 Window > MCP for Unity > Local Setup Window（或 Toggle MCP Window）。
+2. 按包窗口提示安装/定位 Python 和 uv/uvx。使用 HTTP Local 方式。
+3. 可设置基础地址 http://127.0.0.1:8088。若端口被占用，选择空闲端口并同步客户端设置。
+4. 使用窗口提供的 Start Local HTTP Server／HTTP Server Command 启动本机服务，再 Start Bridge。
+   由插件生成与其版本匹配的启动命令，不要复制旧机 Python.exe 路径或全局配置文件。
+5. 验证：
+     Invoke-RestMethod 'http://127.0.0.1:8088/health'
+     Invoke-RestMethod 'http://127.0.0.1:8088/api/instances'
+   instances 中应出现本工程。实例标识随机器/路径改变，要重新发现。
+6. 本项目可选菜单 Tools > Habitat Island > Connect Unity MCP 只连接已启动的服务。
+   默认基础 URL 为 http://127.0.0.1:8088；通过启动 Unity 时的 HABITAT_MCP_URL 环境变量可改为其他本机端口。
+   该变量是基础 URL，不带 /mcp。菜单不会下载软件、启动旧 Python 或覆盖 uv 路径。
+   若使用其他端口，也可以直接在插件窗口设置并 Start Bridge，无需本项目辅助菜单。
+7. Tools > Habitat Island > Install Unity MCP package 只是缺包时的手动修复入口；正常迁移由 UPM 处理依赖。
+
+Codex 本机客户端的 HTTP MCP 示例（二选一；在新机操作）：
+  codex mcp add unityMCP --url http://127.0.0.1:8088/mcp
+  codex mcp list
+
+或者在已有配置中合并这一段，不要覆盖整份个人配置：
+  [mcp_servers.unityMCP]
+  url = "http://127.0.0.1:8088/mcp"
+
+这只是客户端连接配置，不能代替运行 Unity/Python 服务。重新加载客户端后确认工具实际可见。
+如果所用环境不是 Codex，按该客户端的 MCP 连接界面填写同一 URL。
+ChatGPT 网页不读取本机 Codex 配置；使用能访问本机工程的客户端／本地执行环境。
+本包只整理交接，不转移原聊天历史、账户授权或全局插件。
+
+四、备用 MCP Python 客户端
+Tools/mcp_call.py 不再内置旧实例 ID，调用工具时必须显式指定本机发现的实例。
+它是可选客户端，不会安装或启动 Unity MCP 服务。其 SDK 依赖记录在 Tools/requirements-mcp.txt。
+需要 Python 3.10 或更高版本。需要时在项目下另建自己的虚拟环境，例如：
+  python -m venv .tools/mcp-client
+  ./.tools/mcp-client/Scripts/python.exe -m pip install -r Tools/requirements-mcp.txt
+  ./.tools/mcp-client/Scripts/python.exe Tools/mcp_call.py --schema read_console
+
+api/instances 中的 project 和 hash 可以组合为 project@hash，然后使用：
+  ./.tools/mcp-client/Scripts/python.exe Tools/mcp_call.py --instance '本机实际project@hash' --tool read_console --args Tools/console.json
+
+可通过 --url 指定 MCP endpoint（此处要带 /mcp），也支持 HABITAT_MCP_ENDPOINT 和 HABITAT_MCP_INSTANCE。
+Tools/*.json 多为旧轮次实验命令，不是需要批量执行的初始化流水线：其中会切关、改运行参数、生成或构建。
+尤其 build.json、create-scene.json 仅在用户明确要求相应动作时使用。截图/检查的旧工程输出前缀已改为相对路径。
+shrimp-console-schema.json 等服务器返回快照可能保留旧路径，只是历史数据，不用于连接。
+
+五、按变更选择验证
+以下为当前可用 C# 入口，通过 eval/MCP 执行；不要把所有检查一次并行运行。
+编辑状态：
+  HabitatIsland.HabitatModelChecks.Run()
+  HabitatIsland.Editor.HabitatAuthoredLayoutChecks.Run()
+  HabitatIsland.Editor.HabitatDirectionChecks.Run()
+Play 状态：
+  HabitatIsland.Editor.HabitatRuntimeChecks.Run()
+  HabitatIsland.Editor.HabitatAuthoredControllerChecks.Run()
+  HabitatIsland.Editor.HabitatDirectionChecks.RunInputChecks()
+  HabitatIsland.Editor.HabitatOcclusionChecks.Run()
+异步真实帧检查（先读对应类，等待 Status/完成报告）：
+  HabitatIsland.Editor.HabitatTravelerChecks.Begin()
+  HabitatIsland.Editor.HabitatAuthoredViewChecks.Begin()
+  HabitatIsland.Editor.HabitatHudChecks.BeginRenderedChecks()
+
+规则、布局、输入、UI 检查有不同范围和状态恢复方式，执行前按当前改动选择。
+新机最小验收：无编译错误、正式图能进入、中文清楚、主角有移动动画、虾为3D、选格/搬运/镜头方向正常。
+更完整的玩法边界和历史报告见 Docs/开发交接_20261013.txt；末端宝箱全路线与完整经济循环不能声称已验证。
+
+六、参考来源
+Unity CLI：本次随 Unity 插件提供的 unity-cli 技能及实际 CLI schema，版本1.0.0-beta.13。
+MCP for Unity：已安装v10包 README.md、Editor/MenuItems/MCPForUnityMenu.cs、ServerCommandBuilder.cs。
+上游：https://github.com/CoplayDev/unity-mcp
+官方 OpenAI MCP 文档：https://learn.chatgpt.com/docs/extend/mcp?surface=cli
+官方 AGENTS.md 文档：https://learn.chatgpt.com/docs/agent-configuration/agents-md
+以上网页已于2026-10-13核对；以后客户端或插件升级时以新机实际命令和官方文档为准。

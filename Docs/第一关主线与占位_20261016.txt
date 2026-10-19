@@ -1,0 +1,46 @@
+第一关主线与占位接入
+日期：2026-10-16
+
+本轮依据
+用户提供 Untitled.pdf 与第一关流程截图，要求核对当前策划差异并先做好可替换占位。整份审计见“策划差异清单_20261016.txt”。
+本轮把第一关主线连接到既有18×19正式岛。PDF中新的第一至第四关小布局仍未逐个制作；不把现有342格原图当作新四张地图。
+
+试玩入口
+打开 Assets/HabitatIsland/Scenes/HabitatIsland.unity，Play。
+1. 原归航Timeline结束或跳过后，自动进入商店老板3页对话。关闭不会接任务；最后点“接下委托”。旧存档也可在码头商店旁E/B进入。
+2. 任务卡引导到小船，E打开目的地，选“第一关 · 荒岛与琉璃鱼”，再确认出发。仅选择卡片不出发。
+3. 4.2秒出海占位片段结束后提交船旅，首次接宝箱特写。演出可以暂停、跳过；取消不会出航；特写不会自动开箱。
+4. 玩家沿路到原鱼竿宝箱，选中、1/E打开，获得特制鱼竿。商店普通鱼竿不能代替它。
+5. 封闭鱼所在水域，继续生态模拟，等原鱼自然繁衍，再选中鱼按5/E进入钓鱼。默认繁衍时间18秒；亲本保留。
+6. 委托单独计数琉璃鱼，不把开场赠送的3条普通鱼算进去。钓到2条后出现返航提示，到码头商店E明确交付。
+7. 一次扣除2条琉璃鱼、获得200贝币，重复确认不重复奖励；吹风机解锁，售价200。其余旧商品价格暂未统一。
+8. 奖励对话后角色沿码头回家，接原晨光Timeline。实际晨光结束或跳过后天数+1，记录第一关完成并显示次日对话。
+
+保留可选生态教学：F1 → 新手教学，仍可到第0关“螃蟹的欢迎会”。当前主线不再用该生态教学替代琉璃鱼委托。
+目的地中的第二、第三、第四关是灰色锁定占位，没有把旧实验关冒充正式章节。第一关完成后这三张未制作地图仍不可进入。
+
+规则与恢复
+新增共享字段：chapterOneAccepted、chapterOneSailed、chapterOneDelivered、chapterOneMorningSeen、specialRod、glassFish、glassFishCaught。
+同步手写Clone、JSON存档与CopySharedProgress；版本仍HabitatIsland/1，旧普通鱼竿不自动变特制竿，旧正式图rodFromChest可恢复已取得的特制竿。
+琉璃鱼的垂钓入口和最终收获都重新检查封闭水域，不能打开缺口后继续利用旧幼体绕过要求。
+主线不改变原图342个格子的初始地形、道具和动物坐标。现两条鱼封住两个缺口后水域只有2格，按PDF封闭即可繁衍；旧练习图仍保留minPond调参。
+对话/剧情期间普通操作被现有模态或Story锁阻止。读档取消所有未完成演出回调；保存不会把演出中间态写入。
+正式岛与第0教学岛的“重开本关”保留共享委托、装备、货币、渔获、天数和其他岛缓存，仅重置当前地图。调试LoadLevel仍会重置，不要用于正常船旅。
+
+美术替换位置
+以下均可缺省；无资源时使用本轮程序占位。新增资源请走Unity导入，保留现有GUID，不需重建主场景。
+1. 店主：Assets/HabitatIsland/Resources/Models/Story/Shopkeeper.prefab，或HabitatShopkeeperPlaceholder.prefab引用。脚底为原点、本地+Z为正面，约1.6米高；碰撞由码头处理，不由装饰NPC处理。
+2. 出海船：Resources/Models/Story/DepartureBoat.prefab，或HabitatMainStory.departureBoatPrefab。原点位于水线，船头本地+Z，参考占位约长3米、宽1.65米。原码头合并网格中的停泊船保留，出航用独立船。
+3. 海鸟：Resources/Models/Story/Seabird.prefab，或HabitatMainStory.seabirdPrefab。可带Animator；播放暂停会同步暂停。
+4. 捞网：Resources/Models/Story/LandingNet.prefab，或HabitatMainStory.landingNetPrefab。手柄原点，网圈沿本地+Y，现有收网镜头驱动整体。
+5. 老板对话头像：Resources/Story/ShopkeeperPortrait（Sprite）。未提供时显示文字头像。
+宝箱仍用现有模型及原坐标；金色提示圈和特写镜头独立于宝箱美术。琉璃鱼目前沿用现有鱼类视觉，库存和任务规则已独立。
+
+验证
+AgentScripts/RunChapterRuleChecks.ps1：58项主线规则、51项旧模型、41项原图规则、20项旅程、34项旧教学通过。
+AgentScripts/ChapterGameplayChecks.cs 的 Run()：50项Play检查通过。开场、对话、地图确认、出海/特写、回家及存读恢复使用实际Unity流程。钓鱼一段使用明确标识的临时封闭池、预置幼鱼和辅助控制条参数，验证真实小游戏与结算，不冒称完整正式地图解谜通关。
+原图封口和原鱼18秒繁衍另有纯规则回归；其测试推进Tick，不等于人工跑完所有机关路线。
+RunFollowup()另通过24项Play检查：只把玩家站位与手持土设为测试夹具，实际工具封两个缺口后，原图原鱼在默认18秒真实Update中自然各产1幼鱼；正式岛重开保留22项共享字段及其他岛缓存；真实商店按钮风机锁定/解锁200币扣款；宝箱完全聚焦与取消恢复；出海运动中状态不提前提交。另对最终可见角色随船演出作定向检查。
+报告：Logs/plan-mainline-20261016、Logs/chapter-20261016、Logs/plan-20261016。
+修改前备份：工程上级ChangeBackups/plan-mainline-before-20261016。
+本轮不构建EXE，不改用户存档。

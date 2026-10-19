@@ -1,0 +1,308 @@
+{
+  "entries": [
+    {
+      "source": "Assets/HabitatIsland/Art/AnimatedShrimp/creature_animated.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/creature_animated/texture_0.png",
+      "linear": false,
+      "sourceSha256": "91032b87ba3e416ee2642eee9c80e81021918e202250acc674b848087b7ce5f2"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/AnimatedShrimp/creature_animated.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/creature_animated/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "91032b87ba3e416ee2642eee9c80e81021918e202250acc674b848087b7ce5f2"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/AnimatedTrap/lobster_trap_rigged_v2.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/lobster_trap_rigged_v2/texture_0.png",
+      "linear": false,
+      "sourceSha256": "d7faa313a751a84b5c568461e554ec08aed7c907cc25e236567b54c00dd495ac"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/AnimatedTrap/lobster_trap_rigged_v2.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/lobster_trap_rigged_v2/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "d7faa313a751a84b5c568461e554ec08aed7c907cc25e236567b54c00dd495ac"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/BackBasket/BackBasket_v2.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/BackBasket_v2/texture_0.png",
+      "linear": false,
+      "sourceSha256": "b8136193aac94e5e2dbc3f2231ece3fa0f5f5795be167079e1e159c857e63002"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/BackBasket/BackBasket_v2.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/BackBasket_v2/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "b8136193aac94e5e2dbc3f2231ece3fa0f5f5795be167079e1e159c857e63002"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Goldfish/Goldfish_GameReady.glb",
+      "name": "Image_2",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Goldfish_GameReady/Image_2.jpg",
+      "linear": true,
+      "sourceSha256": "fef9b635ef7af13adbf06204dea080c422f7bbbdcd5e492fc82a3e0942c1bd81"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Goldfish/Goldfish_GameReady.glb",
+      "name": "Image_0",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Goldfish_GameReady/Image_0.jpg",
+      "linear": false,
+      "sourceSha256": "fef9b635ef7af13adbf06204dea080c422f7bbbdcd5e492fc82a3e0942c1bd81"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Goldfish/Goldfish_GameReady.glb",
+      "name": "Image_1",
+      "index": 2,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Goldfish_GameReady/Image_1.jpg",
+      "linear": true,
+      "sourceSha256": "fef9b635ef7af13adbf06204dea080c422f7bbbdcd5e492fc82a3e0942c1bd81"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/HermitCrab/HermitCrab_GameReady.glb",
+      "name": "Image_2",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/HermitCrab_GameReady/Image_2.jpg",
+      "linear": true,
+      "sourceSha256": "c1487344f8f5a8b3d13ef6ccb6dcbb52b4008a67558c2c68df2d89672125408e"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/HermitCrab/HermitCrab_GameReady.glb",
+      "name": "Image_0",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/HermitCrab_GameReady/Image_0.jpg",
+      "linear": false,
+      "sourceSha256": "c1487344f8f5a8b3d13ef6ccb6dcbb52b4008a67558c2c68df2d89672125408e"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/HermitCrab/HermitCrab_GameReady.glb",
+      "name": "Image_1",
+      "index": 2,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/HermitCrab_GameReady/Image_1.jpg",
+      "linear": true,
+      "sourceSha256": "c1487344f8f5a8b3d13ef6ccb6dcbb52b4008a67558c2c68df2d89672125408e"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Jellyfish/Jellyfish_GameReady.glb",
+      "name": "Image_2",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Jellyfish_GameReady/Image_2.jpg",
+      "linear": true,
+      "sourceSha256": "aebf2308925c63dbc005fdf2f4d69155f05168ec5d94f2495ab8f2e2715c3487"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Jellyfish/Jellyfish_GameReady.glb",
+      "name": "Image_0",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Jellyfish_GameReady/Image_0.jpg",
+      "linear": false,
+      "sourceSha256": "aebf2308925c63dbc005fdf2f4d69155f05168ec5d94f2495ab8f2e2715c3487"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Jellyfish/Jellyfish_GameReady.glb",
+      "name": "Image_1",
+      "index": 2,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Jellyfish_GameReady/Image_1.jpg",
+      "linear": true,
+      "sourceSha256": "aebf2308925c63dbc005fdf2f4d69155f05168ec5d94f2495ab8f2e2715c3487"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/MeshyTraveler/MeshyTraveler_EmptyHands.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/MeshyTraveler_EmptyHands/texture_0.png",
+      "linear": false,
+      "sourceSha256": "3cf6948733fc3c5d4cf3248ba0b8c7066ef758a2a75e66bd8bf7f68b7c2b6e42"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/ShopAssistant/Shop_Assistant_Rigged.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Shop_Assistant_Rigged/texture_0.png",
+      "linear": false,
+      "sourceSha256": "1d91a0e95ca5cb097a761029d461fd936c329866d341f76f541a655b741086b5"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/ShopAssistant/Shop_Assistant_Rigged.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Shop_Assistant_Rigged/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "1d91a0e95ca5cb097a761029d461fd936c329866d341f76f541a655b741086b5"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/WoodenBoat/WoodenBoat_GameReady.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/WoodenBoat_GameReady/texture_0.png",
+      "linear": false,
+      "sourceSha256": "ccf2264ade5a4672e663808b4b15f302e8dfbc3cc7b8fb50f966b2da0f8109d5"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/WoodenBoat/WoodenBoat_GameReady.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/WoodenBoat_GameReady/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "ccf2264ade5a4672e663808b4b15f302e8dfbc3cc7b8fb50f966b2da0f8109d5"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/WoodenDock/WoodenDock_NoStairs.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/WoodenDock_NoStairs/texture_0.png",
+      "linear": false,
+      "sourceSha256": "6b4200bb701de96f4591ffb6a37af142c088f9ef06f69e1d660ede917caa7c6f"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/WoodenDock/WoodenDock_NoStairs.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/WoodenDock_NoStairs/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "6b4200bb701de96f4591ffb6a37af142c088f9ef06f69e1d660ede917caa7c6f"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/FishingRod/fishing_rod_unirig_animated.glb",
+      "name": "fishing_rod_base_color",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/fishing_rod_unirig_animated/fishing_rod_base_color.png",
+      "linear": false,
+      "sourceSha256": "6e826ee44fb895e4b011c56726225f9a6de5ba91218d70b9763ba32baff89e7e"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/FishingRod/fishing_rod_unirig_animated.glb",
+      "name": "fishing_rod_texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/fishing_rod_unirig_animated/fishing_rod_texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "6e826ee44fb895e4b011c56726225f9a6de5ba91218d70b9763ba32baff89e7e"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Shovel/Shovel_PlayerReady.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Shovel_PlayerReady/texture_0.png",
+      "linear": false,
+      "sourceSha256": "c094c1d38cfb000a09fba83e855166454a9a7a7dfb1fd15d452626b7c6a4ba21"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Shovel/Shovel_PlayerReady.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Shovel_PlayerReady/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "c094c1d38cfb000a09fba83e855166454a9a7a7dfb1fd15d452626b7c6a4ba21"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Magnet/Magnet_GameReady.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Magnet_GameReady/texture_0.png",
+      "linear": false,
+      "sourceSha256": "7f508ce8338f0e7b0d1bfcd4bfb4f6c6c431862638292782d9866348c0812256"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Magnet/Magnet_GameReady.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Magnet_GameReady/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "7f508ce8338f0e7b0d1bfcd4bfb4f6c6c431862638292782d9866348c0812256"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/LandingNet/LandingNet.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/LandingNet/texture_0.png",
+      "linear": false,
+      "sourceSha256": "6361882bba063b6ec6b7f11d7d3460627d10f9d521a9c528a9e4d2da956a2a22"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/LandingNet/LandingNet.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/LandingNet/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "6361882bba063b6ec6b7f11d7d3460627d10f9d521a9c528a9e4d2da956a2a22"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/ShellBellows/Shell_Bellows_Rigged.glb",
+      "name": "texture_0",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Shell_Bellows_Rigged/texture_0.png",
+      "linear": false,
+      "sourceSha256": "a09663a9cef3b511a9aad1b41f373a96271a69a80a76b3386d599698f77e4235"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/ShellBellows/Shell_Bellows_Rigged.glb",
+      "name": "texture_0_metallic_roughness",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Shell_Bellows_Rigged/texture_0_metallic_roughness.png",
+      "linear": true,
+      "sourceSha256": "a09663a9cef3b511a9aad1b41f373a96271a69a80a76b3386d599698f77e4235"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Cannon/Cannon_GameReady.glb",
+      "name": "Image_2",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Cannon_GameReady/Image_2.jpg",
+      "linear": true,
+      "sourceSha256": "6110cc327d95a1dac803d60d3d48d4f26cb5310c84fd5acbacd8cee101627842"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Cannon/Cannon_GameReady.glb",
+      "name": "Image_0",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Cannon_GameReady/Image_0.jpg",
+      "linear": false,
+      "sourceSha256": "6110cc327d95a1dac803d60d3d48d4f26cb5310c84fd5acbacd8cee101627842"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/Cannon/Cannon_GameReady.glb",
+      "name": "Image_1",
+      "index": 2,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/Cannon_GameReady/Image_1.jpg",
+      "linear": true,
+      "sourceSha256": "6110cc327d95a1dac803d60d3d48d4f26cb5310c84fd5acbacd8cee101627842"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/TideEngine/TideEngine_GameReady.glb",
+      "name": "Image_2",
+      "index": 0,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/TideEngine/Image_2.jpg",
+      "linear": true,
+      "sourceSha256": "229ef983f54882ac074dd5518360601ddd209698737f19e1fb9bdb1867a60cbc"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/TideEngine/TideEngine_GameReady.glb",
+      "name": "Image_0",
+      "index": 1,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/TideEngine/Image_0.jpg",
+      "linear": false,
+      "sourceSha256": "229ef983f54882ac074dd5518360601ddd209698737f19e1fb9bdb1867a60cbc"
+    },
+    {
+      "source": "Assets/HabitatIsland/Art/TideEngine/TideEngine_GameReady.glb",
+      "name": "Image_1",
+      "index": 2,
+      "target": "Assets/HabitatIsland/Art/OptimizedTextures/TideEngine/Image_1.jpg",
+      "linear": true,
+      "sourceSha256": "229ef983f54882ac074dd5518360601ddd209698737f19e1fb9bdb1867a60cbc"
+    }
+  ]
+}

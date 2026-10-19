@@ -1,0 +1,1217 @@
+<canvas id="0:1" name="Page 1" x="0" y="0" width="0" height="0">
+  <frame id="38:1158" name="Cube/Drawn ish" x="3091" y="710" width="446" height="514.4697265625">
+    <frame id="38:1159" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:1160" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:1161" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:1162" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:1163" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1164" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.77192800923285" height="385.852294921875">
+      <rounded-rectangle id="38:1165" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:1166" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.2207705165124" height="1053.3401794433594" />
+      <rounded-rectangle id="38:1167" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.54386735249636" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:1168" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.77192800923285" height="385.852294921875">
+      <rounded-rectangle id="38:1169" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.4283238754056" height="858.8177795410156" />
+      <rounded-rectangle id="38:1170" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798119" height="866.3432312011719" />
+      <rounded-rectangle id="38:1171" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566541" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:1172" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:1173" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1174" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.54386735249636" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1175" name="Cube/Drawn ish" x="2868" y="845" width="446" height="514.4697265625">
+    <frame id="38:1176" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:1177" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:1178" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:1179" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:1180" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1181" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.77192800923285" height="385.852294921875">
+      <rounded-rectangle id="38:1182" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:1183" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.2207705165124" height="1053.3401794433594" />
+      <rounded-rectangle id="38:1184" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.54386735249636" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:1185" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.77192800923285" height="385.852294921875">
+      <rounded-rectangle id="38:1186" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.4283238754056" height="858.8177795410156" />
+      <rounded-rectangle id="38:1187" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798119" height="866.3432312011719" />
+      <rounded-rectangle id="38:1188" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566541" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:1189" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007028998" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:1190" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1191" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.54386735249636" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1192" name="Cube/Drawn ish" x="2660" y="999" width="446" height="514.4697265625">
+    <frame id="38:1193" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:1194" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:1195" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:1196" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:1197" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1198" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.77192800923285" height="385.852294921875">
+      <rounded-rectangle id="38:1199" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:1200" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.2207705165124" height="1053.3401794433594" />
+      <rounded-rectangle id="38:1201" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.54386735249636" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:1202" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.77192800923285" height="385.852294921875">
+      <rounded-rectangle id="38:1203" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.4283238754056" height="858.8177795410156" />
+      <rounded-rectangle id="38:1204" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798119" height="866.3432312011719" />
+      <rounded-rectangle id="38:1205" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566541" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:1206" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007028998" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:1207" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1208" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.54386735249636" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1209" name="Cube/Drawn ish" x="2450" y="1121.6513671875" width="431" height="497.16693115234375">
+    <frame id="38:1210" name="top" x="215.72035217285156" y="0.000029559627364506014" width="430.5591993884318" height="248.58348039290104">
+      <rounded-rectangle id="38:1211" name="image 302" x="-124.29141998291016" y="-199.66015625" width="1258.8512556072274" height="726.7981453023858" hidden="true" />
+      <rounded-rectangle id="38:1212" name="image 303" x="-126.93647766113281" y="-106.22065734863281" width="1071.0540922040527" height="618.3733996797309" />
+      <rounded-rectangle id="38:1213" name="image 307" x="-148.09242248535156" y="-482.18115234375" width="1291.6776129820246" height="745.7504559954323" hidden="true" />
+      <rounded-rectangle id="38:1214" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1215" name="Left" x="4.547473508864641e-13" y="124.29164123535156" width="215.2795977622718" height="372.8751983642578">
+      <rounded-rectangle id="38:1216" name="image 302" x="-124.29150390625" y="-448.2434997558594" width="538.1990122615416" height="1142.8668518066406" />
+      <rounded-rectangle id="38:1217" name="image 303" x="-126.9365005493164" y="-354.80413818359375" width="379.02947584165804" height="1017.9139404296875" />
+      <rounded-rectangle id="38:1218" name="image 307" x="-148.0924530029297" y="-730.7646484375" width="430.5592064773855" height="1242.9173278808594" hidden="true" />
+    </frame>
+    <frame id="38:1219" name="Right" x="215.5269012451172" y="248.5836181640625" width="215.2795977622718" height="372.8751983642578">
+      <rounded-rectangle id="38:1220" name="image 302" x="234.47943115234375" y="-329.681396484375" width="576.3690844402813" height="829.9337768554688" />
+      <rounded-rectangle id="38:1221" name="image 303" x="491.43682861328125" y="-1.763377070426941" width="692.0245959796061" height="837.2061157226562" />
+      <rounded-rectangle id="38:1222" name="image 304" x="439.8694763183594" y="-340.7001953125" width="720.6522257698916" height="1037.5274353027344" hidden="true" />
+      <rounded-rectangle id="38:1223" name="image 307" x="971.4153442382812" y="-233.59751892089844" width="861.1183800962467" height="994.3338623046875" hidden="true" />
+      <rounded-rectangle id="38:1224" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1225" name="image 308" x="-248.5834503173828" y="-730.7648315429688" width="430.5592064773855" height="1242.9173278808594" hidden="true" />
+    </frame>
+  </frame>
+  <rounded-rectangle id="38:1028" name="86c0e62ca5e6f6b92216cb167d6221fb 1" x="4465" y="321.9547119140625" width="791.2639522711943" height="982.425270177735" />
+  <instance id="3:963" name="Cube" x="-47" y="423" width="238.40081787109375" height="275" />
+  <instance id="3:888" name="Cube" x="-167" y="90" width="238.40081787109375" height="275" />
+  <instance id="3:889" name="Cube" x="-288" y="158" width="238.40081787109375" height="275" />
+  <instance id="3:819" name="Cube" x="64" y="220" width="238.40081787109375" height="275" />
+  <instance id="3:820" name="Cube" x="-64" y="289" width="238.40081787109375" height="275" />
+  <instance id="3:821" name="Cube" x="177" y="292" width="238.40081787109375" height="275" />
+  <instance id="3:822" name="Cube" x="57" y="359" width="238.40081787109375" height="275" />
+  <instance id="3:750" name="Cube" x="293" y="372" width="238.40081787109375" height="275" />
+  <instance id="3:751" name="Cube" x="172" y="440" width="238.40081787109375" height="275" />
+  <instance id="3:752" name="Cube" x="413" y="439" width="238.40081787109375" height="275" />
+  <frame id="3:998" name="Cube/Drawn ish" x="182" y="439" width="234.93316650390625" height="271">
+    <frame id="3:999" name="top" x="117.58673095703125" y="0" width="234.69288828969002" height="135.50000807642937">
+      <rounded-rectangle id="3:1000" name="image 302" x="-67.74984741210938" y="-108.83248901367188" width="686.1853906783508" height="396.16933855942625" hidden="true" />
+      <rounded-rectangle id="3:1001" name="image 303" x="-69.19136810302734" y="-57.89986801147461" width="583.8193413273721" height="337.0682708960776" />
+      <rounded-rectangle id="3:1002" name="image 307" x="-80.723388671875" y="-262.8316650390625" width="704.0786729454994" height="406.50003230571747" hidden="true" />
+      <rounded-rectangle id="3:1003" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="3:1004" name="Left" x="0" y="67.75006103515625" width="117.34644309176454" height="203.25">
+      <rounded-rectangle id="3:1005" name="image 302" x="-67.74983978271484" y="-244.33251953125" width="293.36611025936486" height="622.963623046875" />
+      <rounded-rectangle id="3:1006" name="image 303" x="-69.19184112548828" y="-193.399658203125" width="206.6046402621954" height="554.8532485961914" />
+      <rounded-rectangle id="3:1007" name="image 307" x="-80.72344207763672" y="-398.3315734863281" width="234.69289215379746" height="677.5" hidden="true" />
+    </frame>
+    <frame id="3:1008" name="Right" x="117.48131561279297" y="135.5" width="117.34644309176451" height="203.25">
+      <rounded-rectangle id="3:1009" name="image 302" x="127.8120346069336" y="-179.70567321777344" width="314.17220232954566" height="452.3874053955078" />
+      <rounded-rectangle id="3:1010" name="image 303" x="267.8767395019531" y="-0.9609915018081665" width="377.2146899547523" height="456.3514862060547" />
+      <rounded-rectangle id="3:1011" name="image 304" x="239.76747131347656" y="-185.71200561523438" width="392.8192708386218" height="565.5443115234375" hidden="true" />
+      <rounded-rectangle id="3:1012" name="image 307" x="529.5069580078125" y="-127.3315658569336" width="469.3857663967897" height="542" hidden="true" />
+      <rounded-rectangle id="3:1013" name="shadow" x="0" y="0" width="488.4383313930273" height="846" />
+      <rounded-rectangle id="3:1014" name="image 308" x="-135.50009155273438" y="-398.33154296875" width="234.69289215379752" height="677.5" hidden="true" />
+    </frame>
+  </frame>
+  <instance id="3:681" name="Cube" x="-423" y="232" width="238.40081787109375" height="275" />
+  <instance id="3:682" name="Cube" x="-544" y="300" width="238.40081787109375" height="275" />
+  <text id="1:3" name="涌现玩法设计" x="-544" y="-152" width="240" height="24" />
+  <text id="1:5" name="游戏视角画面/操作方式确定" x="-544" y="-104" width="336" height="24" />
+  <text id="1:7" name="地块可交互规则 普通地块的高度为1；可移动地块的高度为2，可以被玩家推动可以掉落进水方块或者高度为1或以下的方块；商店购买的箱子充当地块功能" x="336" y="3475.45458984375" width="1076" height="240" />
+  <text id="1:9" name="小怪可交互规则：玩家移动小动物的规则有区别，有的可以直接抱起来拿走，有的只能被驱赶，有的需要沿着水路移动" x="2908" y="3236.45458984375" width="1111.7646484375" height="120" />
+  <rounded-rectangle id="1:13" name="image 1" x="-544" y="-56" width="336" height="192.88888549804688" />
+  <text id="2:11" name="画面视角采取第三人称视角，地块为3D方块，主角用sprite展示（需要前后左右方向） 主角仅能沿着自身前后左右四个方向运动 3D地块有上下可堆叠玩家可以攀爬特定地块。" x="-544" y="161.18182373046875" width="336" height="96" />
+  <text id="3:230" name="游戏玩法：帮助焦躁的小动物找到正确的栖居地，每一关都有不同的栖居地，玩家需要通过收集关卡里的素材引导动物到正确的地块才算通关。" x="-544" y="264" width="336" height="120" />
+  <rounded-rectangle id="78:1828" name="4f677b4f08b633de6b90e314d8dd45c1 6" x="2889.4287109375" y="3516" width="154.24710083007812" height="384.4779968261719" />
+  <rounded-rectangle id="78:1829" name="4f677b4f08b633de6b90e314d8dd45c1 7" x="2866.6337890625" y="4069.921875" width="199.83738708496094" height="136.7708282470703" />
+  <text id="3:278" name="移动方块，玩家可以选择攀爬或者推动（空格/E）" x="337" y="4499.45458984375" width="764" height="120" />
+  <instance id="3:281" name="Cube" x="-166" y="1242" width="301.9999694824219" height="348.36285400390625" />
+  <text id="3:301" name="道路方块：可以旋转玩家可以调整出不同道路（被吓走的寄居蟹貌似会自己沿着连着的路走）" x="-371" y="1591.45458984375" width="852" height="120" />
+  <rounded-rectangle id="78:1830" name="4f677b4f08b633de6b90e314d8dd45c1 8" x="2877.271484375" y="4480.994140625" width="178.56192016601562" height="151.96759033203125" />
+  <instance id="3:311" name="Cube" x="-306" y="294" width="235.51394653320312" height="271.669921875" />
+  <instance id="3:383" name="Cube" x="-57" y="426" width="235.51394653320312" height="271.669921875" />
+  <instance id="3:396" name="Cube" x="-177" y="490" width="235.51394653320312" height="271.669921875" />
+  <instance id="3:438" name="Cube" x="518" y="595" width="238.40081787109375" height="275" />
+  <instance id="3:459" name="Cube" x="-59" y="566" width="238.40081787109375" height="275" />
+  <instance id="3:753" name="Cube" x="420" y="489" width="238.40081787109375" height="275" />
+  <instance id="3:1078" name="Cube" x="-419" y="365" width="235.51394653320312" height="271.669921875" />
+  <instance id="3:501" name="Cube" x="182" y="565" width="238.40081787109375" height="275" />
+  <instance id="3:480" name="Cube" x="62" y="638" width="238.40081787109375" height="275" />
+  <instance id="3:594" name="Cube" x="-423" y="489" width="238.40081787109375" height="275" />
+  <instance id="3:595" name="Cube" x="-541" y="556" width="238.40081787109375" height="275" />
+  <instance id="3:596" name="Cube" x="-303" y="556" width="238.40081787109375" height="275" />
+  <instance id="3:597" name="Cube" x="-423" y="627" width="238.40081787109375" height="275" />
+  <instance id="3:522" name="Cube" x="-179" y="637" width="238.40081787109375" height="275" />
+  <instance id="3:523" name="Cube" x="-300" y="705" width="238.40081787109375" height="275" />
+  <instance id="3:524" name="Cube" x="-59" y="704" width="238.40081787109375" height="275" />
+  <instance id="3:525" name="Cube" x="-179" y="775" width="238.40081787109375" height="275" />
+  <instance id="3:347" name="Cube" x="-175" y="354" width="236.6669921875" height="272.9999694824219" />
+  <rounded-rectangle id="3:677" name="cf73da8e7fb7986883252f277dd1f139 1" x="-366" y="426" width="130.52542114257812" height="151" />
+  <instance id="3:1050" name="Cube" x="497" y="164" width="238.40081787109375" height="275" />
+  <frame id="16:712" name="Group 1321314154" x="3555" y="662" width="471.9838562011719" height="545">
+    <instance id="16:713" name="Top" x="3790.991943359375" y="662" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:714" name="Right turned" x="3790.991943359375" y="934.5" width="235.99192429893628" height="408.75">
+      <instance id="16:715" name="Right" x="4026.98388671875" y="798.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:716" name="Left" x="3555.0068359375" y="798.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:723" name="Group 1321314155" x="3791" y="797" width="471.9838562011719" height="545">
+    <instance id="16:724" name="Top" x="4026.991943359375" y="797" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:725" name="Right turned" x="4026.991943359375" y="1069.5" width="235.99192429893628" height="408.75">
+      <instance id="16:726" name="Right" x="4262.98388671875" y="933.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="16:727" name="Left" x="3791.0068359375" y="933.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:734" name="Group 1321314156" x="3319" y="796" width="471.9838562011719" height="545">
+    <instance id="16:735" name="Top" x="3554.991943359375" y="796" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:736" name="Right turned" x="3554.991943359375" y="1068.5" width="235.99192429893628" height="408.75">
+      <instance id="16:737" name="Right" x="3790.98388671875" y="932.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:738" name="Left" x="3319.0068359375" y="932.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:739" name="Group 1321314157" x="3555" y="931" width="471.9838562011719" height="545">
+    <instance id="16:740" name="Top" x="3790.991943359375" y="931" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:741" name="Right turned" x="3790.991943359375" y="1203.5" width="235.99192429893628" height="408.75">
+      <instance id="16:742" name="Right" x="4026.98388671875" y="1067.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:743" name="Left" x="3555.0068359375" y="1067.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:755" name="Group 1321314158" x="4027" y="931" width="471.9838562011719" height="545">
+    <instance id="16:756" name="Top" x="4262.99169921875" y="931" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:757" name="Right turned" x="4262.99169921875" y="1203.5" width="235.99192429893628" height="408.75">
+      <instance id="16:758" name="Right" x="4498.98388671875" y="1067.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="16:759" name="Left" x="4027.006591796875" y="1067.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:760" name="Group 1321314159" x="4263" y="1066" width="471.9838562011719" height="545">
+    <instance id="16:761" name="Top" x="4498.99169921875" y="1066" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:762" name="Right turned" x="4498.99169921875" y="1338.5" width="235.99192429893628" height="408.75">
+      <instance id="16:763" name="Right" x="4734.98388671875" y="1202.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="16:764" name="Left" x="4263.0068359375" y="1202.25" width="235.99192429893628" height="408.75" />
+  </frame>
+  <frame id="16:765" name="Group 1321314160" x="3791" y="1065" width="471.9838562011719" height="545">
+    <instance id="16:766" name="Top" x="4026.991943359375" y="1065" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:767" name="Right turned" x="4026.991943359375" y="1337.5" width="235.99192429893628" height="408.75">
+      <instance id="16:768" name="Right" x="4262.98388671875" y="1201.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="16:769" name="Left" x="3791.0068359375" y="1201.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:796" name="Group 1321314162" x="3083" y="931" width="471.9838562011719" height="545">
+    <instance id="16:797" name="Top" x="3318.991943359375" y="931" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:798" name="Right turned" x="3318.991943359375" y="1203.5" width="235.99192429893628" height="408.75">
+      <instance id="16:799" name="Right" x="3554.98388671875" y="1067.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:800" name="Left" x="3083.0068359375" y="1067.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:801" name="Group 1321314163" x="3319" y="1066" width="471.9838562011719" height="545">
+    <instance id="16:802" name="Top" x="3554.991943359375" y="1066" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:803" name="Right turned" x="3554.991943359375" y="1338.5" width="235.99192429893628" height="408.75">
+      <instance id="16:804" name="Right" x="3790.98388671875" y="1202.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:805" name="Left" x="3319.0068359375" y="1202.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:806" name="Group 1321314164" x="2847" y="1065" width="471.9838562011719" height="545">
+    <instance id="16:807" name="Top" x="3082.991943359375" y="1065" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:808" name="Right turned" x="3082.991943359375" y="1337.5" width="235.99192429893628" height="408.75">
+      <instance id="16:809" name="Right" x="3318.98388671875" y="1201.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:810" name="Left" x="2847.0068359375" y="1201.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:811" name="Group 1321314165" x="3083" y="1200" width="471.9838562011719" height="545">
+    <instance id="16:812" name="Top" x="3318.991943359375" y="1200" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:813" name="Right turned" x="3318.991943359375" y="1472.5" width="235.99192429893628" height="408.75">
+      <instance id="16:814" name="Right" x="3554.98388671875" y="1336.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:815" name="Left" x="3083.0068359375" y="1336.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:888" name="Group 1321314138" x="4027" y="1202" width="472.0000305175781" height="545.0186767578125">
+    <instance id="16:889" name="Top" x="4263" y="1202" width="472.0000273805017" height="272.50935462172856" />
+    <frame id="16:890" name="Right turned" x="4263" y="1474.50927734375" width="236.00001157235965" height="408.7640075683594">
+      <instance id="16:891" name="Right" x="4499" y="1338.254638671875" width="236.00001157235965" height="408.7640075683594" />
+    </frame>
+    <instance id="16:892" name="Left" x="4027.0068359375" y="1338.254638671875" width="236.00001157235965" height="408.7640075683594" />
+  </frame>
+  <frame id="16:902" name="Group 1321314170" x="3555" y="1197" width="472.0000305175781" height="545.0186767578125">
+    <instance id="16:903" name="Top" x="3791" y="1197" width="472.0000273805017" height="272.50935462172856" />
+    <frame id="16:904" name="Right turned" x="3791" y="1469.50927734375" width="236.00001157235965" height="408.7640075683594">
+      <instance id="16:905" name="Right" x="4027" y="1333.254638671875" width="236.00001157235965" height="408.7640075683594" />
+    </frame>
+    <instance id="16:906" name="Left" x="3555.0068359375" y="1333.254638671875" width="236.00001157235965" height="408.7640075683594" />
+  </frame>
+  <frame id="16:821" name="Group 1321314167" x="3791" y="1332" width="471.9838562011719" height="545">
+    <instance id="16:822" name="Top" x="4026.991943359375" y="1332" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:823" name="Right turned" x="4026.991943359375" y="1604.5" width="235.99192429893628" height="408.75">
+      <instance id="16:824" name="Right" x="4262.98388671875" y="1468.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="16:825" name="Left" x="3791.0068359375" y="1468.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:826" name="Group 1321314168" x="3319" y="1334" width="471.9838562011719" height="545">
+    <instance id="16:827" name="Top" x="3554.991943359375" y="1334" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:828" name="Right turned" x="3554.991943359375" y="1606.5" width="235.99192429893628" height="408.75">
+      <instance id="16:829" name="Right" x="3790.98388671875" y="1470.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:830" name="Left" x="3319.0068359375" y="1470.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="16:831" name="Group 1321314169" x="3555" y="1469" width="471.9838562011719" height="545">
+    <instance id="16:832" name="Top" x="3790.991943359375" y="1469" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:833" name="Right turned" x="3790.991943359375" y="1741.5" width="235.99192429893628" height="408.75">
+      <instance id="16:834" name="Right" x="4026.98388671875" y="1605.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:835" name="Left" x="3555.0068359375" y="1605.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="3:56" name="Cube/Drawn ish" x="2639" y="1186.898193359375" width="466" height="537.5401000976562">
+    <frame id="3:57" name="top" x="233.23825073242188" y="0.00002518042310839519" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="3:58" name="image 302" x="-134.3845672607422" y="-215.87411499023438" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="3:59" name="image 303" x="-137.24456787109375" y="-114.8465805053711" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="3:60" name="image 307" x="-160.1184539794922" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="3:61" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="3:62" name="Left" x="0" y="134.3849334716797" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="3:63" name="image 302" x="-134.38478088378906" y="-484.643798828125" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="3:64" name="image 303" x="-137.24456787109375" y="-383.6165466308594" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="3:65" name="image 307" x="-160.1185302734375" y="-790.1074829101562" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="3:66" name="Right" x="233.02908325195312" y="268.77020263671875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="3:67" name="image 302" x="253.52096557617188" y="-356.4535827636719" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="3:68" name="image 303" x="531.3446655273438" y="-1.9066318273544312" width="748.2214726134184" height="905.1926879882812" />
+      <rounded-rectangle id="3:69" name="image 304" x="475.59002685546875" y="-368.36724853515625" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="3:70" name="image 307" x="1050.300537109375" y="-252.56727600097656" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="3:71" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="3:72" name="image 308" x="-268.77008056640625" y="-790.1078491210938" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="16:915" name="Group 1321314171" x="3583" y="671" width="471.9838562011719" height="545">
+    <instance id="16:916" name="Top" x="3818.99169921875" y="671" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="16:917" name="Right turned" x="3818.99169921875" y="943.5" width="235.99192429893628" height="408.75">
+      <instance id="16:918" name="Right" x="4054.983642578125" y="807.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="16:919" name="Left" x="3583.006591796875" y="807.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <text id="16:927" name="荒原地块" x="4800" y="208" width="368" height="60" />
+  <rounded-rectangle id="3:990" name="50f41ee675abb81cfe9d4066d84344dc 2" x="3697" y="685" width="188" height="179.5164337158203" />
+  <frame id="38:628" name="Cube/Drawn ish" x="4499" y="1197" width="446" height="514.4697265625">
+    <frame id="38:629" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:630" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:631" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:632" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:633" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:634" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:635" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:636" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:637" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:638" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:639" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:640" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:641" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:642" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:643" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:644" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:646" name="Cube/Drawn ish" x="4276" y="1332" width="446" height="514.4697265625">
+    <frame id="38:647" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:648" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:649" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:650" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:651" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:652" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:653" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:654" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:655" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:656" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:657" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:658" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:659" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:660" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:661" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:662" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1512" name="Group 1321314190" x="2403" y="1329" width="471.9838562011719" height="545">
+    <instance id="38:1513" name="Top" x="2638.991943359375" y="1329" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1514" name="Right turned" x="2638.991943359375" y="1601.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1515" name="Right" x="2874.98388671875" y="1465.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1516" name="Left" x="2403.0068359375" y="1465.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <rounded-rectangle id="3:663" name="4f677b4f08b633de6b90e314d8dd45c1 4" x="4197" y="801" width="388.6555480957031" height="266" />
+  <frame id="38:664" name="Cube/Drawn ish" x="4722" y="1308" width="446" height="514.4697265625">
+    <frame id="38:665" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:666" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:667" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:668" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:669" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:670" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:671" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:672" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:673" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:674" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:675" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:676" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:677" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:678" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:679" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:680" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:681" name="Cube/Drawn ish" x="4499" y="1443" width="446" height="514.4697265625">
+    <frame id="38:682" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:683" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:684" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:685" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:686" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:687" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:688" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:689" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:690" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:691" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:692" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:693" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:694" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:695" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:696" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:697" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <instance id="38:699" name="Cube" x="3635" y="502" width="408.9999694824219" height="471.7894592285156" />
+  <frame id="38:734" name="Group 1321314172" x="4020" y="1468" width="471.9838562011719" height="545">
+    <instance id="38:735" name="Top" x="4255.99169921875" y="1468" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:736" name="Right turned" x="4255.99169921875" y="1740.5" width="235.99192429893628" height="408.75">
+      <instance id="38:737" name="Right" x="4491.98388671875" y="1604.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="38:738" name="Left" x="4020.006591796875" y="1604.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:745" name="Group 1321314173" x="3791" y="1604" width="471.9838562011719" height="545">
+    <instance id="38:746" name="Top" x="4026.991943359375" y="1604" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:747" name="Right turned" x="4026.991943359375" y="1876.5" width="235.99192429893628" height="408.75">
+      <instance id="38:748" name="Right" x="4262.98388671875" y="1740.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="38:749" name="Left" x="3791.0068359375" y="1740.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <instance id="38:756" name="Cube" x="4055" y="1252" width="437" height="504.0880126953125" />
+  <frame id="38:793" name="Group 1321314174" x="3819" y="814" width="471.9838562011719" height="545">
+    <instance id="38:794" name="Top" x="4054.99169921875" y="814" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:795" name="Right turned" x="4054.99169921875" y="1086.5" width="235.99192429893628" height="408.75">
+      <instance id="38:796" name="Right" x="4290.98388671875" y="950.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="38:797" name="Left" x="3819.006591796875" y="950.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:860" name="Cube/Drawn ish" x="2872" y="1327.9520263671875" width="466" height="537.5401000976562">
+    <frame id="38:861" name="top" x="233.23825073242188" y="0.000003831803951470647" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="38:862" name="image 302" x="-134.3845977783203" y="-215.87413024902344" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="38:863" name="image 303" x="-137.24453735351562" y="-114.8465347290039" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="38:864" name="image 307" x="-160.11846923828125" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="38:865" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:866" name="Left" x="0" y="134.38490295410156" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:867" name="image 302" x="-134.38478088378906" y="-484.6438293457031" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="38:868" name="image 303" x="-137.24456787109375" y="-383.6165466308594" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="38:869" name="image 307" x="-160.1185302734375" y="-790.1074829101562" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="38:870" name="Right" x="233.02908325195312" y="268.77020263671875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:871" name="image 302" x="253.52096557617188" y="-356.4534912109375" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="38:872" name="image 303" x="531.3446655273438" y="-1.9065310955047607" width="748.2214726134184" height="905.1926879882812" />
+      <rounded-rectangle id="38:873" name="image 304" x="475.59002685546875" y="-368.3671569824219" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="38:874" name="image 307" x="1050.300537109375" y="-252.56716918945312" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="38:875" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:876" name="image 308" x="-268.77008056640625" y="-790.1077270507812" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:878" name="Cube/Drawn ish" x="3105" y="1443.9295654296875" width="466" height="537.5401000976562">
+    <frame id="38:879" name="top" x="233.23825073242188" y="0.000043244639527983963" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="38:880" name="image 302" x="-134.38449096679688" y="-215.87403869628906" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="38:881" name="image 303" x="-137.24449157714844" y="-114.84649658203125" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="38:882" name="image 307" x="-160.11843872070312" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="38:883" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:884" name="Left" x="0" y="134.38494873046875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:885" name="image 302" x="-134.38478088378906" y="-484.643798828125" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="38:886" name="image 303" x="-137.24456787109375" y="-383.61651611328125" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="38:887" name="image 307" x="-160.1185302734375" y="-790.107421875" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="38:888" name="Right" x="233.02908325195312" y="268.7702331542969" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:889" name="image 302" x="253.52096557617188" y="-356.4535827636719" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="38:890" name="image 303" x="531.3446655273438" y="-1.906613826751709" width="748.2214726134184" height="905.1926879882812" />
+      <rounded-rectangle id="38:891" name="image 304" x="475.59002685546875" y="-368.36724853515625" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="38:892" name="image 307" x="1050.300537109375" y="-252.56724548339844" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="38:893" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:894" name="image 308" x="-268.77008056640625" y="-790.1077880859375" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:824" name="Group 1321314176" x="2639" y="1467" width="472.0000305175781" height="545.0186767578125">
+    <instance id="38:825" name="Top" x="2875" y="1467" width="472.0000273805017" height="272.50935462172856" />
+    <frame id="38:826" name="Right turned" x="2875" y="1739.50927734375" width="236.00001157235965" height="408.7640075683594">
+      <instance id="38:827" name="Right" x="3111" y="1603.254638671875" width="236.00001157235965" height="408.7640075683594" />
+    </frame>
+    <instance id="38:828" name="Left" x="2639.0068359375" y="1603.254638671875" width="236.00001157235965" height="408.7640075683594" />
+  </frame>
+  <instance id="38:1523" name="Cube" x="3418" y="1138" width="400.22723388671875" height="461.669921875" />
+  <frame id="38:979" name="Cube/Drawn ish" x="4291" y="1597" width="446" height="514.4697265625">
+    <frame id="38:980" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:981" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:982" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:983" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:984" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:985" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:986" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:987" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:988" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:989" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:990" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:991" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:992" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:993" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:994" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:995" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:996" name="Cube/Drawn ish" x="4081" y="1719.6513671875" width="431" height="497.16693115234375">
+    <frame id="38:997" name="top" x="215.72035217285156" y="0.000029559627364506014" width="430.5591993884318" height="248.58348039290104">
+      <rounded-rectangle id="38:998" name="image 302" x="-124.29141998291016" y="-199.66015625" width="1258.8512556072274" height="726.7981453023858" hidden="true" />
+      <rounded-rectangle id="38:999" name="image 303" x="-126.93647766113281" y="-106.22065734863281" width="1071.0540922040527" height="618.3733996797309" />
+      <rounded-rectangle id="38:1000" name="image 307" x="-148.09242248535156" y="-482.18115234375" width="1291.6776129820246" height="745.7504559954323" hidden="true" />
+      <rounded-rectangle id="38:1001" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1002" name="Left" x="4.547473508864641e-13" y="124.29164123535156" width="215.2795977622718" height="372.8751983642578">
+      <rounded-rectangle id="38:1003" name="image 302" x="-124.29150390625" y="-448.2434997558594" width="538.1990122615416" height="1142.8668518066406" />
+      <rounded-rectangle id="38:1004" name="image 303" x="-126.9365005493164" y="-354.80413818359375" width="379.02947584165804" height="1017.9139404296875" />
+      <rounded-rectangle id="38:1005" name="image 307" x="-148.0924530029297" y="-730.7646484375" width="430.5592064773855" height="1242.9173278808594" hidden="true" />
+    </frame>
+    <frame id="38:1006" name="Right" x="215.5269012451172" y="248.5836181640625" width="215.2795977622718" height="372.8751983642578">
+      <rounded-rectangle id="38:1007" name="image 302" x="234.47943115234375" y="-329.681396484375" width="576.3690844402809" height="829.9337768554688" />
+      <rounded-rectangle id="38:1008" name="image 303" x="491.43682861328125" y="-1.763377070426941" width="692.0245959796066" height="837.2061157226562" />
+      <rounded-rectangle id="38:1009" name="image 304" x="439.8694763183594" y="-340.7001953125" width="720.6522257698916" height="1037.5274353027344" hidden="true" />
+      <rounded-rectangle id="38:1010" name="image 307" x="971.4153442382812" y="-233.59751892089844" width="861.1183800962463" height="994.3338623046875" hidden="true" />
+      <rounded-rectangle id="38:1011" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1012" name="image 308" x="-248.5834503173828" y="-730.7648315429688" width="430.5592064773855" height="1242.9173278808594" hidden="true" />
+    </frame>
+  </frame>
+  <instance id="38:1653" name="Cube" x="3122" y="1445" width="443.8590087890625" height="512" />
+  <frame id="38:819" name="Group 1321314175" x="2853" y="1584" width="471.9838562011719" height="545">
+    <instance id="38:820" name="Top" x="3088.991943359375" y="1584" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:821" name="Right turned" x="3088.991943359375" y="1856.5" width="235.99192429893628" height="408.75">
+      <instance id="38:822" name="Right" x="3324.98388671875" y="1720.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:823" name="Left" x="2853.0068359375" y="1720.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <instance id="38:896" name="Cube" x="3635" y="1258" width="400.22723388671875" height="461.669921875" />
+  <text id="38:1232" name="通过小船来到无人荒岛" x="5536" y="627.4545288085938" width="544" height="60" />
+  <rounded-rectangle id="16:877" name="cf73da8e7fb7986883252f277dd1f139 2" x="3381" y="836" width="315.50848388671875" height="365" />
+  <frame id="38:1288" name="Cube/Drawn ish" x="4925" y="1443" width="446" height="514.4697265625">
+    <frame id="38:1289" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:1290" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:1291" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:1292" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:1293" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1294" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:1295" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:1296" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:1297" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:1298" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:1299" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:1300" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:1301" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:1302" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:1303" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1304" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1305" name="Cube/Drawn ish" x="4702" y="1578" width="446" height="514.4697265625">
+    <frame id="38:1306" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:1307" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:1308" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:1309" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:1310" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1311" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:1312" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:1313" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:1314" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:1315" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:1316" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:1317" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:1318" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:1319" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:1320" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1321" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1322" name="Cube/Drawn ish" x="4494" y="1732" width="446" height="514.4697265625">
+    <frame id="38:1323" name="top" x="223.2280731201172" y="0" width="445.54386001682724" height="257.23487861364265">
+      <rounded-rectangle id="38:1324" name="image 302" x="-128.61705017089844" y="-206.60911560058594" width="1302.6627649701113" height="752.0927332102183" hidden="true" />
+      <rounded-rectangle id="38:1325" name="image 303" x="-131.3542022705078" y="-109.91763305664062" width="1108.3297632884896" height="639.894519501413" />
+      <rounded-rectangle id="38:1326" name="image 307" x="-153.2463836669922" y="-498.9625244140625" width="1336.6315953828744" height="771.7046511733206" hidden="true" />
+      <rounded-rectangle id="38:1327" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1328" name="Left" x="-4.547473508864641e-13" y="128.61729431152344" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:1329" name="image 302" x="-128.6171417236328" y="-463.84368896484375" width="556.9298248259765" height="1182.6417846679688" />
+      <rounded-rectangle id="38:1330" name="image 303" x="-131.35414123535156" y="-367.15240478515625" width="392.22077051651286" height="1053.3401794433594" />
+      <rounded-rectangle id="38:1331" name="image 307" x="-153.2464599609375" y="-756.1973266601562" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+    <frame id="38:1332" name="Right" x="223.02789306640625" y="257.2349853515625" width="222.7719280092324" height="385.852294921875">
+      <rounded-rectangle id="38:1333" name="image 302" x="242.6400909423828" y="-341.1551513671875" width="596.428323875406" height="858.8177795410156" />
+      <rounded-rectangle id="38:1334" name="image 303" x="508.5401306152344" y="-1.8247309923171997" width="716.1089716798115" height="866.3432312011719" />
+      <rounded-rectangle id="38:1335" name="image 304" x="455.1783447265625" y="-352.5574951171875" width="745.7329219566536" height="1073.6362609863281" hidden="true" />
+      <rounded-rectangle id="38:1336" name="image 307" x="1005.2232666015625" y="-241.7274169921875" width="891.0877007029003" height="1028.939453125" hidden="true" />
+      <rounded-rectangle id="38:1337" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1338" name="image 308" x="-257.2347717285156" y="-756.197509765625" width="445.5438673524959" height="1286.17431640625" hidden="true" />
+    </frame>
+  </frame>
+  <instance id="38:1373" name="Top" x="5207.99169921875" y="1702" width="471.98385283350945" height="272.5000162422657" />
+  <frame id="38:1374" name="Right turned" x="5207.99169921875" y="1974.5" width="235.99192429893628" height="408.75">
+    <instance id="38:1375" name="Right" x="5443.9833984375" y="1838.25" width="235.99192429893628" height="408.75" />
+  </frame>
+  <instance id="38:1376" name="Left" x="4972.0068359375" y="1838.25" width="235.99192429893628" height="408.75" />
+  <frame id="38:1339" name="Cube/Drawn ish" x="4284" y="1854.6513671875" width="431" height="497.16693115234375">
+    <frame id="38:1340" name="top" x="215.72035217285156" y="0.000029559627364506014" width="430.5591993884318" height="248.58348039290104">
+      <rounded-rectangle id="38:1341" name="image 302" x="-124.29141998291016" y="-199.66015625" width="1258.8512556072274" height="726.7981453023858" hidden="true" />
+      <rounded-rectangle id="38:1342" name="image 303" x="-126.93647766113281" y="-106.22065734863281" width="1071.0540922040527" height="618.3733996797309" />
+      <rounded-rectangle id="38:1343" name="image 307" x="-148.09242248535156" y="-482.18115234375" width="1291.6776129820246" height="745.7504559954323" hidden="true" />
+      <rounded-rectangle id="38:1344" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1345" name="Left" x="4.547473508864641e-13" y="124.29164123535156" width="215.2795977622718" height="372.8751983642578">
+      <rounded-rectangle id="38:1346" name="image 302" x="-124.29150390625" y="-448.2434997558594" width="538.1990122615416" height="1142.8668518066406" />
+      <rounded-rectangle id="38:1347" name="image 303" x="-126.9365005493164" y="-354.80413818359375" width="379.0294758416585" height="1017.9139404296875" />
+      <rounded-rectangle id="38:1348" name="image 307" x="-148.0924530029297" y="-730.7646484375" width="430.5592064773855" height="1242.9173278808594" hidden="true" />
+    </frame>
+    <frame id="38:1349" name="Right" x="215.5269012451172" y="248.5836181640625" width="215.2795977622718" height="372.8751983642578">
+      <rounded-rectangle id="38:1350" name="image 302" x="234.47943115234375" y="-329.681396484375" width="576.3690844402809" height="829.9337768554688" />
+      <rounded-rectangle id="38:1351" name="image 303" x="491.43682861328125" y="-1.763377070426941" width="692.0245959796066" height="837.2061157226562" />
+      <rounded-rectangle id="38:1352" name="image 304" x="439.8694763183594" y="-340.7001953125" width="720.6522257698916" height="1037.5274353027344" hidden="true" />
+      <rounded-rectangle id="38:1353" name="image 307" x="971.4153442382812" y="-233.59751892089844" width="861.1183800962463" height="994.3338623046875" hidden="true" />
+      <rounded-rectangle id="38:1354" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:1355" name="image 308" x="-248.5834503173828" y="-730.7648315429688" width="430.5592064773855" height="1242.9173278808594" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:1357" name="Group 1321314179" x="4740" y="1834" width="472.0000305175781" height="545.0186767578125">
+    <instance id="38:1358" name="Top" x="4976" y="1834" width="472.0000273805017" height="272.50935462172856" />
+    <frame id="38:1359" name="Right turned" x="4976" y="2106.50927734375" width="236.00001157235965" height="408.7640075683594">
+      <instance id="38:1360" name="Right" x="5212" y="1970.254638671875" width="236.00001157235965" height="408.7640075683594" />
+    </frame>
+    <instance id="38:1361" name="Left" x="4740.0068359375" y="1970.254638671875" width="236.00001157235965" height="408.7640075683594" />
+  </frame>
+  <frame id="38:1362" name="Group 1321314180" x="4509" y="1963" width="471.9838562011719" height="545">
+    <instance id="38:1363" name="Top" x="4744.99169921875" y="1963" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1364" name="Right turned" x="4744.99169921875" y="2235.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1365" name="Right" x="4980.98388671875" y="2099.25" width="235.99192429893628" height="408.75" />
+    </frame>
+    <instance id="38:1366" name="Left" x="4509.0068359375" y="2099.25" width="235.99192429893628" height="408.75" />
+  </frame>
+  <rounded-rectangle id="3:231" name="50f41ee675abb81cfe9d4066d84344dc 1" x="4348" y="1122" width="304" height="290.2818908691406" />
+  <frame id="38:1440" name="Group 1321314183" x="2424" y="1601" width="472.0000305175781" height="545.0186767578125">
+    <instance id="38:1441" name="Top" x="2660" y="1601" width="472.0000273805017" height="272.50935462172856" />
+    <frame id="38:1442" name="Right turned" x="2660" y="1873.50927734375" width="236.00001157235965" height="408.7640075683594">
+      <instance id="38:1443" name="Right" x="2896" y="1737.254638671875" width="236.00001157235965" height="408.7640075683594" />
+    </frame>
+    <instance id="38:1444" name="Left" x="2424.0068359375" y="1737.254638671875" width="236.00001157235965" height="408.7640075683594" />
+  </frame>
+  <rounded-rectangle id="3:1113" name="4f677b4f08b633de6b90e314d8dd45c1 5" x="4550" y="1443" width="422" height="359.14892578125" />
+  <frame id="38:1445" name="Group 1321314184" x="2638" y="1718" width="471.9838562011719" height="545">
+    <instance id="38:1446" name="Top" x="2873.991943359375" y="1718" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1447" name="Right turned" x="2873.991943359375" y="1990.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1448" name="Right" x="3109.98388671875" y="1854.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1449" name="Left" x="2638.0068359375" y="1854.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:1450" name="Group 1321314185" x="2874" y="1852" width="471.9838562011719" height="545">
+    <instance id="38:1451" name="Top" x="3109.991943359375" y="1852" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1452" name="Right turned" x="3109.991943359375" y="2124.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1453" name="Right" x="3345.98388671875" y="1988.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1454" name="Left" x="2874.0068359375" y="1988.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:1481" name="Group 1321314187" x="2195" y="1747" width="471.9838562011719" height="545">
+    <instance id="38:1482" name="Top" x="2430.991943359375" y="1747" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1483" name="Right turned" x="2430.991943359375" y="2019.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1484" name="Right" x="2666.98388671875" y="1883.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1485" name="Left" x="2195.0068359375" y="1883.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:1486" name="Group 1321314188" x="2431" y="1881" width="471.9838562011719" height="545">
+    <instance id="38:1487" name="Top" x="2666.991943359375" y="1881" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1488" name="Right turned" x="2666.991943359375" y="2153.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1489" name="Right" x="2902.98388671875" y="2017.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1490" name="Left" x="2431.0068359375" y="2017.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:1491" name="Group 1321314189" x="2667" y="2016" width="471.9838562011719" height="545">
+    <instance id="38:1492" name="Top" x="2902.991943359375" y="2016" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1493" name="Right turned" x="2902.991943359375" y="2288.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1494" name="Right" x="3138.98388671875" y="2152.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1495" name="Left" x="2667.0068359375" y="2152.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <text id="38:1540" name="玩家一开始在小岛上生活然后做小船来到一座荒岛上 这个荒岛上会不断出现野生的小动物，他们流离失所，玩家需要推动地块改造地形或者和小动物交互让他们找到自己的家园；之后玩家可以用钓鱼竿，捕虾笼获得道具回到码头换取金币然后购买新的土壤改造小岛帮助动物们安居下来。" x="2144" y="2772.727294921875" width="3284.800048828125" height="288" />
+  <text id="3:433" name="一般地块，一般不交互" x="336" y="3862.45458984375" width="476.4705810546875" height="60" />
+  <text id="96:1472" name="参考视角" x="-987" y="3859.45458984375" width="476.4705810546875" height="60" />
+  <text id="93:1966" name="草地" x="440" y="4339.45458984375" width="80" height="60" />
+  <text id="93:1987" name="可推动地块" x="373" y="5036.45458984375" width="217" height="60" />
+  <text id="93:2010" name="类似竹排" x="407" y="5680.45458984375" width="217" height="60" />
+  <text id="93:1973" name="礁石" x="823" y="4339.45458984375" width="80" height="60" />
+  <frame id="38:1576" name="Cube/Drawn ish" x="896" y="6048" width="357" height="411.80645751953125">
+    <frame id="38:1577" name="top" x="178.6825408935547" y="-9.094947017729282e-13" width="356.6348595262152" height="205.90324103255443">
+      <rounded-rectangle id="38:1578" name="image 302" x="-102.95133972167969" y="-165.37994384765625" width="1042.7143774154065" height="602.0114546575969" hidden="true" />
+      <rounded-rectangle id="38:1579" name="image 303" x="-105.14220428466797" y="-87.983154296875" width="887.1607762350268" height="512.2025388410038" />
+      <rounded-rectangle id="38:1580" name="image 307" x="-122.66588592529297" y="-399.39373779296875" width="1069.9045908514345" height="617.7097353704521" hidden="true" />
+      <rounded-rectangle id="38:1581" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:1582" name="Left" x="2.2737367544323206e-13" y="102.951416015625" width="178.31742816286646" height="308.85484313964844">
+      <rounded-rectangle id="38:1583" name="image 302" x="-102.95142364501953" y="-371.2828369140625" width="445.7936138951328" height="946.6437683105469" />
+      <rounded-rectangle id="38:1584" name="image 303" x="-105.14232635498047" y="-293.8861999511719" width="313.95248025616945" height="843.1444549560547" />
+      <rounded-rectangle id="38:1585" name="image 307" x="-122.66596221923828" y="-605.2964477539062" width="356.63486539803955" height="1029.5161437988281" hidden="true" />
+    </frame>
+    <frame id="38:1586" name="Right" x="178.5222625732422" y="205.90321350097656" width="178.31742816286646" height="308.85484313964844">
+      <rounded-rectangle id="38:1587" name="image 302" x="194.2211151123047" y="-273.0769958496094" width="477.4101417027364" height="687.4393310546875" />
+      <rounded-rectangle id="38:1588" name="image 303" x="407.0602111816406" y="-1.4608545303344727" width="573.2082790956672" height="693.4630432128906" />
+      <rounded-rectangle id="38:1589" name="image 304" x="364.346923828125" y="-282.20404052734375" width="596.9207489621333" height="859.3904724121094" hidden="true" />
+      <rounded-rectangle id="38:1590" name="image 307" x="804.62939453125" y="-193.49026489257812" width="713.2697035791593" height="823.6129150390625" hidden="true" />
+      <rounded-rectangle id="38:1591" name="shadow" x="0" y="0" width="488.4383313930273" height="846" />
+      <rounded-rectangle id="38:1592" name="image 308" x="-205.9031982421875" y="-605.2971801757812" width="356.63486539803966" height="1029.5161437988281" hidden="true" />
+    </frame>
+  </frame>
+  <text id="38:1594" name="水体方块：如果有水生生物可以在岸边钓鱼获得金币" x="338" y="5864.45458984375" width="955" height="60" />
+  <rounded-rectangle id="78:1831" name="50f41ee675abb81cfe9d4066d84344dc 4" x="2850.677001953125" y="4873.83056640625" width="230.99073791503906" height="220.56719970703125" />
+  <sticky id="38:1649" x="3504" y="1264" color="STICKY_BLUE" author="Hachi" width="240" height="240">玩家可以推动该方块（传统推箱子逻辑）可以掉在水方块里浮在水面上。</sticky>
+  <rounded-rectangle id="38:1672" name="cf73da8e7fb7986883252f277dd1f139 3" x="2706" y="1554" width="315.50848388671875" height="365" />
+  <frame id="38:1677" name="Group 1321314192" x="2875" y="1504" width="255.0716552734375" height="294.5313415527344">
+    <instance id="38:1678" name="Top" x="3002.535888671875" y="1504" width="255.071654624011" height="147.26569481287515" />
+    <frame id="38:1679" name="Right turned" x="3002.53564453125" y="1651.265625" width="127.53582616748417" height="220.89852905273438">
+      <instance id="38:1680" name="Right" x="3130.0712890625" y="1577.6328125" width="127.53582616748417" height="220.89852905273438" />
+    </frame>
+    <instance id="38:1681" name="Left" x="2875.00341796875" y="1577.6328125" width="127.53582616748417" height="220.89852905273438" />
+  </frame>
+  <sticky id="38:1688" x="2403" y="1504" color="STICKY_BLUE" author="Hachi" width="416" height="256">玩家手持方块可以放置在周围9格的范围之内，可选水格子填上，可堆高方块可以叠高，玩家高度为1，格子高度也为1，无法叠加比自己高度还高2的地块</sticky>
+  <text id="38:1701" name="可获得道具规则：玩家移动小动物的规则有区别有的可以直接抱起来拿走有的只能被驱赶有的需要沿着水路移动" x="4416" y="3191.272705078125" width="1111.7646484375" height="120" />
+  <rounded-rectangle id="38:1715" name="OIP-C 1" x="4367" y="3376" width="693.031494140625" height="607" />
+  <rounded-rectangle id="38:1722" name="OIP-C 2" x="4416" y="4159" width="586" height="610.4951782226562" />
+  <text id="38:1726" name="玩家需要购买钓竿，在带有金鱼的关卡通关后即可购买 玩家钓鱼玩法参考星露谷，玩家可以去码头购买 数值：待定 可作用对象：鱼类" x="5168" y="3516.45458984375" width="992" height="300" />
+  <text id="38:1732" name="消耗品可以布置在大虾周围地块，一段时间后自动获取虾 数值：待定 可作用对象：待定" x="5192" y="4339.45458984375" width="944" height="240" />
+  <text id="38:1740" name="码头/商店系统" x="6352" y="3191.45458984375" width="608" height="60" />
+  <rounded-rectangle id="38:1744" name="a43db42c05a6182f02dbed9299f27534 1" x="6550" y="4003" width="384" height="433.11627197265625" />
+  <text id="38:1752" name="商店老板：会从你手里收购你从小岛上取得的道具，也会想你售卖钓鱼竿，捕虾笼还有地块" x="7020" y="4062.45458984375" width="672" height="180" />
+  <rounded-rectangle id="38:1759" name="86c0e62ca5e6f6b92216cb167d6221fb 2" x="6268" y="3376" width="804.0000131130182" height="510.0844422528462" />
+  <text id="38:1767" name="码头：岛上生活着各式各样的居民可以和你交谈并且给你提供帮助" x="7136" y="3516.45458984375" width="672" height="120" />
+  <rounded-rectangle id="38:1775" name="86c0e62ca5e6f6b92216cb167d6221fb 3" x="6647" y="4518" width="319.98963546814593" height="423.00000530481157" />
+  <text id="38:1789" name="玩家可以通过小船来往小岛和码头之间（）并且方块默认放在小船上只可以从小船上搬运到荒岛（限制：每次一个）" x="7072" y="4638.45458984375" width="672" height="180" />
+  <frame id="38:909" name="Cube/Drawn ish" x="3328" y="1581" width="466" height="537.5401000976562">
+    <frame id="38:910" name="top" x="233.23825073242188" y="0.000043244639527983963" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="38:911" name="image 302" x="-134.38449096679688" y="-215.87403869628906" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="38:912" name="image 303" x="-137.24449157714844" y="-114.84649658203125" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="38:913" name="image 307" x="-160.11843872070312" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="38:914" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:915" name="Left" x="0" y="134.38494873046875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:916" name="image 302" x="-134.38478088378906" y="-484.643798828125" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="38:917" name="image 303" x="-137.24456787109375" y="-383.61651611328125" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="38:918" name="image 307" x="-160.1185302734375" y="-790.107421875" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="38:919" name="Right" x="233.02908325195312" y="268.7702331542969" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:920" name="image 302" x="253.52096557617188" y="-356.4535827636719" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="38:921" name="image 303" x="531.3446655273438" y="-1.906613826751709" width="748.2214726134184" height="905.1926879882812" />
+      <rounded-rectangle id="38:922" name="image 304" x="475.59002685546875" y="-368.36724853515625" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="38:923" name="image 307" x="1050.300537109375" y="-252.56724548339844" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="38:924" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:925" name="image 308" x="-268.77008056640625" y="-790.1077880859375" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:927" name="Cube/Drawn ish" x="3571" y="1702" width="466" height="537.5401000976562">
+    <frame id="38:928" name="top" x="233.23825073242188" y="0.000003831803951470647" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="38:929" name="image 302" x="-134.3845977783203" y="-215.87413024902344" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="38:930" name="image 303" x="-137.24453735351562" y="-114.8465347290039" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="38:931" name="image 307" x="-160.11846923828125" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="38:932" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:933" name="Left" x="0" y="134.38490295410156" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:934" name="image 302" x="-134.38478088378906" y="-484.6438293457031" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="38:935" name="image 303" x="-137.24456787109375" y="-383.6165466308594" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="38:936" name="image 307" x="-160.1185302734375" y="-790.1074829101562" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="38:937" name="Right" x="233.02908325195312" y="268.77020263671875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:938" name="image 302" x="253.52096557617188" y="-356.4534912109375" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="38:939" name="image 303" x="531.3446655273438" y="-1.9065310955047607" width="748.221472613418" height="905.1926879882812" />
+      <rounded-rectangle id="38:940" name="image 304" x="475.59002685546875" y="-368.3671569824219" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="38:941" name="image 307" x="1050.300537109375" y="-252.56716918945312" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="38:942" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:943" name="image 308" x="-268.77008056640625" y="-790.1077270507812" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:944" name="Cube/Drawn ish" x="3804" y="1817.9775390625" width="466" height="537.5401000976562">
+    <frame id="38:945" name="top" x="233.23825073242188" y="0.000043244639527983963" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="38:946" name="image 302" x="-134.38449096679688" y="-215.87403869628906" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="38:947" name="image 303" x="-137.24449157714844" y="-114.84649658203125" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="38:948" name="image 307" x="-160.11843872070312" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="38:949" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:950" name="Left" x="0" y="134.38494873046875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:951" name="image 302" x="-134.38478088378906" y="-484.643798828125" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="38:952" name="image 303" x="-137.24456787109375" y="-383.61651611328125" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="38:953" name="image 307" x="-160.1185302734375" y="-790.107421875" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="38:954" name="Right" x="233.02908325195312" y="268.7702331542969" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:955" name="image 302" x="253.52096557617188" y="-356.4535827636719" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="38:956" name="image 303" x="531.3446655273438" y="-1.906613826751709" width="748.221472613418" height="905.1926879882812" />
+      <rounded-rectangle id="38:957" name="image 304" x="475.59002685546875" y="-368.36724853515625" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="38:958" name="image 307" x="1050.300537109375" y="-252.56724548339844" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="38:959" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:960" name="image 308" x="-268.77008056640625" y="-790.1077880859375" width="465.52339756664514" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:961" name="Cube/Drawn ish" x="4037" y="1957" width="466" height="537.5401000976562">
+    <frame id="38:962" name="top" x="233.23825073242188" y="0.000043244639527983963" width="465.52338990202225" height="268.7700660687715">
+      <rounded-rectangle id="38:963" name="image 302" x="-134.38449096679688" y="-215.87403869628906" width="1361.0781460259532" height="785.8188707657137" hidden="true" />
+      <rounded-rectangle id="38:964" name="image 303" x="-137.24449157714844" y="-114.84649658203125" width="1158.0306316387414" height="668.5893306715334" />
+      <rounded-rectangle id="38:965" name="image 307" x="-160.11843872070312" y="-521.3374633789062" width="1396.57018572601" height="806.3102142262578" hidden="true" />
+      <rounded-rectangle id="38:966" name="light" x="0" y="0" width="976.8766715526581" height="564.0000336170197" />
+    </frame>
+    <frame id="38:967" name="Left" x="0" y="134.38494873046875" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:968" name="image 302" x="-134.38478088378906" y="-484.643798828125" width="581.9042768172199" height="1235.675048828125" />
+      <rounded-rectangle id="38:969" name="image 303" x="-137.24456787109375" y="-383.61651611328125" width="409.8091369873209" height="1100.5751495361328" />
+      <rounded-rectangle id="38:970" name="image 307" x="-160.1185302734375" y="-790.107421875" width="465.5233975666447" height="1343.8502502441406" hidden="true" />
+    </frame>
+    <frame id="38:971" name="Right" x="233.02908325195312" y="268.7702331542969" width="232.761692862181" height="403.1550750732422">
+      <rounded-rectangle id="38:972" name="image 302" x="253.52096557617188" y="-356.4535827636719" width="623.173994074903" height="897.3297729492188" />
+      <rounded-rectangle id="38:973" name="image 303" x="531.3446655273438" y="-1.906613826751709" width="748.221472613418" height="905.1926879882812" />
+      <rounded-rectangle id="38:974" name="image 304" x="475.59002685546875" y="-368.36724853515625" width="779.1738502056714" height="1121.7814025878906" hidden="true" />
+      <rounded-rectangle id="38:975" name="image 307" x="1050.300537109375" y="-252.56724548339844" width="931.0467596064409" height="1075.0802001953125" hidden="true" />
+      <rounded-rectangle id="38:976" name="shadow" x="0" y="0" width="488.4383313930275" height="846" />
+      <rounded-rectangle id="38:977" name="image 308" x="-268.77008056640625" y="-790.1077880859375" width="465.52339756664514" height="1343.8502502441406" hidden="true" />
+    </frame>
+  </frame>
+  <frame id="38:829" name="Group 1321314177" x="3089" y="1718" width="471.9838562011719" height="545">
+    <instance id="38:830" name="Top" x="3324.991943359375" y="1718" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:831" name="Right turned" x="3324.991943359375" y="1990.5" width="235.99192429893628" height="408.75">
+      <instance id="38:832" name="Right" x="3560.98388671875" y="1854.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:833" name="Left" x="3089.0068359375" y="1854.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:834" name="Group 1321314178" x="3325" y="1853" width="471.9838562011719" height="545">
+    <instance id="38:835" name="Top" x="3560.991943359375" y="1853" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:836" name="Right turned" x="3560.991943359375" y="2125.5" width="235.99192429893628" height="408.75">
+      <instance id="38:837" name="Right" x="3796.98388671875" y="1989.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:838" name="Left" x="3325.0068359375" y="1989.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="38:1455" name="Group 1321314186" x="3110" y="1987" width="471.9838562011719" height="545">
+    <instance id="38:1456" name="Top" x="3345.991943359375" y="1987" width="471.98385283350945" height="272.5000162422657" />
+    <frame id="38:1457" name="Right turned" x="3345.991943359375" y="2259.5" width="235.99192429893628" height="408.75">
+      <instance id="38:1458" name="Right" x="3581.98388671875" y="2123.25" width="235.99192429893583" height="408.75" />
+    </frame>
+    <instance id="38:1459" name="Left" x="3110.0068359375" y="2123.25" width="235.99192429893583" height="408.75" />
+  </frame>
+  <frame id="81:3569" name="Group 1321314194" x="-1344" y="7497" width="1389" height="3589.45458984375">
+    <text id="57:782" name="保护高地的海龟：以高地为中心，在周围3×3内的可通行陆地上缓慢活动 关系：抑制红虾的驱赶行为，保护寄居蟹和海星 繁衍条件：高地中心有效，3×3范围内至少有2格连通高地" x="-954" y="9936" width="784" height="480" />
+    <text id="60:849" name="慢吞吞的海星：在邻水岸地一格缓慢移动，不进入远离水域的内陆。玩家不能直接抱起，可通过改变海岸环境影响其活动范围 关系:吸引水母；躲避红虾；寄居蟹是友好邻居 繁衍条件：连续邻水岸地≥2格，3×3内有至少1种友好生物且安全" x="-941" y="10606.455078125" width="986" height="480" />
+    <frame id="81:3568" name="Group 1321314193" x="-1344" y="7497" width="1389" height="2664">
+      <rounded-rectangle id="3:249" name="4f677b4f08b633de6b90e314d8dd45c1 1" x="-1243" y="7497" width="203" height="506" />
+      <text id="3:261" name="口渴的蓝色水母：只可以在有水的地块生存需要放置在有水的地块；在连通水域活动，倾向停留在海星附近的水格 关系：躲避红虾；受海星吸引；帮助寄居蟹满足多样性条件 繁衍条件：连通水域≥3格，无有效红虾威胁" x="-927" y="7571.45458984375" width="913" height="480" />
+      <rounded-rectangle id="3:265" name="4f677b4f08b633de6b90e314d8dd45c1 2" x="-1324" y="8438" width="263" height="180" />
+      <text id="3:273" name="愤怒的红虾：自己会随意移动驱赶周围生物（无法攻击到不在同一高度的生物）若和别的生物在同一水平面会攻击别的生物无法共存，在陆地和水面都可以生存 移动方式：可以被玩家抱起 关系：驱赶金鱼、水母、寄居蟹、海星；受到陆龟庇护区抑制 繁衍条件：所在可达区域≥3格，附近3×3内没有其他物种干扰" x="-954" y="8118.45458984375" width="934" height="660" />
+      <rounded-rectangle id="3:302" name="4f677b4f08b633de6b90e314d8dd45c1 3" x="-1342" y="8998" width="235" height="200" />
+      <text id="3:310" name="爱吃的金鱼：在水下游动 关系：被红虾驱赶；金鱼的存在也会干扰红虾繁衍 繁衍条件：封闭池塘≥4格，无有效红虾威胁" x="-954" y="8937.455078125" width="946" height="300" />
+      <rounded-rectangle id="38:1602" name="50f41ee675abb81cfe9d4066d84344dc 3" x="-1344" y="9439" width="304" height="290.2818908691406" />
+      <text id="38:1635" name="孤独的寄居蟹：玩家没办法把他抱起来，因为害怕孤独很少会外出 躲避红虾；受陆龟保护；附近水母和海星可帮助其繁衍 繁衍条件：周围9格之内的生物&gt;=2种（不含自己）" x="-941" y="9464.455078125" width="986" height="360" />
+      <shape-with-text id="57:783" x="-1304" y="9903" width="264" height="258" name="SQUARE"></shape-with-text>
+    </frame>
+    <shape-with-text id="60:850" x="-1304" y="10528" width="264" height="258" name="SQUARE"></shape-with-text>
+  </frame>
+  <text id="59:1935" name="漂浮方块/玩家可以搭乘方块来回不同岛屿" x="327" y="5276.45458984375" width="774" height="60" />
+  <connector id="60:807" x="-159" y="5345.5" connectorStart="0:1" connectorStartCap="NONE" connectorEnd="0:1" connectorEndCap="ARROW_LINES"></connector>
+  <rounded-rectangle id="60:827" name="image 311" x="-832" y="5119" width="219.53814697265625" height="377" />
+  <rounded-rectangle id="60:834" name="image 312" x="-374" y="5145" width="214.92919921875" height="326" />
+  <connector id="60:841" x="-566" y="5308" connectorStart="0:1" connectorStartCap="NONE" connectorEnd="0:1" connectorEndCap="ARROW_LINES"></connector>
+  <table id="62:2519" x="10944" y="773" tableNumRows="10" tableNumColumns="9" width="1728" height="1896">
+    <table-cell id="T62:2519;62:42;62:44" x="0" y="0" tableCellRowIndex="0" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:45" x="192" y="0" tableCellRowIndex="0" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:51" x="384" y="0" tableCellRowIndex="0" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:55" x="576" y="0" tableCellRowIndex="0" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:59" x="768" y="0" tableCellRowIndex="0" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:64" x="960" y="0" tableCellRowIndex="0" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:67" x="1152" y="0" tableCellRowIndex="0" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:70" x="1344" y="0" tableCellRowIndex="0" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:42;62:71" x="1536" y="0" tableCellRowIndex="0" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:44" x="0" y="384" tableCellRowIndex="2" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:45" x="192" y="384" tableCellRowIndex="2" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:51" x="384" y="384" tableCellRowIndex="2" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:55" x="576" y="384" tableCellRowIndex="2" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:59" x="768" y="384" tableCellRowIndex="2" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:64" x="960" y="384" tableCellRowIndex="2" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:67" x="1152" y="384" tableCellRowIndex="2" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:70" x="1344" y="384" tableCellRowIndex="2" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:43;62:71" x="1536" y="384" tableCellRowIndex="2" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:46;62:44" x="0" y="576" tableCellRowIndex="3" tableCellColumnIndex="0" width="192" height="192">2</table-cell>
+    <table-cell id="T62:2519;62:46;62:45" x="192" y="576" tableCellRowIndex="3" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:46;62:51" x="384" y="576" tableCellRowIndex="3" tableCellColumnIndex="2" width="192" height="192">2</table-cell>
+    <table-cell id="T62:2519;62:46;62:55" x="576" y="576" tableCellRowIndex="3" tableCellColumnIndex="3" width="192" height="192">2</table-cell>
+    <table-cell id="T62:2519;62:46;62:59" x="768" y="576" tableCellRowIndex="3" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:46;62:64" x="960" y="576" tableCellRowIndex="3" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:46;62:67" x="1152" y="576" tableCellRowIndex="3" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:46;62:70" x="1344" y="576" tableCellRowIndex="3" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:46;62:71" x="1536" y="576" tableCellRowIndex="3" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:47;62:44" x="0" y="768" tableCellRowIndex="4" tableCellColumnIndex="0" width="192" height="184">漂流方块</table-cell>
+    <table-cell id="T62:2519;62:47;62:45" x="192" y="768" tableCellRowIndex="4" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:47;62:51" x="384" y="768" tableCellRowIndex="4" tableCellColumnIndex="2" width="192" height="184">2</table-cell>
+    <table-cell id="T62:2519;62:47;62:55" x="576" y="768" tableCellRowIndex="4" tableCellColumnIndex="3" width="192" height="184">2宝箱（可以获得钓鱼竿）</table-cell>
+    <table-cell id="T62:2519;62:47;62:59" x="768" y="768" tableCellRowIndex="4" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:47;62:64" x="960" y="768" tableCellRowIndex="4" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:47;62:67" x="1152" y="768" tableCellRowIndex="4" tableCellColumnIndex="6" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:47;62:70" x="1344" y="768" tableCellRowIndex="4" tableCellColumnIndex="7" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:47;62:71" x="1536" y="768" tableCellRowIndex="4" tableCellColumnIndex="8" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:48;62:44" x="0" y="952" tableCellRowIndex="5" tableCellColumnIndex="0" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:48;62:45" x="192" y="952" tableCellRowIndex="5" tableCellColumnIndex="1" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:48;62:51" x="384" y="952" tableCellRowIndex="5" tableCellColumnIndex="2" width="192" height="184">1障碍物</table-cell>
+    <table-cell id="T62:2519;62:48;62:55" x="576" y="952" tableCellRowIndex="5" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:48;62:59" x="768" y="952" tableCellRowIndex="5" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:48;62:64" x="960" y="952" tableCellRowIndex="5" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:48;62:67" x="1152" y="952" tableCellRowIndex="5" tableCellColumnIndex="6" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:48;62:70" x="1344" y="952" tableCellRowIndex="5" tableCellColumnIndex="7" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:48;62:71" x="1536" y="952" tableCellRowIndex="5" tableCellColumnIndex="8" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:49;62:44" x="0" y="1136" tableCellRowIndex="6" tableCellColumnIndex="0" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:49;62:45" x="192" y="1136" tableCellRowIndex="6" tableCellColumnIndex="1" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:49;62:51" x="384" y="1136" tableCellRowIndex="6" tableCellColumnIndex="2" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:49;62:55" x="576" y="1136" tableCellRowIndex="6" tableCellColumnIndex="3" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:49;62:59" x="768" y="1136" tableCellRowIndex="6" tableCellColumnIndex="4" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:49;62:64" x="960" y="1136" tableCellRowIndex="6" tableCellColumnIndex="5" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:49;62:67" x="1152" y="1136" tableCellRowIndex="6" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:49;62:70" x="1344" y="1136" tableCellRowIndex="6" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:49;62:71" x="1536" y="1136" tableCellRowIndex="6" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:50;62:44" x="0" y="1328" tableCellRowIndex="7" tableCellColumnIndex="0" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:50;62:45" x="192" y="1328" tableCellRowIndex="7" tableCellColumnIndex="1" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:50;62:51" x="384" y="1328" tableCellRowIndex="7" tableCellColumnIndex="2" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:50;62:55" x="576" y="1328" tableCellRowIndex="7" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:50;62:59" x="768" y="1328" tableCellRowIndex="7" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:50;62:64" x="960" y="1328" tableCellRowIndex="7" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:50;62:67" x="1152" y="1328" tableCellRowIndex="7" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:50;62:70" x="1344" y="1328" tableCellRowIndex="7" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:50;62:71" x="1536" y="1328" tableCellRowIndex="7" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:44" x="0" y="1520" tableCellRowIndex="8" tableCellColumnIndex="0" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:52;62:45" x="192" y="1520" tableCellRowIndex="8" tableCellColumnIndex="1" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2519;62:52;62:51" x="384" y="1520" tableCellRowIndex="8" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:55" x="576" y="1520" tableCellRowIndex="8" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:59" x="768" y="1520" tableCellRowIndex="8" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:64" x="960" y="1520" tableCellRowIndex="8" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:67" x="1152" y="1520" tableCellRowIndex="8" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:70" x="1344" y="1520" tableCellRowIndex="8" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:52;62:71" x="1536" y="1520" tableCellRowIndex="8" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;62:69;62:44" x="0" y="1712" tableCellRowIndex="9" tableCellColumnIndex="0" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:69;62:45" x="192" y="1712" tableCellRowIndex="9" tableCellColumnIndex="1" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2519;62:69;62:51" x="384" y="1712" tableCellRowIndex="9" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:69;62:55" x="576" y="1712" tableCellRowIndex="9" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:69;62:59" x="768" y="1712" tableCellRowIndex="9" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:69;62:64" x="960" y="1712" tableCellRowIndex="9" tableCellColumnIndex="5" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:69;62:67" x="1152" y="1712" tableCellRowIndex="9" tableCellColumnIndex="6" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:69;62:70" x="1344" y="1712" tableCellRowIndex="9" tableCellColumnIndex="7" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;62:69;62:71" x="1536" y="1712" tableCellRowIndex="9" tableCellColumnIndex="8" width="192" height="184"></table-cell>
+    <table-cell id="T62:2519;64:74;62:44" x="0" y="192" tableCellRowIndex="1" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:45" x="192" y="192" tableCellRowIndex="1" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:51" x="384" y="192" tableCellRowIndex="1" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:55" x="576" y="192" tableCellRowIndex="1" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:59" x="768" y="192" tableCellRowIndex="1" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:64" x="960" y="192" tableCellRowIndex="1" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:67" x="1152" y="192" tableCellRowIndex="1" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:70" x="1344" y="192" tableCellRowIndex="1" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2519;64:74;62:71" x="1536" y="192" tableCellRowIndex="1" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+  </table>
+  <text id="62:2899" name="关卡制作格" x="8272" y="744.727294921875" width="1376" height="96" />
+  <table id="62:2903" x="10944" y="2649" tableNumRows="9" tableNumColumns="9" width="1728" height="1712">
+    <table-cell id="T62:2903;62:42;62:44" x="0" y="0" tableCellRowIndex="0" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:42;62:45" x="192" y="0" tableCellRowIndex="0" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:42;62:51" x="384" y="0" tableCellRowIndex="0" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:42;62:55" x="576" y="0" tableCellRowIndex="0" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:42;62:59" x="768" y="0" tableCellRowIndex="0" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:42;62:64" x="960" y="0" tableCellRowIndex="0" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:42;62:67" x="1152" y="0" tableCellRowIndex="0" tableCellColumnIndex="6" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:42;62:70" x="1344" y="0" tableCellRowIndex="0" tableCellColumnIndex="7" width="192" height="192">2</table-cell>
+    <table-cell id="T62:2903;62:42;62:71" x="1536" y="0" tableCellRowIndex="0" tableCellColumnIndex="8" width="192" height="192">2</table-cell>
+    <table-cell id="T62:2903;62:43;62:44" x="0" y="192" tableCellRowIndex="1" tableCellColumnIndex="0" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2903;62:43;62:45" x="192" y="192" tableCellRowIndex="1" tableCellColumnIndex="1" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2903;62:43;62:51" x="384" y="192" tableCellRowIndex="1" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:43;62:55" x="576" y="192" tableCellRowIndex="1" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:43;62:59" x="768" y="192" tableCellRowIndex="1" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:43;62:64" x="960" y="192" tableCellRowIndex="1" tableCellColumnIndex="5" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:43;62:67" x="1152" y="192" tableCellRowIndex="1" tableCellColumnIndex="6" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2903;62:43;62:70" x="1344" y="192" tableCellRowIndex="1" tableCellColumnIndex="7" width="192" height="184">宝箱</table-cell>
+    <table-cell id="T62:2903;62:43;62:71" x="1536" y="192" tableCellRowIndex="1" tableCellColumnIndex="8" width="192" height="184">1箱子</table-cell>
+    <table-cell id="T62:2903;62:46;62:44" x="0" y="376" tableCellRowIndex="2" tableCellColumnIndex="0" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:46;62:45" x="192" y="376" tableCellRowIndex="2" tableCellColumnIndex="1" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:46;62:51" x="384" y="376" tableCellRowIndex="2" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:46;62:55" x="576" y="376" tableCellRowIndex="2" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:46;62:59" x="768" y="376" tableCellRowIndex="2" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:46;62:64" x="960" y="376" tableCellRowIndex="2" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:46;62:67" x="1152" y="376" tableCellRowIndex="2" tableCellColumnIndex="6" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:46;62:70" x="1344" y="376" tableCellRowIndex="2" tableCellColumnIndex="7" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:46;62:71" x="1536" y="376" tableCellRowIndex="2" tableCellColumnIndex="8" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:47;62:44" x="0" y="568" tableCellRowIndex="3" tableCellColumnIndex="0" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:47;62:45" x="192" y="568" tableCellRowIndex="3" tableCellColumnIndex="1" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:47;62:51" x="384" y="568" tableCellRowIndex="3" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:47;62:55" x="576" y="568" tableCellRowIndex="3" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:47;62:59" x="768" y="568" tableCellRowIndex="3" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:47;62:64" x="960" y="568" tableCellRowIndex="3" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:47;62:67" x="1152" y="568" tableCellRowIndex="3" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:47;62:70" x="1344" y="568" tableCellRowIndex="3" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:47;62:71" x="1536" y="568" tableCellRowIndex="3" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:44" x="0" y="760" tableCellRowIndex="4" tableCellColumnIndex="0" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:48;62:45" x="192" y="760" tableCellRowIndex="4" tableCellColumnIndex="1" width="192" height="192">1</table-cell>
+    <table-cell id="T62:2903;62:48;62:51" x="384" y="760" tableCellRowIndex="4" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:55" x="576" y="760" tableCellRowIndex="4" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:59" x="768" y="760" tableCellRowIndex="4" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:64" x="960" y="760" tableCellRowIndex="4" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:67" x="1152" y="760" tableCellRowIndex="4" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:70" x="1344" y="760" tableCellRowIndex="4" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:48;62:71" x="1536" y="760" tableCellRowIndex="4" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:49;62:44" x="0" y="952" tableCellRowIndex="5" tableCellColumnIndex="0" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2903;62:49;62:45" x="192" y="952" tableCellRowIndex="5" tableCellColumnIndex="1" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2903;62:49;62:51" x="384" y="952" tableCellRowIndex="5" tableCellColumnIndex="2" width="192" height="184">1箱子</table-cell>
+    <table-cell id="T62:2903;62:49;62:55" x="576" y="952" tableCellRowIndex="5" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:2903;62:49;62:59" x="768" y="952" tableCellRowIndex="5" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:49;62:64" x="960" y="952" tableCellRowIndex="5" tableCellColumnIndex="5" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:49;62:67" x="1152" y="952" tableCellRowIndex="5" tableCellColumnIndex="6" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:49;62:70" x="1344" y="952" tableCellRowIndex="5" tableCellColumnIndex="7" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:49;62:71" x="1536" y="952" tableCellRowIndex="5" tableCellColumnIndex="8" width="192" height="184"></table-cell>
+    <table-cell id="T62:2903;62:50;62:44" x="0" y="1136" tableCellRowIndex="6" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:45" x="192" y="1136" tableCellRowIndex="6" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:51" x="384" y="1136" tableCellRowIndex="6" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:55" x="576" y="1136" tableCellRowIndex="6" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:59" x="768" y="1136" tableCellRowIndex="6" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:64" x="960" y="1136" tableCellRowIndex="6" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:67" x="1152" y="1136" tableCellRowIndex="6" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:70" x="1344" y="1136" tableCellRowIndex="6" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:50;62:71" x="1536" y="1136" tableCellRowIndex="6" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:44" x="0" y="1328" tableCellRowIndex="7" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:45" x="192" y="1328" tableCellRowIndex="7" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:51" x="384" y="1328" tableCellRowIndex="7" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:55" x="576" y="1328" tableCellRowIndex="7" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:59" x="768" y="1328" tableCellRowIndex="7" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:64" x="960" y="1328" tableCellRowIndex="7" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:67" x="1152" y="1328" tableCellRowIndex="7" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:70" x="1344" y="1328" tableCellRowIndex="7" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:52;62:71" x="1536" y="1328" tableCellRowIndex="7" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:44" x="0" y="1520" tableCellRowIndex="8" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:45" x="192" y="1520" tableCellRowIndex="8" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:51" x="384" y="1520" tableCellRowIndex="8" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:55" x="576" y="1520" tableCellRowIndex="8" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:59" x="768" y="1520" tableCellRowIndex="8" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:64" x="960" y="1520" tableCellRowIndex="8" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:67" x="1152" y="1520" tableCellRowIndex="8" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:70" x="1344" y="1520" tableCellRowIndex="8" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:2903;62:69;62:71" x="1536" y="1520" tableCellRowIndex="8" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+  </table>
+  <table id="62:3067" x="9216" y="785" tableNumRows="10" tableNumColumns="9" width="1728" height="1864">
+    <table-cell id="T62:3067;62:42;62:44" x="0" y="0" tableCellRowIndex="0" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:45" x="192" y="0" tableCellRowIndex="0" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:51" x="384" y="0" tableCellRowIndex="0" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:55" x="576" y="0" tableCellRowIndex="0" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:59" x="768" y="0" tableCellRowIndex="0" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:64" x="960" y="0" tableCellRowIndex="0" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:67" x="1152" y="0" tableCellRowIndex="0" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:70" x="1344" y="0" tableCellRowIndex="0" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:42;62:71" x="1536" y="0" tableCellRowIndex="0" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:44" x="0" y="192" tableCellRowIndex="1" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:45" x="192" y="192" tableCellRowIndex="1" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:51" x="384" y="192" tableCellRowIndex="1" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:55" x="576" y="192" tableCellRowIndex="1" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:59" x="768" y="192" tableCellRowIndex="1" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:64" x="960" y="192" tableCellRowIndex="1" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:67" x="1152" y="192" tableCellRowIndex="1" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:70" x="1344" y="192" tableCellRowIndex="1" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:43;62:71" x="1536" y="192" tableCellRowIndex="1" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:46;62:44" x="0" y="384" tableCellRowIndex="2" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:45" x="192" y="384" tableCellRowIndex="2" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:51" x="384" y="384" tableCellRowIndex="2" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:55" x="576" y="384" tableCellRowIndex="2" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:59" x="768" y="384" tableCellRowIndex="2" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:64" x="960" y="384" tableCellRowIndex="2" tableCellColumnIndex="5" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:67" x="1152" y="384" tableCellRowIndex="2" tableCellColumnIndex="6" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:70" x="1344" y="384" tableCellRowIndex="2" tableCellColumnIndex="7" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:46;62:71" x="1536" y="384" tableCellRowIndex="2" tableCellColumnIndex="8" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:44" x="0" y="568" tableCellRowIndex="3" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:45" x="192" y="568" tableCellRowIndex="3" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:51" x="384" y="568" tableCellRowIndex="3" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:55" x="576" y="568" tableCellRowIndex="3" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:59" x="768" y="568" tableCellRowIndex="3" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:64" x="960" y="568" tableCellRowIndex="3" tableCellColumnIndex="5" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:47;62:67" x="1152" y="568" tableCellRowIndex="3" tableCellColumnIndex="6" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:47;62:70" x="1344" y="568" tableCellRowIndex="3" tableCellColumnIndex="7" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:47;62:71" x="1536" y="568" tableCellRowIndex="3" tableCellColumnIndex="8" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:48;62:44" x="0" y="752" tableCellRowIndex="4" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:48;62:45" x="192" y="752" tableCellRowIndex="4" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:48;62:51" x="384" y="752" tableCellRowIndex="4" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:48;62:55" x="576" y="752" tableCellRowIndex="4" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:48;62:59" x="768" y="752" tableCellRowIndex="4" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:48;62:64" x="960" y="752" tableCellRowIndex="4" tableCellColumnIndex="5" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:48;62:67" x="1152" y="752" tableCellRowIndex="4" tableCellColumnIndex="6" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:48;62:70" x="1344" y="752" tableCellRowIndex="4" tableCellColumnIndex="7" width="192" height="184">2箱子</table-cell>
+    <table-cell id="T62:3067;62:48;62:71" x="1536" y="752" tableCellRowIndex="4" tableCellColumnIndex="8" width="192" height="184">2潮汐引擎</table-cell>
+    <table-cell id="T62:3067;62:49;62:44" x="0" y="936" tableCellRowIndex="5" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:49;62:45" x="192" y="936" tableCellRowIndex="5" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:49;62:51" x="384" y="936" tableCellRowIndex="5" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:49;62:55" x="576" y="936" tableCellRowIndex="5" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:49;62:59" x="768" y="936" tableCellRowIndex="5" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:49;62:64" x="960" y="936" tableCellRowIndex="5" tableCellColumnIndex="5" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:49;62:67" x="1152" y="936" tableCellRowIndex="5" tableCellColumnIndex="6" width="192" height="184">2攀爬方块</table-cell>
+    <table-cell id="T62:3067;62:49;62:70" x="1344" y="936" tableCellRowIndex="5" tableCellColumnIndex="7" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:49;62:71" x="1536" y="936" tableCellRowIndex="5" tableCellColumnIndex="8" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:50;62:44" x="0" y="1120" tableCellRowIndex="6" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:50;62:45" x="192" y="1120" tableCellRowIndex="6" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:50;62:51" x="384" y="1120" tableCellRowIndex="6" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:50;62:55" x="576" y="1120" tableCellRowIndex="6" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3067;62:50;62:59" x="768" y="1120" tableCellRowIndex="6" tableCellColumnIndex="4" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3067;62:50;62:64" x="960" y="1120" tableCellRowIndex="6" tableCellColumnIndex="5" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3067;62:50;62:67" x="1152" y="1120" tableCellRowIndex="6" tableCellColumnIndex="6" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3067;62:50;62:70" x="1344" y="1120" tableCellRowIndex="6" tableCellColumnIndex="7" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3067;62:50;62:71" x="1536" y="1120" tableCellRowIndex="6" tableCellColumnIndex="8" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3067;62:52;62:44" x="0" y="1312" tableCellRowIndex="7" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:52;62:45" x="192" y="1312" tableCellRowIndex="7" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:52;62:51" x="384" y="1312" tableCellRowIndex="7" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:52;62:55" x="576" y="1312" tableCellRowIndex="7" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:52;62:59" x="768" y="1312" tableCellRowIndex="7" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:52;62:64" x="960" y="1312" tableCellRowIndex="7" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:52;62:67" x="1152" y="1312" tableCellRowIndex="7" tableCellColumnIndex="6" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:52;62:70" x="1344" y="1312" tableCellRowIndex="7" tableCellColumnIndex="7" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:52;62:71" x="1536" y="1312" tableCellRowIndex="7" tableCellColumnIndex="8" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:69;62:44" x="0" y="1496" tableCellRowIndex="8" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:69;62:45" x="192" y="1496" tableCellRowIndex="8" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;62:69;62:51" x="384" y="1496" tableCellRowIndex="8" tableCellColumnIndex="2" width="192" height="184">小</table-cell>
+    <table-cell id="T62:3067;62:69;62:55" x="576" y="1496" tableCellRowIndex="8" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:69;62:59" x="768" y="1496" tableCellRowIndex="8" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:69;62:64" x="960" y="1496" tableCellRowIndex="8" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;62:69;62:67" x="1152" y="1496" tableCellRowIndex="8" tableCellColumnIndex="6" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;62:69;62:70" x="1344" y="1496" tableCellRowIndex="8" tableCellColumnIndex="7" width="192" height="184">3红虾</table-cell>
+    <table-cell id="T62:3067;62:69;62:71" x="1536" y="1496" tableCellRowIndex="8" tableCellColumnIndex="8" width="192" height="184">2</table-cell>
+    <table-cell id="T62:3067;64:72;62:44" x="0" y="1680" tableCellRowIndex="9" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;64:72;62:45" x="192" y="1680" tableCellRowIndex="9" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3067;64:72;62:51" x="384" y="1680" tableCellRowIndex="9" tableCellColumnIndex="2" width="192" height="184">船</table-cell>
+    <table-cell id="T62:3067;64:72;62:55" x="576" y="1680" tableCellRowIndex="9" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;64:72;62:59" x="768" y="1680" tableCellRowIndex="9" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;64:72;62:64" x="960" y="1680" tableCellRowIndex="9" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;64:72;62:67" x="1152" y="1680" tableCellRowIndex="9" tableCellColumnIndex="6" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3067;64:72;62:70" x="1344" y="1680" tableCellRowIndex="9" tableCellColumnIndex="7" width="192" height="184">小鱼</table-cell>
+    <table-cell id="T62:3067;64:72;62:71" x="1536" y="1680" tableCellRowIndex="9" tableCellColumnIndex="8" width="192" height="184">小鱼</table-cell>
+  </table>
+  <table id="62:3231" x="9216" y="2649" tableNumRows="9" tableNumColumns="9" width="1728" height="1696">
+    <table-cell id="T62:3231;62:42;62:44" x="0" y="0" tableCellRowIndex="0" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:45" x="192" y="0" tableCellRowIndex="0" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:51" x="384" y="0" tableCellRowIndex="0" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:55" x="576" y="0" tableCellRowIndex="0" tableCellColumnIndex="3" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:42;62:59" x="768" y="0" tableCellRowIndex="0" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:64" x="960" y="0" tableCellRowIndex="0" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:67" x="1152" y="0" tableCellRowIndex="0" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:70" x="1344" y="0" tableCellRowIndex="0" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:42;62:71" x="1536" y="0" tableCellRowIndex="0" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:44" x="0" y="192" tableCellRowIndex="1" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:45" x="192" y="192" tableCellRowIndex="1" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:51" x="384" y="192" tableCellRowIndex="1" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:55" x="576" y="192" tableCellRowIndex="1" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:59" x="768" y="192" tableCellRowIndex="1" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:64" x="960" y="192" tableCellRowIndex="1" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:67" x="1152" y="192" tableCellRowIndex="1" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:43;62:70" x="1344" y="192" tableCellRowIndex="1" tableCellColumnIndex="7" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:43;62:71" x="1536" y="192" tableCellRowIndex="1" tableCellColumnIndex="8" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:46;62:44" x="0" y="384" tableCellRowIndex="2" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:46;62:45" x="192" y="384" tableCellRowIndex="2" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:46;62:51" x="384" y="384" tableCellRowIndex="2" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:46;62:55" x="576" y="384" tableCellRowIndex="2" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:46;62:59" x="768" y="384" tableCellRowIndex="2" tableCellColumnIndex="4" width="192" height="184">漂流方块</table-cell>
+    <table-cell id="T62:3231;62:46;62:64" x="960" y="384" tableCellRowIndex="2" tableCellColumnIndex="5" width="192" height="184">漂流方块</table-cell>
+    <table-cell id="T62:3231;62:46;62:67" x="1152" y="384" tableCellRowIndex="2" tableCellColumnIndex="6" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:46;62:70" x="1344" y="384" tableCellRowIndex="2" tableCellColumnIndex="7" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:46;62:71" x="1536" y="384" tableCellRowIndex="2" tableCellColumnIndex="8" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:47;62:44" x="0" y="568" tableCellRowIndex="3" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:47;62:45" x="192" y="568" tableCellRowIndex="3" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:47;62:51" x="384" y="568" tableCellRowIndex="3" tableCellColumnIndex="2" width="192" height="184">漂流方块</table-cell>
+    <table-cell id="T62:3231;62:47;62:55" x="576" y="568" tableCellRowIndex="3" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:47;62:59" x="768" y="568" tableCellRowIndex="3" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:47;62:64" x="960" y="568" tableCellRowIndex="3" tableCellColumnIndex="5" width="192" height="184">1寄居蟹</table-cell>
+    <table-cell id="T62:3231;62:47;62:67" x="1152" y="568" tableCellRowIndex="3" tableCellColumnIndex="6" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:47;62:70" x="1344" y="568" tableCellRowIndex="3" tableCellColumnIndex="7" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:47;62:71" x="1536" y="568" tableCellRowIndex="3" tableCellColumnIndex="8" width="192" height="184">1箱子</table-cell>
+    <table-cell id="T62:3231;62:48;62:44" x="0" y="752" tableCellRowIndex="4" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:48;62:45" x="192" y="752" tableCellRowIndex="4" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:48;62:51" x="384" y="752" tableCellRowIndex="4" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:48;62:55" x="576" y="752" tableCellRowIndex="4" tableCellColumnIndex="3" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:48;62:59" x="768" y="752" tableCellRowIndex="4" tableCellColumnIndex="4" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:48;62:64" x="960" y="752" tableCellRowIndex="4" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:48;62:67" x="1152" y="752" tableCellRowIndex="4" tableCellColumnIndex="6" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:48;62:70" x="1344" y="752" tableCellRowIndex="4" tableCellColumnIndex="7" width="192" height="184">1障碍物</table-cell>
+    <table-cell id="T62:3231;62:48;62:71" x="1536" y="752" tableCellRowIndex="4" tableCellColumnIndex="8" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:49;62:44" x="0" y="936" tableCellRowIndex="5" tableCellColumnIndex="0" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:49;62:45" x="192" y="936" tableCellRowIndex="5" tableCellColumnIndex="1" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:49;62:51" x="384" y="936" tableCellRowIndex="5" tableCellColumnIndex="2" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:49;62:55" x="576" y="936" tableCellRowIndex="5" tableCellColumnIndex="3" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:49;62:59" x="768" y="936" tableCellRowIndex="5" tableCellColumnIndex="4" width="192" height="184"></table-cell>
+    <table-cell id="T62:3231;62:49;62:64" x="960" y="936" tableCellRowIndex="5" tableCellColumnIndex="5" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:49;62:67" x="1152" y="936" tableCellRowIndex="5" tableCellColumnIndex="6" width="192" height="184">1箱子</table-cell>
+    <table-cell id="T62:3231;62:49;62:70" x="1344" y="936" tableCellRowIndex="5" tableCellColumnIndex="7" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:49;62:71" x="1536" y="936" tableCellRowIndex="5" tableCellColumnIndex="8" width="192" height="184">1</table-cell>
+    <table-cell id="T62:3231;62:50;62:44" x="0" y="1120" tableCellRowIndex="6" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:50;62:45" x="192" y="1120" tableCellRowIndex="6" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:50;62:51" x="384" y="1120" tableCellRowIndex="6" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:50;62:55" x="576" y="1120" tableCellRowIndex="6" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:50;62:59" x="768" y="1120" tableCellRowIndex="6" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:50;62:64" x="960" y="1120" tableCellRowIndex="6" tableCellColumnIndex="5" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:50;62:67" x="1152" y="1120" tableCellRowIndex="6" tableCellColumnIndex="6" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:50;62:70" x="1344" y="1120" tableCellRowIndex="6" tableCellColumnIndex="7" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:50;62:71" x="1536" y="1120" tableCellRowIndex="6" tableCellColumnIndex="8" width="192" height="192">1</table-cell>
+    <table-cell id="T62:3231;62:52;62:44" x="0" y="1312" tableCellRowIndex="7" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:45" x="192" y="1312" tableCellRowIndex="7" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:51" x="384" y="1312" tableCellRowIndex="7" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:55" x="576" y="1312" tableCellRowIndex="7" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:59" x="768" y="1312" tableCellRowIndex="7" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:64" x="960" y="1312" tableCellRowIndex="7" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:67" x="1152" y="1312" tableCellRowIndex="7" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:70" x="1344" y="1312" tableCellRowIndex="7" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:52;62:71" x="1536" y="1312" tableCellRowIndex="7" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:44" x="0" y="1504" tableCellRowIndex="8" tableCellColumnIndex="0" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:45" x="192" y="1504" tableCellRowIndex="8" tableCellColumnIndex="1" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:51" x="384" y="1504" tableCellRowIndex="8" tableCellColumnIndex="2" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:55" x="576" y="1504" tableCellRowIndex="8" tableCellColumnIndex="3" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:59" x="768" y="1504" tableCellRowIndex="8" tableCellColumnIndex="4" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:64" x="960" y="1504" tableCellRowIndex="8" tableCellColumnIndex="5" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:67" x="1152" y="1504" tableCellRowIndex="8" tableCellColumnIndex="6" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:70" x="1344" y="1504" tableCellRowIndex="8" tableCellColumnIndex="7" width="192" height="192"></table-cell>
+    <table-cell id="T62:3231;62:69;62:71" x="1536" y="1504" tableCellRowIndex="8" tableCellColumnIndex="8" width="192" height="192"></table-cell>
+  </table>
+  <sticky id="70:3472" x="10320" y="3056" color="STICKY_ORANGE" author="Hachi" width="240" height="256">这是一只孤独的寄居蟹，除了大虾没有任何东西能让他挪动，帮助它交到更多的朋友吧。</sticky>
+  <sticky id="75:3482" x="9960" y="1088" color="STICKY_ORANGE" author="Hachi" width="240" height="240">红虾喜欢捣乱，连不爱动的寄居蟹也会躲着他呢，</sticky>
+  <rounded-rectangle id="77:3492" name="OIP-C 3" x="4335" y="4941" width="725" height="728" />
+  <text id="77:3502" name="吹风机方块 可以吹动漂浮方块，制造指定方向的气流让漂浮方块沿着气流方向运动可以通过商店购买 /如果上一关有多余的地块，可通过吹风机方块移动到下一关 数值：待定 可作用对象：漂流方块" x="5144" y="5136.45458984375" width="944" height="300" />
+  <text id="78:1839" name="水母：水生生物，必须要在连通海域的水域，且附件有贝壳（或寄居蟹）中才能繁殖（地形影响）" x="3257.1904296875" y="3600.341796875" width="892.8096313476562" height="120" />
+  <text id="78:1846" name="大虾：两栖生物，可移动，周围3*3内没有其他生物才能繁殖（生物影响），在水中繁殖可用虾笼捕获后代，在高地3*3繁殖不会受其他生物影响" x="3257.1904296875" y="4115.857421875" width="892.8096313476562" height="180" />
+  <text id="78:1853" name="金鱼：水生生物，必须在不连通海域的水域中才能繁殖（地形影响）" x="3257.1904296875" y="4534.5283203125" width="714.2476806640625" height="120" />
+  <text id="78:1860" name="寄居蟹：陆生生物，周围3*3要有其他水生与陆生生物（除大虾）才能繁殖（生物影响）" x="3257.1904296875" y="4938.76220703125" width="714.2476806640625" height="180" />
+  <text id="78:1874" name="陆龟：陆生生物，在可动高地33周围繁殖（地形影响）周围3*3不能有水生生物" x="3257.1904296875" y="5407.58203125" width="714.2476806640625" height="120" />
+  <text id="78:1887" name="贝壳：水生生物，需要用钓竿牵引，在陆地周围一格内繁殖，且要水域联通海域；在有贝壳存在的情况下优先考虑贝壳的位置" x="3257" y="5746.45458984375" width="714.2476806640625" height="240" />
+  <rounded-rectangle id="78:1864" name="image 313" x="2837" y="5335.0517578125" width="258.34490966796875" height="228.69874572753906" />
+  <sticky id="80:3512" x="9552" y="2640" color="STICKY_ORANGE" author="Hachi" width="240" height="240">玩家可以放一个吹风机改变方向</sticky>
+  <text id="81:3537" name="1，起始：店铺老板拜托自己去拿到" x="9408" y="240" width="1984" height="60" />
+  <rounded-rectangle id="81:3578" name="download 1" x="4290" y="5746" width="815" height="728" />
+  <text id="81:3585" name="潮汐引擎：会让海水全体上升一个可以让飘流方块也跟着上升一格，但是需要有箱子压在板子上才能触发，可在商店售卖。" x="5144" y="5923.45458984375" width="944" height="180" />
+  <rounded-rectangle id="81:3608" name="download 2" x="4335" y="6592" width="725" height="738.526123046875" />
+  <text id="81:3618" name="商店版本箱子：可以放置推动" x="338" y="6592" width="944" height="60" />
+  <rounded-rectangle id="92:1914" name="image 314" x="2823" y="5727" width="286.4576110839844" height="286" />
+  <text id="92:1921" name="动物移动规则： 所有生物都害怕大虾，当大虾移动到某动物的相邻格（上下左右）时，该动物立刻被惊吓，并朝远离大虾的方向移动 1 格。 具体细化： 只在大虾主动靠近时触发 每次只移动 1 格 优先朝与大虾相反的方向逃跑 如果正后方被挡住，则原地不动 不能随机逃跑" x="1583" y="3919.45458984375" width="1067" height="540" />
+  <connector id="92:1928" x="2656.4931640625" y="4160" connectorStart="0:1" connectorStartCap="NONE" connectorEnd="92:1921" connectorEndCap="ARROW_LINES"></connector>
+  <connector id="92:1932" x="0" y="0" connectorStart="0:1" connectorStartCap="NONE" connectorEnd="0:1" connectorEndCap="ARROW_LINES"></connector>
+  <rounded-rectangle id="93:1945" name="image 315" x="336" y="4002" width="288" height="302.9222717285156" />
+  <rounded-rectangle id="93:1952" name="image 316" x="720" y="4002" width="286.0933532714844" height="302.92236328125" />
+  <rounded-rectangle id="93:1980" name="image 317" x="338" y="4699" width="285.746337890625" height="302.92236328125" />
+  <rounded-rectangle id="93:1994" name="image 318" x="623.9615478515625" y="5396" width="264.9615587356982" height="249.0000115818375" />
+  <rounded-rectangle id="93:2014" name="image 319" x="338" y="6020" width="379.0944519042969" height="377" />
+  <rounded-rectangle id="93:2024" name="image 320" x="338" y="6780.54541015625" width="259" height="259" />
+  <rounded-rectangle id="96:1465" name="image 321" x="-987" y="3948" width="1123.3270263671875" height="842" />
+</canvas>

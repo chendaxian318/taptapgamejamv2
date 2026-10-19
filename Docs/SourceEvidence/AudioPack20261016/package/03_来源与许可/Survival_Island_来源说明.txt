@@ -1,0 +1,5 @@
+﻿来源：用户已有的 Survival Island Template Editor v1.2.0.unitypackage。
+包内目录：Assets/Project Files/Game/Audio/Sounds/。
+本项目使用其中10个短音。未找到这些音频的独立许可文本；沿用该模板适用的使用条款，不标记为CC0。
+两条step经过增益调整，其他8条保留原字节。具体变更见音效清单。
+本包用于本项目协作交接，不能据此将第三方音频宣称为原创或统一开源的独立音效商品。

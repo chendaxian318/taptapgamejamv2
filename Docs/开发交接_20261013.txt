@@ -1,0 +1,144 @@
+小岛栖居实验室／HabitatIsland3D 开发交接
+核对日期：2026-10-13
+
+本文件供换电脑后继续与 GPT／Codex 开发使用。所有项目路径均相对 Unity 工程根目录 HabitatIsland3D；旧电脑的盘符、Downloads、微信文件和桌面素材目录仅是来源记录，不是运行依赖。已接入模型与贴图副本均在工程内。迁移先读根目录 00_换电脑先看这里.txt，给 GPT 的继续开发上下文见 GPT_继续开发提示词.txt，工具准备与连接见 Docs/工具连接与验证.txt。本文不承诺首次导入可离线完成。
+
+一、项目当前状态
+
+这是依据 FigJam 策划案制作的 Unity 3D 玩法测试原型，用于验证地形改造、动物栖居、繁衍、机关与交易。当前使用 Unity 6000.6.0f1、URP 17.6.0、Input System 1.20.0，GLB 原生导入使用 glTFast 6.20.0；准确依赖以 ProjectSettings/ProjectVersion.txt、Packages/manifest.json 和 Packages/packages-lock.json 为准。
+
+主场景：Assets/HabitatIsland/Scenes/HabitatIsland.unity。
+主程序：Assets/HabitatIsland/Scripts/HabitatGame.cs。
+默认 startLevel=4，对应菜单第 5 项“Figma · 荒岛关卡”，不是旧第 4 关生态沙盒。场景序列化值及代码默认值都为 4，进入后暂停。棋盘、角色显示与 HUD 主要在运行时创建，不能只根据编辑状态下的场景层级判断内容是否缺失。
+
+正式关是一张 18×19 的连续图，共 342 格，由 FigJam 四张表拼接。用户已确认数字表示地面高度，道具放在该高度上。原图坐标从左上开始，向右列号增加、向下行号增加；世界坐标 x=列，z=18−行。原图 0 基坐标和观察卡“原图几行几列”的 1 基坐标要区分。
+
+初始动物为虾 1、鱼 2、寄居蟹 1；图中没有水母、海龟、海星的初始位置。道具共箱子 5、浮块 4、攀爬块 1、潮汐引擎 1、障碍 2、宝箱 2。初始贝币、货物、虾笼为 0，无鱼竿。鱼竿由原图宝箱获得。旧四个 9×9 实验关仍保留，供规则回归，不替代当前正式关。
+
+默认相机正交，yaw=0°、pitch=58°，局部 orthographicSize=6.5。全图缩放按地图和视口计算，1920×1080 的既有记录约为 13.04885。移动方向跟随镜头，不固定于棋盘世界坐标；直接调用 Move(dx,dz) 时仍使用棋盘坐标。
+
+当前主要操作：
+WASD／方向键：按画面上下左右移动；迎着箱子走可推箱。
+Shift+方向：攀上箱子／攀爬方块；不是冲刺键。
+左键：选格。E／右键：执行当前工具，右键同时选格。
+1～5：搬运交互、铺土、钓竿引导、虾笼、收获／垂钓。
+R：旋转相邻道路或风机。
+Space：暂停／继续；英文句号：暂停并推进 1 秒；Z：撤销；Backspace：重开。
+M：全图；Home：回到人物局部跟随；中键拖动：平移；滚轮：缩放；Q／C：每次旋转 90°。
+Tab：实验室；B：补给商店；F1：帮助；Esc：关面板或取消垂钓。
+垂钓时按住 Space／左键抬升捕获区域，松开下落；取消／失败保留后代，成功收取后代并保留亲代。垂钓期间岛屿模拟暂停。
+
+二、用户约束与工作口径
+
+1. 优先完成用户当前明确提出的工作。非必要不改核心规则；美术、镜头、材质或动画调整应尽量只改显示层。确需改规则时同步来源／假设文档，并执行有针对性的回归检查。
+2. 保持正式图逐格对应及用户确认的高度含义。未定义的奖励、角色、地图格或终局不能自行补成策划事实；源数据与运行时取值要分开记录。
+3. 用户要求使用合适的素材，不能为了已有文件而硬套旧版美术。优先保留已认可的模型、清晰俯视角和可读 HUD；旧原画、旧 AI 主角与完整海港图不是必须恢复的目标。
+4. 最新虾按用户选择静态接入。未执行 UniRig，也没有为虾新增骨骼或动作动画。不要自行追加模型上传、重生成或绑定流程。
+5. 日常迭代先在 Unity 编辑器内验证。用户未明确要求时，不重新构建 EXE；本次工程交接不等于要求生成新的游戏发行包。
+6. 不把历史检查写成本轮全部重测通过，不把局部路线通过写成完整通关。先查看 Verification 报告的范围和时间，再报告结果。
+
+三、素材与模型现状
+
+主角 MeshyTraveler：
+工程原始副本：Assets/HabitatIsland/Art/MeshyTraveler/MeshyTraveler.glb。
+运行资源：Assets/HabitatIsland/Resources/Models/MeshyTraveler/Player.prefab。
+同目录 Traveler.controller 以 MoveSpeed 控制 Idle_9、Walking、Running 三段 BlendTree。动画随实际水平位移速度切换，Animator 关闭 Root Motion，人物位置由格子规则控制。原 GLB 的 8 个动作保留；Collect_Object、Ladder_Climb_Loop、Push_and_Walk_Forward、Regular_Jump 等其他动作尚未绑定到采集、攀爬、推箱或跳跃操作。不要把当前攀爬位移测试等同于已接入攀爬动画。
+HabitatPlayerVisual.cs 负责模型实例、转身、动画参数和搬运锚点。模型可用时隐藏旧主角 Sprite；旧正背面图只作加载失败时的备用显示。
+
+最新静态 3D 虾 MeshyShrimp：
+接入已完成，且有 16 项实际运行检查记录。
+工程原始副本：Assets/HabitatIsland/Art/MeshyShrimp/MeshyShrimp.glb。
+原文件 SHA-256：917728BA77591FA3CE4C43D182B371675963B89355E8754DC6DB0418D441B30D。
+运行资源：Assets/HabitatIsland/Resources/Models/MeshyShrimp/Shrimp.prefab，以及同目录 Shrimp0.mat。
+1 个静态 mesh，27,205 顶点、30,252 三角面；2 张 4096×4096 PNG，分别为 baseColor、metallicRoughness。无骨骼、无 Animator、无动画。
+保持原 PBR shader、纹理与通道含义；统一缩放 0.4203701，底部居中，+Z 正面，包络约 0.619×0.594×0.8 米。HabitatView.cs 优先加载虾模型，水平移动时朝向位移方向，搬运时朝向人物方向；水位改变造成的垂直移动不应改变朝向。其他生物未因此替换。虾原画仍在图集中，可作为模型不可用时的显示回退。
+
+其他显示资源：
+KayKit：Resources/Models/KayKit 中 sand_A 用于支撑层，sand_with_grass 用于高度 1 地表和土块，dirt_with_grass 用于较高地表；保留公用 atlas、UV 和法线。
+Kenney：Resources/Models/Kenney 中 stone_largeA 用于障碍／石块，tree_palmShort 用于外围装饰。
+原画：Resources/Art/Artist 中 Water.png 用于水面，HarborParts.png 只取小船，Creatures.jpg 仍用于水母和金鱼等；寄居蟹使用 Resources/Art/Crab.jpg。海龟、海星仍为几何占位造型。
+白底原画在 shader 中去白并处理边缘，未改源图像素；原画导入 NPOT Scale=None，不强行变成 2 的幂次。不要将原画导入参数机械套到 GLB 的 PBR 纹理。
+完整 Harbor.png 已归档到 Docs/SourceEvidence/UnusedLegacy；旧 AI HeroIdle 帧归档到 Docs/SourceEvidence/RetiredAI，不在 Assets 中运行。
+
+许可：KayKit／Kenney 的 CC0 只适用于各自下载包，LICENSE.txt 保留在对应模型目录。用户提供的 Meshy 模型及原画按来源和适用条款使用，不标成 CC0。来源、哈希与选择理由见 Docs/ART_SOURCES.md、Docs/THIRD_PARTY_ASSETS.md 及 SourceEvidence 的清单。不要依赖原作者文件仍存在于旧电脑的绝对路径。
+
+四、关键文件索引
+
+入口与规则（以下前缀为 Assets/HabitatIsland/）：
+Scenes/HabitatIsland.unity：主场景、正式关入口。
+Scripts/HabitatGame.cs：控制器、输入、动作与撤销、关卡切换、测试存档。
+Scripts/HabitatModel.cs：状态、地形、动物、生态、搬运、机关、经济等核心规则。
+Scripts/HabitatFigJamLevel.cs：正式图 Index=4、18×19 SourceRows、原图映射、初始库存和检查点。
+Scripts/HabitatLevels.cs：关卡分发与旧四关。
+Scripts/HabitatView.cs：地块／道具／动物创建、模型资源加载、相机、选择、显示更新。
+Scripts/HabitatPlayerVisual.cs：3D 主角动画、朝向及搬运锚点。
+Scripts/HabitatHud.cs、HabitatHud.Layout.cs：uGUI HUD、实验室／补给／帮助、布局适配。
+Scripts/HabitatFishing.cs：垂钓流程与界面。
+Scripts/HabitatOcclusionFade.cs：上层遮挡渐隐及选格。
+Resources/HabitatSprite.shader、HabitatWater.shader：白底原画与水面显示。
+Editor/HabitatTravelerSetup.cs、HabitatShrimpSetup.cs：从工程内 GLB 生成预制体、材料、动画／预览的工具；修改前先确认是否真的需要重新生成，避免覆盖现有调整。
+Editor/HabitatSetup.cs：项目场景／基础设置工具，迁移后不要因文件存在就随意重新执行全部初始化。
+
+策划与来源：
+Docs/FIGMA_LEVEL_TEST.md：正式关源图、坐标、数量、实现选择、路线和未定义事项。
+Docs/RULES_AND_ASSUMPTIONS.md：六物种规则、冲突处理与测试数值。
+Docs/SourceEvidence/LevelDesign/level-grid.json：342 格逐格原始文字、坐标、高度、道具、动物及奖励核对数据。
+Docs/SourceEvidence/LevelDesign/62-3067.png、62-2519.png、62-3231.png、62-2903.png：四张源表截图。
+Docs/figjam-level-source-20261013.xml：当日 FigJam 文本快照。
+Docs/TEST_STEPS.md：旧四个实验场测试步骤；不能当成当前正式图开局步骤。
+Docs/UI_DESIGN_OPTIONS.md：已有 UI 比较与选择记录。
+README.md：通用操作与迭代记录。正式关与旧实验关应分开阅读；历史截图和构建记录不代表最新资源状态。描述发生冲突时，核对当前代码、正式关文档和对应验证报告。
+
+测试存档由 HabitatGame 写入 Application.persistentDataPath 下 Playtests/latest.json，另有带时间的测试快照。JSON 保存关卡状态、测试参数和动作计数，不保存当前工具、镜头、模拟速度或撤销栈；读取后会清空撤销栈并暂停。它不属于工程相对路径；是否迁移个人测试存档由迁移说明单独处理，不在代码中写死旧机路径。
+
+五、已知限制与需策划确认的内容
+
+正式图最终委托未定义，没有自动胜利条件。当前检查点只记录潮汐、宝箱鱼竿、开箱数和寄居蟹是否受惊移动；不能用“两个箱子都开了”推导通关。
+
+原图的两格黄色船标记未说明船下高度，运行时按水格 0 处理；无数字的末端宝箱暂取地面高度 1；出生点取原图 (3,8)。这些是明列的实现取值，不是源图原文。末端宝箱奖励未标明，当前只记录开箱，不凭空给奖励。
+
+方向惊吓：正式图中虾主动移动到四向相邻后，符合高度、合法退路与庇护条件的动物沿远离虾的方向退一格；正后方被挡就停留，不能随机绕行。被抱放下、风机被动载移、虾静止不属于同一种主动接近事件。旧实验关保留旧邻近威胁逻辑，修改时注意两套入口。
+
+已核对路线到达寄居蟹岛，未完成验证末端宝箱全程、鱼竿后的繁衍—垂钓—交易—购买风机完整经济循环。原图仅有鱼、虾、蟹，虾不计入蟹的友好多样性，不能直接套旧实验关“两种友好物种”条件宣称完成委托。
+
+价格、繁衍时间、行动节奏、钓鱼难度属于可调测试值。虾笼保留亲代并使其停留，可重复收取后代；与源案一次性消耗品的口径尚有简化。剧情、居民对话、独立航行地图与长期成长尚未实现。
+
+主角只有三段移动动画已接线；虾是静态模型加显示移动／转身，不是完整生物动画。仍有原画与几何占位并存。3D 虾含两张 4K 图及约 3 万面，若出现性能压力先测量，再考虑导入压缩、尺寸或 LOD，不改动物判定来掩盖显示性能问题。
+
+六、后续开发建议
+
+1. 新电脑恢复工程后，先确认主场景进入正式图且暂停，检查主角、虾、材质、中文、选格、镜头和搬运。记录新环境实测结果，再开展功能修改；迁移先看 00_换电脑先看这里.txt，工具接入按 Docs/工具连接与验证.txt 操作。
+2. 开始关卡扩展前，优先向策划补齐最终委托、末端宝箱奖励和完整经济通路；保留源图／实现假设的区别。
+3. 按用户下一项要求小步推进。纯美术变化优先改 View、Visual、材质或对应预制体；仅在确需改变行为时进入 HabitatModel，并同步文档。
+4. 若用户要求互动动画，再将现有主角动作接到明确的玩法事件；虾后续是否绑定骨骼应重新按用户选择处理。当前无需 UniRig 才能继续开发或测试。
+5. 修改输入、镜头或 HUD 后关注旋转方向、不同宽高比、面板挡点击；修改动物模型后关注脚底、水面高度、携带锚点、转向和状态条遮挡；修改地图后对照 level-grid.json 并复验可达路线。
+6. 有新结果时更新对应说明，注明实际执行范围。不要自动覆盖源素材、重做已认可 UI，也不要未经本轮请求重建 EXE。
+
+七、验证资料索引与范围
+
+以下是工程内已有实际检查记录，不代表交接时重新执行了所有测试。不同报告属于不同迭代，不能合并为“最新整关全部通过”。
+
+Verification/rule-checks.txt：51 项核心规则断言。
+Verification/runtime-checks.txt：47 项旧实验关运行集成，含垂钓、存档与暂停恢复。
+Verification/authored-layout-checks.txt：1814 项正式图布局／路线断言；全部 342 格对照，重放 39 个合法动作。
+Verification/authored-controller-checks.txt：117 项；从菜单真实入口，经潮汐／撤销／退潮、宝箱取竿、搬原有浮块抵达蟹岛，并检查存档恢复。
+Verification/authored-view-checks.txt：14 项真实输入／镜头检查。
+Verification/occlusion-checks.txt：61 项遮挡／选择／恢复检查。
+Verification/authored-ocean-checks.txt：6 项外海显示检查。
+Verification/direction-checks.txt：111 项镜头相对方向检查。
+Verification/direction-input-checks.txt：80 项真实 HandleInput 方向与 Shift 攀爬检查。
+Verification/ui-checks.txt：最新文件为 673 项，0 失败、0 长内容复核提示、0 待执行渲染检查；覆盖九种视口与面板遮挡。旧文档中的 202 是之前版本。
+Verification/meshy-traveler-checks.txt：56 项真实帧主角检查，含动画、朝向、重载、攀爬脚底、推箱潮汐、携带锚点；不是全关通关。
+Verification/meshy-shrimp-runtime-checks.txt：16 项最新虾检查，含原网格、原 PBR 两张 4K 图、无 Animator、替换旧 Sprite、移动转身、抱起放下、水位和状态条。
+Verification/meshy-shrimp-import.txt、meshy-traveler-import.txt：模型导入与预制体设置记录。
+
+相关检查脚本以 Assets/HabitatIsland/ 为前缀：Scripts/HabitatModelChecks.cs、HabitatAuthoredRuleChecks.cs、HabitatAuthoredViewChecks.cs、HabitatTravelerChecks.cs，以及 Editor/HabitatRuntimeChecks.cs、HabitatAuthoredLayoutChecks.cs、HabitatAuthoredControllerChecks.cs、HabitatDirectionChecks.cs、HabitatOcclusionChecks.cs、HabitatHudChecks.cs。执行前阅读各入口的模式要求和状态恢复逻辑，不批量盲跑初始化工具。
+
+最新模型截图：Verification/meshy-shrimp-game.png 为正式默认镜头；meshy-shrimp-close.png、meshy-shrimp-carry.png 是临时放大的检查画面，检查后恢复默认镜头。主角单独验证见 meshy-traveler-game.png、traveler-preview-lit.png。布局对照见 figma-level-local.png、figma-level-overview.png，可能早于最新模型替换。
+
+历史 Windows 包记录：Verification/windows-build-20261013.txt 记录曾应用户要求构建 Builds/Windows-20261013-Meshy/HabitatIsland.exe，并完成启动／输入冒烟检查。该记录早于最新静态虾接入，不能据此认定现有 EXE 包含虾或与当前工程完全一致；黑色捕获图不作为视觉通过证据。此次交接以当前 Unity 工程源码与资源为准，不重新构建 EXE。
+
+原始策划链接：
+https://www.figma.com/board/6xPhvAzHpPDO9pjqsH6eSC/Untitled?node-id=81-3569
+
+交接阅读顺序建议：本文件 → Docs/FIGMA_LEVEL_TEST.md → Docs/RULES_AND_ASSUMPTIONS.md → Docs/ART_SOURCES.md → 当前修改相关的代码与 Verification 报告。

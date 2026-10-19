@@ -1,0 +1,70 @@
+2026-10-15 更新：当前工程版本为 Unity 6000.6.5f1。本轮镜头、箱子规则、码头和 Timeline 流程见 Docs/开发更新_20261015.txt；下文历史验收记录不代表本轮复验。
+
+栖屿／HabitatIsland3D —— 换电脑启动说明
+交接日期：2026-10-13（Asia/Taipei）
+
+这是可以继续开发的 Unity 源工程，已包含最新的 3D 主角和静态 3D 虾。
+本次仅归档工程和交接资料，没有重新构建游戏 EXE。
+
+一、最短启动步骤
+1. 把整个 ZIP 解压到新电脑本地磁盘，例如 D:\UnityProjects\HabitatIsland3D。
+   找到同时包含 Assets、Packages、ProjectSettings 的 HabitatIsland3D 文件夹。
+   不要只复制 Assets，不要丢失任何 .meta 文件，不要直接在压缩包内打开。
+2. 安装 Unity Hub 和 Unity Editor 6000.6.0f1。第一次恢复先用同版本，避免混入升级问题。
+   若以后需要 Windows IL2CPP 构建，再安装对应 Build Support 和 C++ 工具链；本次无需构建。
+   模板不是必需品，不需要新建 Unity 项目。
+3. 安装 Git 并使其在 PATH 中可用：工程的 Unity MCP 包来自 GitHub。
+   第一次导入需要访问 Unity Package Registry 和 GitHub。Unity 账号与编辑器许可在新机自行登录。
+4. 在 Unity Hub 中添加上述现有项目，打开并等待包下载、素材导入和脚本编译结束。
+   Library、Temp 等由 Unity 自动生成。首次比平时打开慢是正常的；包下载失败时检查网络，不要删改包版本凑合启动。
+5. 打开 Assets/HabitatIsland/Scenes/HabitatIsland.unity，点击 Play。
+   默认应为“Figma · 荒岛关卡”：18×19 连续图，初始暂停，出现 Meshy 主角和橙红色 3D 虾。
+   地形和 HUD 是运行时生成的；编辑状态下场景看起来较空，不代表工程缺东西。
+6. Game 视图优先选择 1920×1080／16:9，点击 Game 后按 Space 开始，WASD 移动。
+   鼠标选格、1 切搬运、E 交互；完整操作见 README.md。
+
+二、让下一位 GPT 接手
+在能访问本机文件和终端的 GPT／Codex 环境中，选择解压后的 HabitatIsland3D 作为工作目录。
+把根目录 GPT_继续开发提示词.txt 的内容发给它。
+AGENTS.md 保存了项目约定；Docs/开发交接_20261013.txt 保存当前状态、未完成内容和关键代码索引。
+工具接入按 Docs/工具连接与验证.txt，支持 Unity CLI + Pipeline，以及 MCP for Unity。
+迁移包不包含原电脑的账户、Codex 全局配置、插件安装或登录状态；这些需要在新机设置。
+本地 Unity 的 127.0.0.1 服务需要在同一电脑运行的客户端访问，网页会话不会因为上传 ZIP 就自动取得本机 Unity 控制权。
+
+三、包中有什么
+Assets/：源码、场景、材质、贴图、中文字体、GLB、运行预制体、.meta。
+Packages/：manifest.json 与 packages-lock.json，锁定已使用的包。
+ProjectSettings/：Unity 版本、输入、URP、图形质量与构建场景设置。
+Docs/：策划规则、逐格 Figma 数据与源表截图、美术许可、迁移交接文档。
+Tools/：本地工具客户端、历史命令与工程校验脚本。
+Verification/：现有验证结果和截图；历史报告不代表本轮全部重跑。
+Docs/PlaytestSaves/：旧电脑找到的 8 份历史测试 JSON，供按需恢复。
+MIGRATION_MANIFEST.json：归档时每个文件的大小和 SHA-256。
+
+没有包含 Library、Temp、Obj、Logs、UserSettings、旧 Builds 或自动生成的 .sln/.csproj。
+源码文件与素材完整保留；排除的是可重建缓存、个人编辑器布局、机器相关文件及旧发行包。
+未包含未被项目采用的整套外部素材仓库；已使用素材均有工程内副本。
+现有老 EXE 早于静态虾接入，不能代表这里的最新源码，因此不混入开发包。
+
+四、解压完整性检查（可选，但建议迁移后先做）
+安装 Python 3.10 或更高版本后，在工程根目录执行：
+  python Tools/verify_handoff.py
+显示 verified=true，missing/changed 均为空即为归档内容一致。
+这是文件校验，不是 Unity 运行测试；开始开发后改过文件，哈希发生变化属于正常情况。
+若 ZIP 同目录提供 .sha256.txt，可用 PowerShell Get-FileHash -Algorithm SHA256 检查整个压缩包。
+
+五、历史测试存档
+备份位置：Docs/PlaytestSaves/。其中没有 latest.json，不自动指定恢复哪次实验。
+进入新机 Unity 后通过 C# 查询 UnityEngine.Application.persistentDataPath。
+需要恢复某次实验时，把对应 JSON 复制到该目录的 Playtests/latest.json，然后在游戏设置里读取最近记录。
+若新机已存在 latest.json，先另存备份；这些记录主要来自旧实验关，不是正式图通关存档。
+源码和模型开发不需要恢复这些测试存档。
+
+六、常见问题
+粉色／缺模型：先确认 UPM 编译完成，URP 与 glTFast 包版本正确，不要重建 GUID 或删 .meta。
+中文乱码／方块：确认 Resources/Fonts 下 OTF 和 HabitatChinese.asset 都存在，待 Unity 导入完成。
+没有画面：确认打开的是 HabitatIsland.unity 而非 SampleScene 或 Assets/_Recovery/0.unity，并进入 Play。
+新机 MCP 连接不上：先证明游戏能单独运行，再按工具文档配置；无需复制旧电脑的 Python 虚拟环境。
+不要用“Create Playtest Scene”作为恢复步骤，它会重新生成场景。
+
+归档校验报告与压缩包校验值放在 ZIP 同目录。新电脑上的实际首次启动仍须按以上步骤检查。

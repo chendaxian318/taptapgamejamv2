@@ -1,0 +1,84 @@
+{
+  "frames": [
+    {
+      "name": "hero_idle_00",
+      "pivotX": 0.5550239234449761,
+      "pivotY": 0.03349282296650713
+    },
+    {
+      "name": "hero_idle_01",
+      "pivotX": 0.5063795853269537,
+      "pivotY": 0.03349282296650713
+    },
+    {
+      "name": "hero_idle_02",
+      "pivotX": 0.5558213716108453,
+      "pivotY": 0.03349282296650713
+    },
+    {
+      "name": "hero_idle_03",
+      "pivotX": 0.5143540669856459,
+      "pivotY": 0.03349282296650713
+    },
+    {
+      "name": "fish_swim_00",
+      "pivotX": 0.5479472463283256,
+      "pivotY": 0.49325030066535724
+    },
+    {
+      "name": "fish_swim_01",
+      "pivotX": 0.529879901330014,
+      "pivotY": 0.5184153453186904
+    },
+    {
+      "name": "fish_swim_02",
+      "pivotX": 0.5552577809311849,
+      "pivotY": 0.560498339407685
+    },
+    {
+      "name": "fish_swim_03",
+      "pivotX": 0.5511895123545641,
+      "pivotY": 0.5589569541674466
+    },
+    {
+      "name": "launcher_fire_00",
+      "pivotX": 0.20011273957158962,
+      "pivotY": 0.318058690744921
+    },
+    {
+      "name": "launcher_fire_01",
+      "pivotX": 0.20067643742953778,
+      "pivotY": 0.318058690744921
+    },
+    {
+      "name": "launcher_fire_02",
+      "pivotX": 0.20180383314543404,
+      "pivotY": 0.36772009029345365
+    },
+    {
+      "name": "launcher_fire_03",
+      "pivotX": 0.2012401352874859,
+      "pivotY": 0.36772009029345365
+    },
+    {
+      "name": "bubble_pop_00",
+      "pivotX": 0.5,
+      "pivotY": 0.5
+    },
+    {
+      "name": "bubble_pop_01",
+      "pivotX": 0.5,
+      "pivotY": 0.5
+    },
+    {
+      "name": "bubble_pop_02",
+      "pivotX": 0.5,
+      "pivotY": 0.5
+    },
+    {
+      "name": "bubble_pop_03",
+      "pivotX": 0.5,
+      "pivotY": 0.5
+    }
+  ]
+}

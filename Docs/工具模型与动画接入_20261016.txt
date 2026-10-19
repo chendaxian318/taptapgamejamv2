@@ -1,0 +1,46 @@
+栖屿：鱼竿、铲子和贝壳风箱接入（2026-10-16）
+
+范围
+来源：C:/Users/admin/Desktop/聚光灯草案。
+用户明确要求背篓先不要应用，本轮没有导入或替换背篓。
+后续更新：用户随后明确“背篓也可以使用了”，现已另行接入v2；以下是前一轮工具接入记录，最新背篓状态见 Docs/背篓接入_20261016.txt。
+目录内龙虾动画、笼子与工程现用GLB逐一SHA256相同；码头/人物匹配的是工程原版，不覆盖当前NoStairs/EmptyHands，保留已去楼梯/去鱼钩和8K码头贴图。
+
+本次应用
+1. 鱼竿
+Art/FishingRod/fishing_rod_unirig_animated.glb；Resources/Models/FishingRod/Rod.prefab。
+保留19骨和原4K PBR贴图，持握原点Grip_CTRL不重新居中。按玩家尺寸显示约1.30格长；右手掌心挂点对准主握点，左手辅助握持。
+工具3「引导」或工具5「收获」且拥有鱼竿时显示待机Idle_Sway（4秒）；引导成功/实际垂钓开始播放Cast（3秒），收获成功播放Hook_Pull（3.5秒）。动画结束回待机。鱼线从实际Rod_Tip_Attachment接到目标水格；引导后目标使用动物的新位置。
+2. 铲子
+Art/Shovel/Shovel_PlayerReady.glb；Resources/Models/Shovel/Shovel.prefab。
+使用修形后的刚性PlayerReady版，保留Root/Tool_Rigid/Grip_Primary/Grip_Secondary和原4K PBR贴图。整体显示约0.90格长，右手主握点、左手副握点由角色骨架校准。
+源文件没有动画片段，本轮添加的是玩家控制器中的0.72秒挥铲姿态。工具2「填土」时持铲；实际铺土成功、工具1搬运放下土块成功才触发挥铲。失败操作不播放成功动作、不增加资源或撤销项。
+3. 贝壳风箱
+Art/ShellBellows/Shell_Bellows_Rigged.glb；Resources/Models/ShellBellows/Bellows.prefab。
+替换现有Fan的几何风扇显示，包括购买后携带/放置的模型；原风力、格子旋转、吹浮箱规则不变。
+保留6骨、原4K PBR；实测GLB世界喷嘴-X、上方+Y，glTFast转换后喷嘴+X，外层绕Y -90度使喷嘴朝游戏+Z，再由格子rotation*90度旋转；四向均实测对应规则风向。
+水平最大跨度归一化0.82格，底面贴地。暂停时Idle（2秒轻微呼吸），模拟运行时Pump_Loop（源1.5秒，按模拟节奏调整速度），暂停下执行单步触发Pump_Once（1秒）后回待机。全部仅驱动外观，不增加模拟Tick或再次移动浮箱。
+
+资源与程序边界
+三个GLB从交付目录原样复制，SHA256一致；贴图内嵌，不依赖桌面或D:/tools，原GLB未修改。
+材质沿用glTF的G粗糙度/B金属度打包，不直接套用不兼容的URP smoothness通道。
+独立 .anim 重置时间起点并保持骨骼曲线路径、姿态、时长；没有把导入器显示FPS当成源动画制作FPS。
+HabitatEquipmentAnimation使用手动PlayableGraph，无自动Update；工具和风箱由各自的View驱动Tick。停用销毁图，重新启用重建；同名Play默认不重播。
+HabitatPlayerVisual.Equipment.cs负责手持挂点、程序挥铲、鱼线。切工具、手持其他对象、推拉/攀爬/下落、取消钓鱼、撤销、换图和剧情会清理旧动作。角色原8段动画、脚步速度与格子到位提交均保留。
+Setup入口：HabitatIsland.Editor.HabitatEquipmentSetup.PrepareAll()，仅在Edit执行，通过Unity API生成或更新独立材质、动画、prefab，保留既有资源GUID，不重建场景。
+
+验证
+EquipmentAssetChecks.Run：32项资源/几何检查通过；检查6段动作确实改变蒙皮顶点、风箱喷嘴顶端固定、循环首尾闭合、铲子刚性不拉伸、原PBR与握点保留。
+EquipmentAssetChecks.RunRuntime：17项真实帧播放图检查通过，含手动推进、循环/单次/重播/定格、切片不叠加、停用释放/恢复。
+EquipmentGameplayChecks.Run：44项真实游戏检查通过，含数字键选工具、成功与失败操作、真实垂钓结束/取消、鱼线、握点、四向风箱及三动作、旋转、撤销、换图和晨光清理。
+挥铲最终参数：主手下移0.02格、前伸0.03格、额外俯转18度，动作0.72秒。完整动作及回待机共0.8秒按实际渲染帧检查，48个采样的副手最大偏差0.00786米，主手小于0.00001米；双手验收上限均为0.02米。
+鱼线端点使用主相机endCameraRendering后实测，起点与竿梢、末端与目标格误差均为0；Update前后混相位读取曾出现4cm伪差异，已改检查相位，没有放宽阈值。
+FeedbackMovementChecks：89项原移动/推拉/跌落/打捞/风箱浮箱回归检查通过。
+JourneyOpeningChecks：新游戏自然归航开场通过，原地图、人物、真实鱼虾库存和控制恢复正确。
+报告/实拍：Logs/equipment-20261016；导入报告Verification/equipment-20261016/import.txt；来源对照Logs/asset-inventory-20261016/non-backpack-assets.json。
+工具/风箱截图使用可恢复的9×9验收夹具，结束后恢复原正式地图，夹具没有保存成关卡。正面工具特写只临时调整检查镜头，主游戏相机参数未改。
+
+保留与回退
+源码修改前备份：工程上级 ChangeBackups/equipment-before-20261016。
+桌面原始资源、背篓包、原角色/码头/龙虾/笼子均保留。未改正式342格原地形和现有剧情入口。
+本轮更新Unity工程，不构建EXE或更新旧交接ZIP；旧可执行包不包含这些资源。

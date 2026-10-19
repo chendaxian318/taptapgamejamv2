@@ -1,0 +1,20 @@
+音效组合试听（离线顺序拼接，非游戏录音）
+按当前 HabitatAudio 默认 masterVolume=0.55、各 cue gain/pitch 制作；未作额外响度增强。
+00.50–01.27 秒  草地脚步 1  (footstep_grass_000.ogg)
+01.67–02.35 秒  草地脚步 2  (footstep_grass_001.ogg)
+02.75–03.09 秒  沙地脚步 1（预留低岸）  (step_sand_1.wav)
+03.49–03.77 秒  木板脚步 1  (footstep_wood_000.ogg)
+04.17–04.41 秒  木板脚步 2  (footstep_wood_001.ogg)
+04.81–05.18 秒  推箱  (impactWood_medium_000.ogg)
+05.58–05.71 秒  拿起  (pick.wav)
+06.11–06.23 秒  放下  (drop.wav)
+06.63–07.42 秒  铺土  (digging.wav)
+07.82–07.94 秒  布置虾笼  (impactSoft_medium_000.ogg)
+08.34–09.45 秒  开宝箱  (reward.wav)
+09.85–10.72 秒  抛竿  (splash.wav)
+11.12–11.97 秒  收获  (harvest.wav)
+12.37–12.95 秒  买卖  (coin_pickup.wav)
+13.35–15.40 秒  潮汐机关  (water.wav)
+
+总时长 15.80 秒；峰值 -13.76 dBFS；无数字削波。
+仅检查了文件和波形数值，未做主观听感验收。

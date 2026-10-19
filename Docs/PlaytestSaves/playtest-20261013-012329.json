@@ -1,0 +1,690 @@
+{
+    "version": "HabitatIsland/1",
+    "state": {
+        "width": 9,
+        "depth": 9,
+        "tiles": [
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 3,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 3,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": true,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": true,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 0,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 0,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 0,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 0,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 3,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 3,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 8,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": 1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            },
+            {
+                "height": -1,
+                "prop": 0,
+                "rotation": 0,
+                "trap": false,
+                "coveredProp": 0
+            }
+        ],
+        "animals": [
+            {
+                "id": 1,
+                "x": 3,
+                "z": 2,
+                "species": 3,
+                "progress": 0.0000324249267578125,
+                "offspring": 1,
+                "carried": false,
+                "homeX": 3,
+                "homeZ": 2,
+                "moveClock": 0.49999821186065674,
+                "spawnedTotal": 1
+            },
+            {
+                "id": 2,
+                "x": 4,
+                "z": 3,
+                "species": 0,
+                "progress": 0.0000324249267578125,
+                "offspring": 1,
+                "carried": false,
+                "homeX": 3,
+                "homeZ": 3,
+                "moveClock": 0.49999821186065674,
+                "spawnedTotal": 1
+            },
+            {
+                "id": 3,
+                "x": 4,
+                "z": 2,
+                "species": 5,
+                "progress": 0.0000324249267578125,
+                "offspring": 1,
+                "carried": false,
+                "homeX": 4,
+                "homeZ": 2,
+                "moveClock": 2.9999921321868896,
+                "spawnedTotal": 1
+            },
+            {
+                "id": 4,
+                "x": 1,
+                "z": 3,
+                "species": 1,
+                "progress": 0.0000324249267578125,
+                "offspring": 0,
+                "carried": false,
+                "homeX": 2,
+                "homeZ": 2,
+                "moveClock": 0.49999821186065674,
+                "spawnedTotal": 1
+            }
+        ],
+        "playerX": 1,
+        "playerZ": 2,
+        "facingX": 0,
+        "facingZ": 1,
+        "coins": 30,
+        "cargo": 4,
+        "fish": 0,
+        "shrimp": 1,
+        "carryingAnimal": -1,
+        "carryingProp": 0,
+        "waterLevel": 0,
+        "tickCount": 7,
+        "elapsed": 18.000032424926758,
+        "rod": true,
+        "traps": 2,
+        "selectedX": 1,
+        "selectedZ": 3,
+        "message": "已恢复上一步，模拟已暂停；按空格继续。",
+        "events": [
+            "载入 01 · 螃蟹的欢迎会",
+            "搬走 (3,3) 的虾，放到 (2,4) 陷阱；让螃蟹与海星、水母相伴并首次繁衍。螃蟹和海星不能搬起。",
+            "已搬起虾，靠近空格再次交互放下",
+            "放下虾",
+            "螃蟹繁衍成功：幼体 +1（亲本保留）",
+            "水母繁衍成功：幼体 +1（亲本保留）",
+            "海星繁衍成功：幼体 +1（亲本保留）",
+            "虾繁衍成功：幼体 +1（亲本保留）",
+            "陷阱自动收集虾幼体 +1，亲本保留，可回码头出售",
+            "关卡目标达成！所需物种环境适宜且已首次繁衍。可继续自由测试。"
+        ],
+        "levelIndex": 0,
+        "levelName": "01 · 螃蟹的欢迎会",
+        "objective": "搬走 (3,3) 的虾，放到 (2,4) 陷阱；让螃蟹与海星、水母相伴并首次繁衍。螃蟹和海星不能搬起。",
+        "goals": [
+            3
+        ],
+        "won": true,
+        "dockX": 1,
+        "dockZ": 2,
+        "seed": 1710068766,
+        "movementClock": 0.49999821186065674,
+        "tideActive": false,
+        "tideBaseLevel": 0,
+        "earnedSpecies": [
+            3,
+            0,
+            5,
+            1
+        ]
+    },
+    "tuning": {
+        "breedSeconds": 18.0,
+        "moveSeconds": 2.5,
+        "animalMovement": true,
+        "shrimpRadius": 1,
+        "friendlyRadius": 1,
+        "minWater": 3,
+        "minPond": 4,
+        "minHighland": 2
+    },
+    "actions": 3
+}

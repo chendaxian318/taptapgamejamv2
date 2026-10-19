@@ -1,0 +1,32 @@
+海岛灯光、天空盒与水面 shader 第一版（2026-10-18）
+
+采用明亮柔和日景作为可调整初版；用户尚未选择更具体的风格分支。
+
+1. HabitatLightingProfile 集中保存主光颜色/强度/方向、阴影强度、天空/水平/地面三色环境光、天空材质、后处理和海水颜色/波纹/泡沫强度。
+   配置：Assets/HabitatIsland/Resources/Environment/IslandDaylight.asset。
+   天空：同目录IslandSky.mat；后处理：IslandDaylightVolume.asset。
+   新建入口：Tools/Habitat Island/Art/Prepare Island Daylight；已有配置不会被重建菜单重置。
+
+2. 主光1.25，暖白色，柔和阴影强度0.72。Trilight环境光保留冷暖层次。
+   后处理Neutral、Bloom 0.10/threshold 1.25、曝光+0.10、对比6、饱和-5、轻微暗角0.055。
+   原PC管线100%分辨率/4xMSAA、BC7纹理及模型PBR材质保持。
+   HabitatView初始化时只应用一次；切关不会新增重复灯光组件或后处理Volume。
+   Timeline仍独占主光动画；天空读取主光方向，不抢写演出灯光。晨光取消后恢复日景参数。
+
+3. Habitat/IslandSky为轻量程序渐变天空，含软云和柔和太阳光晕，不依赖新贴图。
+   开场BlueSky镜头由纯色背景改用实际天空盒，资源缺失时仍回退纯色。
+   正常正交俯视玩法主要看海面，天空效果主要在开场等低角度镜头中可见。
+
+4. Habitat/QuietPaintedWater保留原手绘纹理，增加世界坐标缓慢波纹法线、主光/阴影响应、轻微高光、深浅水色与岸边泡沫。
+   使用相机深度恢复水下表面高度，支持正交镜头；在不透明物体之后绘制（queue2950），颜色覆盖仍为实色，不添加真实折射或实时平面反射。
+   岸边浅色由水下几何决定，涨退潮随原waterLevel移动。原网格边界/选择线保留。
+   动画只影响画面；没有波浪碰撞、地形位移或额外生态Tick。
+
+5. 验证入口AgentScripts/IslandRenderingChecks.cs / IslandRenderingChecks.Begin。
+   30项运行检查通过：两shader及实际变体无诊断、配置加载、深度输入、原画质保留、index5/8/10切关无重复实例、涨退潮跟随、开场天空、晨光可变暗/暂停/取消恢复。
+   这是渲染与演出接口测试，不是重新跑整条主线，也不是GPU性能基准。
+   Verification/render-20261018保存before/after、high-tide、opening-sky、morning截图及checks.txt；已查看对照和演出截图。
+   测试潮位为受控临时状态，测试后恢复快照；没有改变潮汐规则。
+
+本次只修改显示代码和新增渲染资产，UI保持冻结，未修改关卡规则、存档格式或构建EXE。
+原代码备份：../ChangeBackups/render-before-20261018。

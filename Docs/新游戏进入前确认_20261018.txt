@@ -1,0 +1,17 @@
+新游戏进入前确认（2026-10-18）
+
+用户要求：有存档时在进入游戏前显示现有确认弹窗，无存档直接进入。
+
+实现：
+- 开始游戏按钮统一进入 RequestNewSession，仅以 HasSavedSession 判断是否弹窗，不再因内存会话已经开始就要求确认。
+- 复用已有三槽、旧 latest、自动存档及 .bak 识别规则。
+- 从主菜单打开确认时保留主菜单背景，禁止其按钮接收输入，确认框置于上层。未确认前不调用 NewSession，不重置进度或启动归航开场。
+- 取消、X、Esc 返回主菜单；确认后沿用 NewSession 开局。保留原弹窗样式、文案和存档写入规则。
+- ActiveModalPage 优先识别确认框，避免同时显示主菜单时返回目标和 Esc 处理错误。程序关闭面板清理过期确认回调。
+
+验证：
+- Unity 编译通过；AgentScripts/NewGameConfirmationChecks.cs 实际按钮回调与跨帧检查共71项通过。
+- 覆盖空目录直接进入、三手动槽、旧档、自动档、仅备份档、有档取消、X、Esc、确认后才播放开场、回主菜单但无磁盘档直接进入，以及退出确认的取消路径。
+- 截图 Verification/new-game-confirmation-20261018/confirmation-before-game.png；检查明细同目录 checks.txt。
+- 测试使用独立存档目录，finally恢复状态；玩家 Playtests 文件 SHA256 前后一致。
+- 未构建 EXE，未重复整线关卡测试。

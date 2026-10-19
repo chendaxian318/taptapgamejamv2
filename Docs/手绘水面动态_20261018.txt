@@ -1,0 +1,31 @@
+手绘水面动态增强（2026-10-18）
+
+用户要求：保持当前画风一致，给水增加动态效果。
+本轮沿用原手绘Water贴图、深浅水色、泡沫颜色、灯光和天空配置。
+
+新增效果：
+- 双层反向缓慢漂移的原画纹理与细微UV扰动。
+- 两组错开的断续手绘波纹，在世界坐标上缓慢漂移、渐隐渐现。
+- 波纹使用连续坐标导数做抗锯齿，避免frac网格边界产生额外细线；降低生成密度，保持原有平静海岛画面。
+- 原有法线起伏、高光、岸边泡沫统一受水面速度控制。没有添加几何浪高、物理运动或额外生态Tick。
+
+Inspector：Resources/Environment/IslandDaylight.asset → Painted water movement。
+waterMotionSpeed=.75，waterRippleStrength=.12，waterFlowStrength=.002。
+速度0可暂停shader动态；正常生态暂停时仍保留环境水面动态，与原有表现约定一致。
+原waveStrength=.035、foamStrength=.35及全部配色保持。
+
+修改：HabitatWater.shader、HabitatLightingProfile.cs、HabitatLighting.cs及配置资产。
+未修改HabitatView、地形/玩法/存档/UI逻辑，不新增运行时物体或绘制Pass；增加一次原画纹理采样和少量程序波纹计算，未做GPU性能基准。
+
+验证：AgentScripts/WaterMotionChecks.cs / WaterMotionChecks.Begin，11项通过。
+包括shader/实际变体无诊断、配置传入、原贴图与颜色保留、真实渲染随时间变化、速度0静止、几何与高度不受波纹影响、涨退潮跟随。
+隔离水面图像两帧平均RGB变化0.320221/255，停止速度后为0；测试相机/层/材质参数/运行快照均恢复，测试存档使用隔离目录。
+本轮不宣称整条主线或性能复验。
+
+Verification/water-motion-20261018/checks.txt为完整记录。
+before-current.png为同一最新运行画面临时换回旧shader的对照，screen-00至31为新效果实拍。
+water-motion.gif为32帧、160ms/帧的屏幕录制预览，播放循环是预览格式，不代表水面动画5秒重复。
+已查看同镜头前后图及不同时间帧。对比用临时shader已通过AssetDatabase删除，不进入正式资源。
+录制工具AgentScripts/WaterMotionPreview.cs，无旧shader时仅录新效果。
+本轮前源文件备份：../ChangeBackups/water-motion-20261018。
+用户运行前快照另存before-session.json（当时SessionStarted=false、level4、paused=true），未写入玩家手动存档。编辑器最终为Edit模式。

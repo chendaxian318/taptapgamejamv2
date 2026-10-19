@@ -1,0 +1,20 @@
+水母模型接入（2026-10-17）
+
+来源：C:/Users/admin/Desktop/聚光灯草案/part3/vinda/水母/3d/02_游戏用成品/Jellyfish_GameReady.glb。
+工程原件：Assets/HabitatIsland/Art/Jellyfish/Jellyfish_GameReady.glb。
+运行预制体：Assets/HabitatIsland/Resources/Models/Jellyfish/Jellyfish.prefab。
+重建入口：Tools/Habitat Island/Art/Prepare Delivered Jellyfish。
+
+保留交付GLB的原比例、33骨骼、PBR材质、4K色图/法线及2K金属粗糙度图。
+Idle为3秒循环，Swim为1.6秒循环。使用现有HabitatEquipmentAnimation手动推进，无Root Motion。
+HabitatJellyfishVisual按画面实际水平位移切换Swim/Idle，停止后回Idle，携带时Idle；读档/撤销造成状态替换或传送时重置。生态暂停沿用其他动物的表现约定，待机仍呼吸；显示dt=0时保持动画相位。
+水母原点在伞体下方。水中保留原点定位，触须浸入水面；不叠加旧平面素材的程序上下摆动。在陆地、笼内或携带时按两段动画49个采样姿态测得最低点抬高，避免触须穿地。原大小0.8米，导入测得离地补偿0.5071633米；携带/笼内沿用现有显示缩放。
+HabitatView中所有Species.Jellyfish优先用该模型。旧切图保留为资源缺失时备用。未改动地图、规则、适居判定、奖励或存档格式。
+
+验证：Unity编译通过；AgentScripts/JellyfishChecks.cs / JellyfishChecks.Begin 完整运行27项通过。
+包括33骨、两段动画实际网格变形、首尾衔接、材质/纹理、游动/停止/携带/传送姿态、零dt保持，以及第四关index8、群山之巅index9的实例替换、陆地与携带落点。index4本无水母，额外检查没有凭空增加实例。
+用户latest.json未写入，测试恢复运行快照。携带/陆地属于受控显示测试，不宣称通过正常玩法捕获水母，也未重新执行完整通关路线。
+记录：Verification/jellyfish-20261017/import.txt、checks.txt。
+截图：fourth-level.png为默认方向地图画面，水母会被邻近高地遮挡；fourth-close.png为临时旋转俯视近景，已人工查看新模型及材质。测试镜头已恢复。
+测试期间有Play热重载造成运行引用失效；重新进入完整Play后完成检查，最终控制台当前错误数0。旧控制台历史记录不视为本次最终运行结果。
+本轮前备份：../ChangeBackups/jellyfish-before-20261017。未构建EXE。

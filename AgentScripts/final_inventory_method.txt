@@ -1,0 +1,35 @@
+  void BuildStyledInventory()
+  {
+   var p=Skin(inventoryPanel,new Vector2(1440,830),"");p.GetComponent<Image>().color=aqua;
+   HabitatFinalUi.Art(p,"Background12",Vector2.zero,new Vector2(1440,830));
+   Ribbon(p,"BagEquipment","TOOL",355,-80,242,red);
+   Ribbon(p,"BagCreatures","CREATURE",200,-338,363,red);
+   Ribbon(p,"BagItems","ITEM",200,-632,235,red);
+   inventorySummary=Text(p,"",14,deepSea,new Vector2(630,-22),new Vector2(650,64));
+   equippedIcon=HabitatUiAssets.Icon(p,"Rod",Vector2.zero,Vector2.zero);equippedIcon.gameObject.SetActive(false);
+   int[] ids={0,3,2,6,7,5,1,4};
+   string[] arts={"R127","R128","R126","R140","R141","R142",null,null};
+   Vector2[] positions={new Vector2(640,-122),new Vector2(810,-122),new Vector2(980,-122),new Vector2(535,-650),new Vector2(705,-650),new Vector2(875,-650),new Vector2(640,-305),new Vector2(830,-305)};
+   Vector2[] sizes={new Vector2(128,164),new Vector2(128,164),new Vector2(390,164),new Vector2(128,150),new Vector2(128,150),new Vector2(128,150),new Vector2(160,42),new Vector2(160,42)};
+   for(int i=0;i<ids.Length;i++)
+   {
+    int id=ids[i];var b=TextButton(p,HabitatGame.ToolNames[id],positions[i].x,positions[i].y,sizes[i].x,()=>SelectBagTool(id),15);Place(b,positions[i].x,positions[i].y,sizes[i].x,sizes[i].y);b.name="Inventory tool "+id;inventoryTools[id]=b;
+    if(arts[i]!=null){HabitatFinalUi.Art(b.transform,arts[i],Vector2.zero,sizes[i],true);Place(b.GetComponentInChildren<TMP_Text>(),0,-sizes[i].y+22,sizes[i].x,24);}
+    b.GetComponentInChildren<TMP_Text>().color=deepSea;
+   }
+   string[] cards={"R133","R134","R133","R125","R135"};string[] names={"普通鱼","龙虾","琉璃鱼","蟹壳","水母"};
+   for(int i=0;i<5;i++){float x=535+i*170;HabitatFinalUi.Art(p,cards[i],new Vector2(x,-408),new Vector2(128,153),true);catchCounts[i]=Text(p,"",20,deepSea,new Vector2(x+83,-430),new Vector2(45,30),TextAlignmentOptions.Center,true);Text(p,names[i],15,deepSea,new Vector2(x,-571),new Vector2(128,26),TextAlignmentOptions.Center);}
+   string[] storedArt={"R143","R144"};PropKind[] kinds={PropKind.Fan,PropKind.Crate};
+   for(int i=0;i<2;i++){var kind=kinds[i];var b=TextButton(p,i==0?"风箱":"木箱",1045+i*170,-650,128,()=>{int index=game.State.bagProps.IndexOf(kind);if(index>=0)SelectBagItem(index);else inventoryFeedback.text=kind==PropKind.Crate?"船舱木箱请在渡口卸下。":"背包内没有已收起的风箱。";},15);Place(b,1045+i*170,-650,128,150);HabitatFinalUi.Art(b.transform,storedArt[i],Vector2.zero,new Vector2(128,150),true);b.GetComponentInChildren<TMP_Text>().color=deepSea;Place(b.GetComponentInChildren<TMP_Text>(),0,-128,128,24);}
+   bagCatch=Text(p,"",14,deepSea,new Vector2(535,-608),new Vector2(830,30));
+   var stored=Shape(p,"Stored items drawer",500,-610,875,190,blue,24);stored.gameObject.SetActive(false);
+   storedItems=new Button[5];for(int i=0;i<5;i++){int id=i;storedItems[i]=TextButton(stored,"",20+i*163,-35,150,()=>SelectBagItem(bagPage*5+id),17);storedItems[i].name="Stored item "+i;Place(storedItems[i],20+i*163,-35,150,95);}
+   TextButton(stored,"下一页 ›",580,-137,140,()=>{bagPage=(bagPage+1)*5<game.State.bagProps.Count?bagPage+1:0;},18).name="Next stored page";
+   TextButton(stored,"关闭",750,-137,95,()=>stored.gameObject.SetActive(false),18);
+   TextButton(p,"收纳物品",1090,-305,160,()=>{stored.gameObject.SetActive(!stored.gameObject.activeSelf);stored.SetAsLastSibling();},18);
+   Shape(p,"Bag feedback backing",20,-756,420,58,new Color32(105,209,181,245),12);
+   inventoryFeedback=Text(p,"",15,deepSea,new Vector2(30,-764),new Vector2(400,45));
+   cargoLoad=SeaButton(p,"装箱",new Vector2(28,-683),new Vector2(105,40),()=>game.TransferCargo(false));
+   cargoUnload=SeaButton(p,"卸箱",new Vector2(145,-683),new Vector2(105,40),()=>game.TransferCargo(true));
+   SeaButton(p,"收起手持",new Vector2(263,-683),new Vector2(148,40),()=>game.StoreInventoryItem());
+  }

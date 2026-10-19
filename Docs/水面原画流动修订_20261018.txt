@@ -1,0 +1,21 @@
+水面原画流动修订（2026-10-18）
+
+用户否定第二版观感：规则亮色波纹密集重复，与当前画风不协调。
+本版删除整个PaintedRipple程序笔触函数及其叠加，也删除大面积规则正弦明暗带。
+改为直接表现原Water.png的蓝绿色手绘晕染，以两层不同速度的UV流动和连续局部扭动产生动态。
+水面亮暗来自原画；没有新增白色波纹图案。已有岸边泡沫和场景原有细线仍保留。
+原画混合控制压低，给岛屿主体留出视觉空间，不以像素变化量越大越好作为审美标准。
+
+默认参数覆盖前两版：
+waterMotionSpeed=1.1
+waterRippleStrength=.14（保留字段兼容；现在控制原画细节可见度，不再控制程序白色笔触）
+waterFlowStrength=.008
+原深浅色配置与天空灯光不变。仅修改shader、配置默认值及通过Unity API保存配置资产。
+不修改水位、格子、动物、人物或玩法规则，不增加渲染Pass；纹理仍为原图的双次采样。
+
+本轮验证和实拍：Verification/water-soft-flow-20261018。
+WaterSoftFlowChecks/WaterSoftFlowPreview均在改变状态前隔离测试存档目录，finally恢复运行快照和设置，核对玩家存档文件哈希。
+checks.txt保存实际测试结果；preview-save-check.txt保存录制期间存档核对。
+screen-00至31为当前配置实拍，water-motion.gif仅为录制预览。
+运行检查只证明编译/时间变化/停止/潮位等功能，不证明用户认可审美；未做完整主线或性能基准，未构建EXE。
+修改前备份：../ChangeBackups/water-soft-flow-20261018。

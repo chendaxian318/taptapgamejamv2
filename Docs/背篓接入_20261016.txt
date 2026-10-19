@@ -1,0 +1,34 @@
+背篓 v2 接入（2026-10-16）
+
+用户在工具模型接入后明确“背篓也可以使用了”，本次使用该授权，替代此前暂不应用的限制。
+来源：C:/Users/admin/Desktop/聚光灯草案/part3/hona/背篓/3d/模型/背篓_静态_v2.glb。
+源与工程GLB SHA256均为 b8136193aac94e5e2dbc3f2231ece3fa0f5f5795be167079e1e159c857e63002。
+
+资源
+Assets/HabitatIsland/Art/BackBasket/BackBasket_v2.glb
+Assets/HabitatIsland/Resources/Models/BackBasket/Basket.prefab
+原11个网格、13,362三角面、6个PBR材质与内嵌4K编织贴图保留；源文件没有骨骼和动画片段。
+Setup入口 HabitatIsland.Editor.HabitatBackBasketSetup.Prepare()，仅在Edit执行。
+prefab根在三块背板贴背平面的中心，+Y向上，+Z离开身体，源单位保留；含BackMount、BasketRim、SourceBaseOrigin三个标记。
+独立材质保存时Unity将_BUILTIN_QueueControl从-1初始化为1，但实际renderQueue=2000、RenderType=Opaque及PBR属性保持一致；检查对此单一编辑器标志分类记录，不忽略其他材质差异。
+
+角色表现
+HabitatPlayerVisual.BackBasket.cs：日常持续佩戴单个背篓，世界高度0.50格、比例0.50/0.65；初始贴背点在角色朝向空间(0,0.62,-0.17)，篮体朝身后。
+保存Spine2局部挂点及朝向，每次LateUpdate在骨骼/手臂动作之后更新；独立外层跟随骨骼，避开落地姿态的非均匀挤压，保持静态篓身刚性。
+没有重跑UniRig或创建虚构源动画。肩带与篮体均为原静态几何，由躯干运动带动。
+持鱼竿/铲子、推拉和跌落不会删掉背篓；与举物CarryAnchor和手持工具挂点分离。
+
+剧情
+主地图归航的4个临时鱼获放入BackBasketRim，取消/跳过/完成后仅销毁鱼获；家中晨光随角色整体隐藏，结束后保留同一个背篓。
+HarborPrototype在Awake初始化角色后迁移旧场景几何筐，运行时不会双筐；旧编辑器占位预览保留作为资源缺失时的fallback。
+没有改变真实渔获库存、出售结算、移动规则、存档结构、原地图或Timeline路径。
+
+验证记录
+Logs/back-basket-20261016/assets.json：32项来源、网格、UV、PBR与挂点检查。
+Logs/back-basket-20261016/runtime.json：33项实帧检查，涵盖走转、推拉、跌落落地、工具切换、撤销、换图、开场跳过/取消及自然晨光结束；检查后恢复原State、历史、相机、UI和输入。
+Logs/back-basket-20261016/opening.json：主地图自然归航开场、渔获与控制恢复检查。
+Logs/back-basket-20261016/equipment-regression.json：44项鱼竿、铲子、风箱与剧情清理回归检查。
+Logs/back-basket-20261016/prototype.json：15项独立HarborPrototype检查，涵盖旧筐迁移、鱼获挂点、开场结束/跳过和晨光显隐；为缩短验证，将Director推进至片尾后等待真实帧触发停止回调，不宣称全长自然播放。
+实拍截图在同目录，背面/侧面/常用视角使用不保存的7×7平地检查夹具；夹具结束后恢复原正式地图。
+源代码备份在工程上级 ChangeBackups/backbasket-before-20261016。
+本次仅更新Unity工程，未构建EXE。

@@ -1,0 +1,31 @@
+潮汐引擎模型接入 — 2026-10-19
+
+归档：C:/Users/admin/Desktop/聚光灯草案/part3/hona/潮汐引擎/3d
+02_游戏用成品：TideEngine_GameReady.glb / .fbx / .blend，含骨骼动画。
+01_原始模型保留；06_早期石板版本仅供追溯，旧悬浮动画不用于当前潮汐机关。
+原模型底部独立碎块已移除。游戏模型 12,504 三角面、3 根骨骼。
+
+Unity 项目：D:/chatgptproject/taptapgamejam/HabitatIsland3D
+源模型：Assets/HabitatIsland/Art/TideEngine/TideEngine_GameReady.glb
+预制体：Assets/HabitatIsland/Resources/Models/TideEngine/TideEngine.prefab
+贴图：Assets/HabitatIsland/Art/OptimizedTextures/TideEngine（独立 BC7，颜色/法线4096，金属粗糙度2048）
+重建菜单：Tools/Habitat Island/Art/Prepare Tide Engine
+
+当前游戏中 PropKind.Tide 已自动使用此模型，包括第四关。符文朝上平放，宽0.80米。
+动画：Idle 2秒循环、Press 0.4秒、Active 2秒循环、Release 0.4秒。
+石板为刚体骨骼动画，受压下沉约0.024米；不使用根运动。
+箱子/浮木覆盖该格后触发 Press，保持 Active，移开后 Release。
+Active 石板保持受压，运行时代码补充青色提示环脉动。
+动画跟随实际提交的机关状态，预览移动不提前触发。其他未被压住的引擎不会随全局涨潮点亮。
+地形重建保留过渡进度，载入时直接恢复正确姿态；撤销后平滑恢复。
+原涨潮规则、关卡配置与存档格式未修改。
+
+验证：Verification/tide-engine-20261019/checks.txt，32项检查通过。
+覆盖模型面数/骨骼/动画/材质、受压与中途反向、真实控制器推箱/拉箱/取消/撤销/重建、第四关全部潮汐模型替换。
+此为受控交互回归，并非完整通关测试。测试隔离存档，真实存档前后哈希一致。
+04_预览包含 Unity 实景截图：fourth-level.png 正式第四关；unpressed.png/pressed.png 受控测试。
+初次检查未等待撤销后0.4秒动画完成，已修正测试等待并完整重跑通过。
+未重新打包 EXE。Unity 已退出测试 Play 模式。
+修改前备份：ChangeBackups/tide-engine-20261019。
+
+2026-10-19 可见性修正：此前2.4厘米行程过小且被箱子遮住；新版宽0.94米、静止底部0.125米，骨骼受压行程约0.118米，受压后底部仍在地面以上。动画时长仍0.4秒。33项检查通过，新增实际拉箱后逐帧压缩进度检查，release-00至23为实际回弹截图。已更新源模型、四段动画、预制体和GIF，未打包EXE。此条取代上文0.80米/0.024米参数。

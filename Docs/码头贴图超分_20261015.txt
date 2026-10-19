@@ -1,0 +1,57 @@
+码头贴图超分（2026-10-15）
+
+本次范围
+用户同意使用本地 Real-ESRGAN，工具和模型安装到 D:\tools。
+先处理 WoodenDock 码头颜色图，未改变主角、龙虾或笼子贴图。
+原始 GLB、网格、UV、碰撞、码头行走规则和金属粗糙度图不变。
+
+文件
+工具/模型/运行入口：D:\tools\Real-ESRGAN\（使用方法见其中 README.txt）
+超分输出：D:\tools\Real-ESRGAN\outputs\WoodenDock_BaseColor_RealESRGAN_8k.png
+工程资源：Assets/HabitatIsland/Art/WoodenDock/Enhanced/WoodenDock_BaseColor_RealESRGAN_8k.png
+使用材质：Assets/HabitatIsland/Resources/Models/WoodenDock/Harbor0.mat，属性 baseColorTexture。
+主地图和独立 HarborPrototype 共用该材质。
+工具复用本机现有 CUDA Python；未修改 UniRig 环境包，也未运行绑定流程。
+
+处理方法
+官方 RealESRGAN_x2plus.pth，4096×4096 → 8192×8192，RGB颜色图。
+模型下载：https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.1/RealESRGAN_x2plus.pth
+模型信息：https://github.com/xinntao/Real-ESRGAN
+模型加载器 Spandrel 0.4.2：https://github.com/chaiNNer-org/spandrel
+推理使用 RTX 5070 Ti、FP16、tile256、padding32，耗时约88秒。
+保留原图坐标与方向，没有重排UV、额外翻转、改变贴图比例或重绘几何。
+输出SHA256：cd41ead9d6ca92236d49938a3f87400ba42078ef4e3078151cc1781bd7622279
+原GLB SHA256：de85c18557053aa9c9cd819879208fa6ab80e2284a34e0c5ccb30a7a67ce2a7b
+
+Unity导入
+8192×8192、sRGB、14级mipmap、Trilinear、aniso8、Repeat、不可读。
+Standalone覆盖为BC7高质量，避免8K未压缩图的高显存成本。
+编辑器Profiler报告该纹理运行内存170.67 MiB（该API统计不应直接当成纯GPU占用）。
+原始8K PNG保留，后续可重新选择压缩设置。
+HabitatWoodenDockSetup.ApplyEnhancedTexture() 负责导入和绑定。
+Prepare() 在复制原始材质后重新应用可选增强颜色图，防止重建时丢失。
+增强图不存在时 Prepare() 继续使用原GLB颜色图。
+
+验证
+Logs/texture-upscale-20261015/inference-report.json：推理尺寸、哈希、误差。
+D:\tools\Real-ESRGAN\outputs\alignment-check.json：检查±2像素平移，最佳偏移为(0,0)。
+平均RGB漂移小于1/255；分块与整块512区域对比平均误差0.139/255、99分位1/255。
+AgentScripts/DockTextureClarityChecks.cs 在同帧固定三个机位捕获原GLB、提取原图、原始8K、正式导入8K。
+提取原图与GLB三机位逐像素一致，排除方向/gamma错误。
+额外红紫诊断检查保证材质替换确实生效；临时材质/相机/MPB/GPU标志在finally恢复。
+正式导入8K相对未压缩8K的平均画面差异为0.081～0.216/255（同时含过滤设置差异）。
+Logs/texture-upscale-20261015/clarity-checks.txt：实际渲染对比报告。
+Logs/texture-upscale-20261015/integration-checks.txt：材质引用、导入尺寸、重建绑定和进度检查。
+Logs/texture-upscale-20261015/comparison-near.png：左原4K、右正式导入8K，同坐标原生裁剪。
+当前145步操作/撤销历史和码头人物位置已保存并恢复；本次没有重置关卡。
+
+效果与限制
+可见改善集中于木板缝、屋顶图案和色块边缘；近景更明显，正常远景差异有限。
+木纹/门帘等原本缺失或模糊的细节不能保证真实恢复，少量颗粒被平滑。
+已检查的模型视角未见新增明显接缝、整体色偏或锐化光晕。
+此前图片生成工具的1254×1254候选改变了边界，已排除，未作为项目贴图。
+
+回退
+原始GLB仍完整保留。可将Harbor0.mat的baseColorTexture重新绑定原GLB的texture_0。
+若希望后续Prepare也保持原图，须同时移除/改名可选Enhanced颜色图或调整ApplyEnhancedColor逻辑。
+修改前材质和Setup源码备份：工程外 ChangeBackups/before-dock-upscale-20261015/。

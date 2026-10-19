@@ -1,0 +1,66 @@
+后续更新：本日较早的攀爬、捞箱、UI、人物比例和移动提交方式已被晚间确认覆盖，当前以 Docs/反馈规则与移动同步_20261015.txt 为准。模型接入见 Docs/模型与动画接入_20261015.txt，楼梯移除见 Docs/码头楼梯移除_20261015.txt。以下保留本日较早阶段的策划修改记录，不是当前验收规则。
+
+栖屿 · 2026-10-15 策划修改记录
+
+工程：HabitatIsland3D，Unity 6000.6.5f1。
+本轮用户需求优先于旧交接文档中的相机、攀爬描述。旧 Verification 记录为历史证据；本轮结果集中在 Logs/plan-20261015。
+
+一、如何体验
+
+打开 Assets/HabitatIsland/Scenes/HabitatIsland.unity，Play 后仍是正式荒岛关卡。
+按 Tab 打开设置，选择“前往码头”。首次进入自动播放首日开场。
+也可以单独打开 Assets/HabitatIsland/Scenes/HarborPrototype.unity 后 Play。
+码头用 WASD 自由移动，Q/C 转向，靠近家、商店、小船后按 E 打开接口，Esc 关闭。
+商店可交付随身的一筐渔获；家可休息到次日；小船前往正式荒岛。
+开场与清晨片段可暂停、继续或跳过，结束后恢复自由行动。码头没有 NPC。
+
+二、镜头、龙虾、攀爬块
+
+主岛相机俯角由 58° 改为 48°，orbit yaw 为 14°，略偏侧面以增加可见正脸。
+Q/C 仍每次转 90°，移动方向随镜头，默认局部正交尺寸仍为 6.5。
+龙虾在地面放大到原来 1.4 倍；搬运保持原尺寸，减少遮挡人物。徽标随真实模型 bounds 抬升。
+原龙虾为不透明 glTF PBR 材质，不是白底图片。原金属贴图含较高金属值，本轮用运行时 PropertyBlock 将 metallicFactor 降为 0.12；原纹理与粗糙度保留。
+攀爬块使用 sand_with_grass 模型的原 UV 与 KayKit 原图集，离线检查未发现贴图错配。草沙运行时材质关闭镜面与环境反射，保留贴图、漫反射和阴影。
+用户随后指出攀爬块过于透明：已定位为遮挡淡化系统将该交互道具也当作遮挡地形。修正范围为攀爬块实体、草顶和梯子保持不透明；普通高地的遮挡淡化继续保留。
+这些是显示调整，不更换用户原始资源；外部 UniRig 动画资源仍未自动接入正式游戏。
+
+三、箱子和攀爬规则
+
+迎着箱子移动：推动。
+Ctrl + 背离箱子的方向键：玩家后退一格，箱子拉到玩家原站位。需要空手，并且箱格、原站位和退路没有动物。
+后拉只沿平地或下坡拖动实心箱子；浮箱可从相邻水格拖上一层干岸，成为木箱；木箱进入水格成为浮箱。ClimbBlock 类型保持。
+后拉会先预演潮汐变化，若退路会被淹或落差过大，整次动作不提交。成功后拉可用 Z 撤销。
+工具 1“搬运” + E：抱起/放下邻格道具，也可捞起水里的浮箱。不能拿起脚下正在支撑玩家的浮箱。直接捞起仍携带 Float，沿用放回水格的规则。
+用户确认的高度规则：普通表面和普通木箱最多跨 1 层；只有 ClimbBlock 可按 Shift 向上攀高 2 层。
+Shift 登上普通木箱时只是不推它，不会放宽高度限制。原图潮汐箱相对旁边玩家只高 1 层，仍可登上。
+
+四、首日与次日 Timeline
+
+首日：蔚蓝天空中海鸟飞过 → 主角从小船回到码头 → 收起捞网 → 带一筐渔获走到商店前。
+玩家交付渔获并回家休息后：窗台晨光片段 → 第 2 天 → 恢复自由行动。
+使用真正的 TimelineAsset + PlayableDirector，自定义 HabitatDockBeatTrack / HabitatDockBeatClip。
+片段类型、字幕、人物起终点/途经点以及片段时长可在 Unity Timeline 中编辑；预览登记了相关场景属性以便退出预览时恢复。
+码头采用程序化几何原型：家、商店、小船、码头、海鸟、捞网与渔获。并非最终美术。
+当前码头渔获是一筐剧情状态，交付记一次记录；不虚构金额，也未与岛屿鱼虾库存建立正式经济结算。
+天数、渔获、交付记录在同次 Play 中跨场景保留；小岛往返保留离开前生态状态、参数和操作计数。停止 Play 后重置码头会话，尚未加入跨启动持久存档。
+
+五、主要代码与资产
+
+HabitatGame.cs：Ctrl 后拉输入、码头入口和岛屿往返快照。
+HabitatModel.cs：攀爬限高、PullPlayer 与潮汐预演。
+HabitatView.cs：相机、龙虾比例与材质显示。
+HabitatHud.Layout.cs：操作说明与“前往码头”按钮。
+HabitatDockPrototype.cs / .World.cs / .Hud.cs：码头逻辑、环境和中文界面。
+HabitatDockBeatClip.cs / HabitatDockBeatTrack.cs：真实 Timeline 片段与轨道。
+Editor/HabitatDockPrototypeSetup.cs：通过 Unity API 生成码头场景及 Timeline 资产，不重建原正式场景。
+AgentScripts/PlanDockChecks.cs：码头自然播放、交付、休息、输入、跨场景往返验收。
+
+六、验证与备份
+
+修改前 Scripts、Editor、Scenes 备份位于工程父目录 ChangeBackups/before-plan-20261015。
+尚未构建新的 EXE，旧 Builds 和 20261014 交接 ZIP 不包含本轮改动。
+本轮已执行：51 项基础模型、38 项正式关规则、128 项箱子机制、115 项方向映射、104 项真实 HandleInput、14 项真实帧镜头/输入、1814 项正式地图与路线、117 项正式控制器、30 项视觉集成，以及 673 项 UI 布局/渲染检查。上述检查全部通过，UI 无失败或待完成渲染项。
+最终码头已通过 37 项自然播放、真实 E/Esc 输入、交付防重复、实际步行、晨光到次日、岛屿往返状态恢复及跳过边界检查。返航船舷开口与商店贴地路面修正后重跑通过。码头自由镜头也沿用 48° 俯角与略侧面默认朝向。
+截图包括 climb-block-opaque.png（攀爬块透明修正后）、island-local.png（修正前镜头）、harbor-BlueSky.png、harbor-ReturnToDock.png、harbor-StowNet.png、harbor-WalkToShop.png、harbor-MorningWindow.png、harbor-day2.png。
+核对正式 HabitatIsland.unity 与修改前备份 SHA256 一致，新增码头未改写原图场景。原始模型/贴图/prefab 与 metadata 的视觉检查亦通过。
+攀爬块透明修正已在原正式图 (6,13) 通过草顶、主体、三阶梯子不透明以及直接点击检查，包含在 30 项视觉集成中；另通过 61 项遮挡回归（普通高地淡化、Alt 选择、撤销与潮汐重建）。低俯角下旧回归取样误把薄拾取碰撞体侧面当作顶面，检查现要求命中法线朝上。修正后实机截图为 climb-block-opaque.png；当前编译无错误。

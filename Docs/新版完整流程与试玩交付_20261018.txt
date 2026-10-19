@@ -1,0 +1,40 @@
+﻿新版规则完整流程复验与试玩交付（2026-10-18）
+
+交付构建：D:\chatgptproject\taptapgamejam\HabitatIsland3D\Builds\Windows_Playtest_20261018_232811
+构建：Succeeded；错误 0；警告 1。
+最新 ZIP 路径、字节大小、SHA256 和 CRC 校验结果见 Verification/latest-cg-campaign/delivery.json。
+
+连续主线：在本次交付 EXE 上，从真正 NewSession（零金币、无装备）开始，连续完成开场 CG→第一关→通关 CG→真实钓取两鱼→返航交付100贝币→回家 CG/次日→出售额外幼鱼/购买风箱→第二至五关→返航交付/结局→解锁两额外岛→保存/读取。
+没有注入金币、道具、居民坐标或完成旗标。补给资金来自真实繁衍、钓取、出售；关卡中按原价购入并实际消耗铲子、磁铁、发射器等。
+真实控制器路线结果：
+PASS first all residents suitable; real victory, 45 encoded actions
+PASS 6 all residents suitable; real victory, 91 encoded actions
+PASS 7 all residents suitable; real victory, 158 encoded actions
+PASS 8 all residents suitable; real victory, 99 encoded actions
+PASS 10 all residents suitable; real victory, 124 encoded actions
+这是自动控制器测试，不是人工手动试玩：操作走生产控制器，钓鱼按真实帧通过正式 Advance 输入，动作到位再提交；操作之间暂停生态，重复繁衍等候采用测试内部4倍速度。另在正常1倍做了两次自然繁衍，约36秒。
+
+额外地图：编辑器先完成相同新规则主线并取得结局存档，再从该实际赚取的结局存档续测两张自由探索图，均完成适居通关、采集和存读档。没有把这一段称为单次未中断的七图运行。第一次补查在地图已经获胜后，仍执行旧路线多余推箱，受到通关后动物合法占位阻挡；修正测试路线停止条件后续测通过，没有降低胜利条件或修改地图。
+
+本轮修复
+独立 EXE 初测发现 cg.rar 的 MP4 使用 PCM 音轨，WindowsVideoMedia 报 0xc00d5212。编辑器的原视频通过不能证明独立版兼容。现游戏使用 H.264 Baseline/yuv420p + AAC 的1080p兼容副本，三段自然播放及剧情结算在最终 EXE 上通过，运行没有解码错误。保留原故事画面、声音内容和顺序，但编码有损，不宣称与原文件逐字节或逐像素一致。
+原件：ChangeBackups/latest-cg-campaign/OriginalCG 与 Docs/SourceEvidence/CG20261018。
+兼容输出：Exports/CG_Compatible；生产文件：Assets/StreamingAssets/StoryCG。
+编码命令、源/目标哈希和大小：Verification/latest-cg-campaign/cg-compatibility.json。
+工具：D:/tools/ffmpeg-runtime（imageio-ffmpeg 自带 FFmpeg）。
+
+最终专项与画面
+同一未修改的 EXE 在 player-visible-specialties 下通过全部6组、107项专项：提示2、正常繁衍1、输入/失焦/诱导27、鼠标26、可见打捞35、工具/取消/撤销/潮汐16。
+107项是断言计数，不表示107种独立玩法。测试目录隔离，所有完成的测试均核对真实玩家存档 SHA256 不变。
+可见窗口11张场景实拍均有有效画面，另人工查看码头与关卡实拍。1080p每场景预热后300帧：平均帧率 59.82–60.00，超过33.34ms共 0 帧。锁60帧、高配本机数据，不代表低配验收，也不能证明相对旧版性能提升。
+
+保留的初测与边界
+- player-codec-failed：原 CG 解码失败，非交付版本。
+- player-verified：最终二进制的连续主线通过；首次输入专项因漏放 legacy-fishing-fixture.json 未完成。补齐样本后，在同一二进制重跑全部专项通过；不把该目录整体 result.pass=false 改写为true。
+- player-specialties：补齐样本后逻辑通过，但隐藏窗口截图为黑帧，不能作为画面/性能证明。
+- player-visible-specialties：可见窗口重跑的最终专项/画面/性能证据，result.pass=true。
+- 隐藏窗口主线测试只作为游戏控制器、实际 VideoPlayer 自然结束、交易及保存逻辑证据，不把其中黑帧或采样用作画面证明。
+- 未覆盖所有替代解法、极端输入组合和所有旧存档来源；策划仍需评估谜题难度、经济等待和视觉体验。
+
+打包
+压缩包仅包含该构建运行文件、三段兼容 CG、开始试玩、反馈模板和本版检查说明；排除 ButDontShipItWithYourGame，不包含测试存档、测试路线或项目源码。打包前核对所有测试二进制 SHA256；完成后执行 ZIP CRC 全量校验。

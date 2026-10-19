@@ -1,0 +1,28 @@
+木船与商店老板接入（2026-10-16）
+
+使用用户提供的 part3/hona/木船/3d 与 店员/3d 成品。GLB和原贴图复制到工程Art/WoodenBoat、Art/ShopAssistant，来源文件未修改，无重新生成或重新绑骨。
+
+当前主游戏
+1. Resources/Models/Story/DepartureBoat.prefab 是3米长的独立木船；同一实例用于主地图停泊、开场归航与出海。
+2. 老合并码头只去掉独立旧船的765个三角面，生成WoodenDock_NoStairs_NoBoat.glb。保留38260面、原顶点/法线/UV/贴图，保留已删除楼梯的修补与8K材质。Harbor.prefab的GUID、变换与其他组件不变。
+3. HabitatHarborBoat按当前潮位定位，读取Footwell_Aft_Surface供角色站立乘船，读取左右船沿挂点供开场登岸路线。不再对新船沿用旧+0.71高度。Seat挂点保留供后续坐姿使用；本轮角色是稳定站姿，没有新增坐姿动画。
+4. 木船原资产是静态模型，无骨骼/动画。航行与轻微摇摆由程序驱动。船根为waterLevel*0.7+0.21，浮动±0.005、侧倾±0.8度，保持舱底高于当前连续水面。
+5. Resources/Models/Story/Shopkeeper.prefab使用原20骨模型，保留4秒Idle、3秒Talk、2秒Greet；Generic、无RootMotion。进入老板交谈时致意，之后循环Talk，关闭交谈回Idle；普通商店面板进入时也致意。只有老板对话触发Talk，其他提示不会让老板说话。
+6. 模型源高1.6米，地图显示缩放0.84以匹配当前主角。站在ShopApproach旁(-1.5,0,0.5)的甲板上，朝向互动点，避开原先与玩家重叠的站位。
+7. 不改任务、价格、奖励、地图布局、存档。出海仍完成后提交换岛，取消不回调，恢复船与玩家位置。换岛和涨潮重建时重新加载船及老板。
+
+编辑入口（停止Play后执行；不重建主场景）
+HabitatIsland.Editor.HabitatStoryArtSetup.Prepare()
+HabitatIsland.Editor.HabitatMooredBoatSetup.Install()
+HabitatIsland.Editor.HabitatLegacyHarborSetup.Prepare()
+第三项只为旧独立HarborPrototype保留原船，避免共用资源改动使历史演示缺船；当前主游戏使用新木船。
+
+验证与图片
+Verification/boat-shop-20261016/import.txt：动作时长、循环、20骨、原点、尺寸、4个挂点、原始PBR材质。
+Verification/boat-shop-20261016/dock-prefab-install.txt：移除旧船及保留8K/碰撞/GUID。
+AgentScripts/BoatShopChecks.cs：23项运行验证，含121个航行摇摆采样、交谈动画、暂停、取消、自然完成及同一玩家保留。
+AgentScripts/BoatShopRebindChecks.cs：真实SailToLevel往返与临时潮位渲染重绑定。潮位是内存显示夹具，不代表潮汐机关解谜测试。
+Verification/boat-shop-20261016/内保存检查报告及真实Unity渲染图。
+本轮只验收新资源与相关流程，不作为全部正式关完整通关证明。
+
+最终实测：23项主体运行检查、30项往返与潮位重绑定检查通过；另重放真实Timeline完成返航/收网/前往商店，渔获数量未变化。Unity最终编译失败标记为false。没有写游戏存档。

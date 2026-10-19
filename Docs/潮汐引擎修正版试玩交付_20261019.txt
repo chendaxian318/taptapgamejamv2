@@ -1,0 +1,9 @@
+2026-10-19 最新可执行版交付
+构建：Builds/Windows_Playtest_20261019_013112/HabitatIsland.exe
+ZIP：Builds/栖屿_最新版_潮汐引擎修正版_20261019.zip
+大小643565708字节，SHA256 c4baa61596e4f6d6e42adbdb5b47308fafce77980ba89d2f633f64683c8481eb，ZIP全量CRC通过。
+包含当前项目资源与界面及潮汐引擎四段动画。GIF修复是导出流程逐帧蒙皮刷新，运行时保留正常SkinnedMeshRenderer，不加入预览临时网格。
+构建Succeeded，0错误、6警告；详见Verification/tide-release-20261019/build-report.json。
+同一交付EXE在player-window通过6组107项专项检查、11场景采样，result.pass=true，errors为空，真实玩家档SHA未变。截图确认主菜单与第四关正常。此轮未重跑从新游戏到结局全流程。
+首次隐藏窗口验收无法截图，未完成；保留player目录失败结果，不计作通过。最终证据为player-window/result.json。
+包内不含测试存档、路线及ButDontShipItWithYourGame目录。完整解压后双击HabitatIsland.exe，勿单独复制exe。

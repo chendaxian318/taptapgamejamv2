@@ -1,0 +1,30 @@
+初始港口家园岛（2026-10-18）
+
+用户要求：给初始码头铺一个初始岛屿。
+已在家园港口（levelIndex=11）的住宅、商店后侧增加连续的小岛，船边保留开放水域。
+沙滩缓坡与不规则岸线、草地、弯曲沙径、四棵棕榈及三处礁石构成初始布局；使用已有棕榈/石头模型，港口局部材质调为暖色，未覆盖共享素材。
+地表为运行时连续网格与轻微程序色彩纹理，随港口一同生成/销毁，无需手动修改场景或资产YAML。
+
+通行：现有码头开口处增加宽1.9规范单位的木栈道，可从商店附近走上岛。
+仍使用港口连续行走及原harborX/harborZ存档坐标。新增HabitatHomeIsland地面采样和海岸/植被边界，现有住宅和码头家具不允许借岛面穿越。
+家园岛不切换到解谜网格，不新增任务/奖励/动物/经济，不影响正式关关卡设计。
+补足家园港口总览所需的海面范围；贴图缩放同步，原水面效果不改。
+相机沿已有港口renderer bounds机制自动包含小岛，四个总览旋转方向均检查。
+
+实现：
+- HabitatHomeIsland.cs：岛体轮廓、通行采样、障碍及生成资源释放。
+- HabitatView.HomeIsland.cs：沙滩/草地/小径、植被及栈道显示。
+- HabitatView.cs：仅家园港口接入、家园海面覆盖。
+- HabitatMapHarbor.cs：岛面通行及家园中不触发解谜岸格退出。
+- HabitatImportedDockLayout.cs：查询现有码头轮廓，保持原行走/交互坐标。
+
+验证：AgentScripts/HomeIslandChecks.cs，38项通过，原玩家存档SHA256核对不变。
+包括真实NewSession、从船边经商店道路上岛、岛内往返、存读档位置保持、回商店/家门、海域/住宅/树干阻挡、船边水域、切到第一正式关清理岛体、回港仅生成一个岛、四朝向海面覆盖。
+测试和存档写入使用独立isolated-saves，finally恢复原快照、撤销、剧情标记、会话标记和设置。
+不是整条主线通关或剧情录像复验，未构建EXE。
+
+截图与检查记录：Verification/home-island-20261018。
+home-island-overview.png：新游戏初始港口。
+home-island-walking.png：玩家实际走到岛上。
+home-island-final.png：切关返回后的港口。
+修改前备份：../ChangeBackups/home-island-20261018。
